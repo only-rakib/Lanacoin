@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap');
+body
+{
+    font-family: Arial,"sans-serif";
+}
+img{
+  transition: all .2s ease-in-out;
+}
+.card{
+  border: none;
+}
+a.black
+{
+  color:#000;
+}
+a.black:hover
+{
+  color:#3d3d3d;
+}
+a.shadeblue
+{
+  color: #0074c4;
+  
+}
+a.shadeblue:hover{
+  color:#318ECE;
+}
+/*Header*****************************************/
+.sidepanel {
+  width: 0;
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #fff !important;
+  overflow-x: hidden;
+  transition:all .2s ease-in-out;
+  padding-top: 10px;
+  padding-bottom: 180px;
+}
+
+.sidepanel ul li a {
+  /*padding: 8px 8px 8px 32px;*/
+  border-bottom: 0;
+  padding-top: .8125rem;
+  padding-bottom: .8125rem;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+  width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  color: #000;
+  padding-left: 1.25rem;
+  transition: all .2s ease-in-out;
+  
+}
+.sidepanel ul li .button-item
+{
+  height: 2.5rem;
+  border: 0;
+
+  background: transparent;
+  z-index: 3;
+  width: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.sidepanel ul li a:hover {
+  color: #0074c4;
+  text-decoration: underline;
+}
+.sidepanel .topside-section a{
+  text-decoration: none;
+  padding: .8125rem 0px .8125rem 1.25rem;
+}
+.sidepanel ul li
+{
+  color:#000;
+  font-size: 16px;
+  font-weight: 600;
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  font-size: 26px;
+}
+
+.sidepanel .side-logo
+{
+  position: absolute;
+  top: 0;
+  left:5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: bold;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #006998 !important;
+  letter-spacing: 3px;
+}
+.sidepanel .dropright .btnr
+{
+  width: 250px;
+  border: none;
+  box-shadow: none;
+}
+.sidepanel .dropright .dropdown-menu
+{
+  position: absolute;
+  left: 250px;
+  border: none;
+  box-shadow: none;
+}
+.sidepanel .dropdown-menu .hasOptions
+{
+  position: absolute;
+  top:0px;
+  left:180px;
+  border:none;
+}
+.sidepanel .dropdown-menu .dropdown-submenu:hover .hasOptions
+{
+  display: block;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.nav-item .btn ::after
+{
+    content: "Secciones";
+    margin-left: 8px;
+    font-size: 0.75rem;
+    font-family: Arial, "sans-serif";
+    font-weight: 500;
+    align-items: center;
+    vertical-align: middle;
+}
+.nav-item .btn
+{
+  padding: .375rem .375rem .375rem 0;
+}
+.nav-item .btn:hover{
+    color: #006998;
+}
+.lanacoin_logo_header {
+  /*font-family: 'Merriweather', serif;*/
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-style: bold;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #006998 !important;
+  letter-spacing: 3px;
+}
+
+.com-search {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 11.875rem;
+}
+.com-search:focus-within {
+  width: 100% !important;
+}
+form.com-search input[type=text] {
+    padding: 10px;
+    font-size: 15px;
+    background: #f1f1f1;
+    width: 100%;
+  }
+  
+  /* Style the submit button */
+  form.com-search button {
+    background: transparent;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transform: translateX(2px); 
+    position: absolute; 
+    right: 8px;
+    border-radius: 5px;
+}
+  
+  form.com-search button:hover {
+    color: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.com-search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .btnr
+  {
+    border: 1px solid #ccc;
+    color: #000;
+    padding: .6875rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: opacity .2s ease-in-out;
+    font-size: 12px;
+  }
+  .btnr.yellow
+  {
+    background: #ffff24;
+  }
+  .btnr.yellow:hover
+  {
+    background: #323232;
+    color: #fff;
+  }
+  .btnr.outline_blue
+  {
+    background-color: #fff;
+    border: 1px solid #0074c4;
+    color: #0074c4;
+  }
+  .btnr.outline_blue:hover
+  {
+    background: #328FCF;
+    color: #fff;
+  }
+/***********************HomePage****************************************/
+
+
+#sub-header
+{
+  background: #f7f7f7;
+  border-bottom: 1px solid #d9d9d9;
+  padding: .5rem 0;
+  font-size: .875rem;
+  padding: .5rem 0;
+   
+}
+#sub-header .currency a
+{
+  color: #0074c4;
+}
+#sub-header .currency a:hover
+{
+  color: #318ECE;
+}
+#sub-header .weather a
+{
+  position: relative;
+  top: -6px;
+  color:#000 ;
+}
+#sub-header .weather a:hover{
+  color:#4E4E4E;
+}
+#sub-header .weather:before
+{
+  content: "";
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  background-image: url("/static/svg/image.svg");
+
+}
+#sub-header .Newsletters{
+  padding-top: 2px;
+}
+#sub-header .club a
+{
+  position: relative;
+  top: -6px;
+  color: #0074c4;
+}
+#sub-header .club:before
+{
+  content: "";
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  margin-right: 5px;
+  display: inline-block;
+  background-image: url("../svg/club.svg");
+
+}
+#sub-header .Newsletters a
+{
+  
+  color: #0074c4;
+}
+#sub-header .Newsletters a:hover,.club a:hover
+{
+  color: #318ECE;
+}
+
+.recent-news .col-tablet:after{
+content: "";
+display: block;
+height: 100%;
+position: absolute;
+right: .875rem;
+top: 0;
+border-right: 1px solid #d9d9d9;
+
+}
+
+ .card .big-image img
+{
+  transition: all .2s ease-in-out;
+  filter: brightness(1.1);
+}
+h1.title
+{
+  transition: all .2s ease-in-out;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+  transition: all .2s ease-in-out;
+  color: #000;
+  
+}
+
+h2.title
+{
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 900;
+  letter-spacing: -.4px;
+  color: #000;
+}
+h3.title{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  margin-bottom: -1px;
+  padding-bottom: .3125rem;
+  color:#000;
+}
+a h1.title:hover,a h2.title:hover
+a h3.title:hover{
+  color: #808080;
+}
+.big-image img
+{
+  border:1px solid #ccc;
+}
+.small-image img
+{
+  border:1px solid #ccc;
+}
+ .big-image .card-body .title .highlight,.small-image .card-body .title .highlight
+{
+  transition: all .2s ease-in-out;
+  color: #0074c4;
+  font-style: normal;
+  
+}
+ a:hover .big-image .card-body .title .highlight,a:hover .small-image .card-body .title .highlight
+{
+  color: #318ECE;
+}
+ a:hover .big-image .card-body .card-text, a:hover .small-image .card-body .card-text
+{
+  color: #808080;
+}
+ a:hover .big-image .card-body img, a:hover .small-image .card-body img
+{
+  filter: brightness(1.11);  
+}
+
+ a:hover .big-image .card-body .title ,a:hover .small-image .card-body .title ,a:hover .author
+{
+  color:#4E4E4E;
+}
+.sidebar_aside
+{
+  padding-right: 15px;
+  background: repeating-linear-gradient(45deg,#fff,#fff,#fff,#fff 4px,#dbdbdb 6px);
+}
+.author
+{
+  font-size: .875rem;
+  line-height: 1.0625rem;
+  margin-top: .3125rem;
+  color: #000;
+}
+
+.article-header
+{
+  
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  
+}
+
+
+/*Footer****************************************/
+
+
+.icons
+{
+  font-size: 25px;
+  padding:0 1rem;
+  color: black;
+}
+.footer-link
+{
+  color: #0074C4;
+  padding: 0 0.5rem;
+  font-size: 14px;
+}
+.lanacoin_logo_footer {
+  /*font-family: 'Merriweather', serif;*/
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: bold;
+  font-weight: 900;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #006998 !important;
+  letter-spacing: 3px;
+}

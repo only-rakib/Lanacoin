@@ -1,0 +1,63 @@
+@media(max-width:1023px)
+{
+    .hide1023
+    {
+        display: none;
+    }
+    .show1023
+    {
+        display: block;
+    }
+}
+@media(min-width:1024px)
+{
+    .hide1023
+    {
+        display: block;
+    }
+    .show1023
+    {
+        display: none;
+    }
+}
+@media(max-width:991px)
+{
+    .hide991
+    {
+        display: none;
+        
+    }
+    .show991
+    {
+        display: block;
+    }
+}
+@media(min-width:768px)
+{
+    #section-editorials .border-edit
+    {
+        border:none;
+    }
+}
+@media(max-width:767px)
+{
+    #section-editorials .border-edit
+    {
+        border:1px solid #ccc;
+    }
+    .recent-news .col-tablet:after{
+        display: none;
+    }
+    .show767
+    {
+        display: block !important;
+    }
+    .hide767
+    {
+        display: none !important;
+    }
+    .lanacoin_logo_header
+    {
+        font-size: 1.5rem;
+    }
+}

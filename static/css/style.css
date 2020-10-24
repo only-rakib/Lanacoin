@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+a{
+  transition: all .2s ease-in-out;
+}
+ul,ol{
+	list-style-type: none;
+}
+
+/*politics start here*/
+
+.page-divider, .page-break {
+	margin-left: auto;
+	margin-right: auto;
+	width: 470px;
+}
+.sub__heading-politics a{
+	color: gray;
+}
+.heading__main-politics h1{
+	font-family: suecaslabmedium,Georgia,"serif";
+	font-size: 35px;
+}
+.page__divider-ver{
+	border-right: 1px solid #e6e6e6;
+}
+.article__heading-politics a{
+	font-family: suecaslabmedium,Georgia,"serif";
+	font-size: 19px;
+	line-height: 26px;
+	color: #000;
+}
+
+.article__heading-politics a:hover{
+	color:#0074c4;
+	transition: .2s ease;
+}
+
+.btn__politics{
+	color: #0075c4;
+    display: inline-block;
+    border: 1px solid #0075c4;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-family: Arial;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 21px;
+}
+.btn__politics:hover{
+	background-color: #0074c4;
+	color: #fff;
+}
+
+.btn__social {
+	max-width: 36px;
+    max-height: 36px;
+	border: 1px solid #0074c4;
+	color: #000;
+	padding: 5px 9px;
+}
+.btn__social:hover{
+	background-color: #0074c4;
+	color: #fff;
+}
+
+.comment__text{
+	font-family: Arial;
+	font-size: 12px;
+	color: #565656;
+	line-height: 18px;
+	text-transform: none;
+}
+
+.top__text{
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sub__text-politics{
+	font-family: Arial;
+	font-size: 15px;
+	color: gray;
+}
+
+.has-dropcap:first-letter {
+	font-family: Arial, Helvetica, sans-serif;
+	float: left;
+	font-size: 78px;
+	line-height: 30px;
+	font-weight: 700;
+	margin: 0.1em 0.1em 0.2em 0;
+  }
+.content__text-politics{
+	font-size: 19px;
+line-height: 30px;
+}
+
+.custom__btn-politics:hover{
+	background-color: #006998;
+	color: #fff;
+}
+
+.icon_section-politics{
+    position: relative;
+}
+.icon_section-politics:after{
+	    content: " ";
+    display: block;
+    background-image: url(../svg/lapicera.svg);
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: #e6e3d8;
+   
+    border-radius: 50px;
+    
+    background-size: 37%;
+    background-position: center;
+}
+
+
+
+
+.custom__btn{
+    display: inline-block;
+    margin-right: 35px;
+    float:left;
+ }
+
+.image__area-post{
+	justify-content: center;
+    max-height: 622px;
+    max-width: 935px;
+}
+.text__top-politics{
+	color: #0074c4;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.head__text-first{
+	font: 43px suecaslabmedium,Georgia,"serif";
+	line-height: 54px;
+	color: #000;
+}
+  
+.steps {
+  max-width: 350px;
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+.steps li {
+  margin: 0 0 .5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+.steps li::before {
+  content: counter(my-awesome-counter);
+  /*color: #fcd000;*/
+  color: rgb(236, 234, 234);
+  font-size: 1.0rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 32px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 1rem;
+  /*transform: rotate(-10deg);*/
+  background: black;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}

@@ -1,0 +1,221 @@
+
+/*card part start here*/
+.standard-content{
+	width: 100%;
+	padding-top: 3%;
+}
+
+.standard-row{
+	padding-top: 5%;
+	width: 100%;
+}
+.standard-content h3 {
+	font-family: "acta-display", georgia, serif;
+	font-weight: 300;
+	color: #121212;
+	font-size: 40px;
+	line-height: 1.2;
+	margin: 0;
+	text-align: center;
+}
+.baseball-card__meta {
+	font-family: "proxima-nova", Gotham, Helvetica, sans-serif;
+	font-weight: 400;
+	display: flex;
+	line-height: 1.2;
+	justify-content: space-between;
+}
+.baseball-card__meta strong {
+	color:#121212;
+	display: block;
+	font-weight: bold;
+}
+.baseball-card__progress-bar {
+	background: #e6e6e6;
+	height: 5px;
+	position: relative;
+}
+.baseball-card__progress-bar-fill {
+	background: #ff4814;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+.btn.btn-large {
+	padding: 0.9em 2em 0.88em;
+	background-color: #fff !important;
+	border: 1px solid #ff4814 !important;
+}
+.btn:link, .btn:visited, .btn:focus {
+	color: #fff;
+}
+
+.btn-section{
+	text-align: center;
+	margin: 0auto;
+	width:100%;
+	padding-top: 4%;
+
+}
+.btn.hover, .btn:hover {
+	color: #8f2308 !important;
+	background-color: #e6e6e6 !important;
+	background-position: 0 -15px;
+	transition: background-position .1s linear;
+}
+.btn-card-bg{
+	width:100%;
+	padding-top: 3%;
+	padding-bottom: 10%;
+}
+.btn-card-bg a{
+	border:1px solid gray;
+	padding: 0% 6% 0% 7%;
+	border-radius: 5px;
+	font-size: 14px;
+}
+#team img{
+	margin-top: -30%;
+}
+/*card part end here*/
+.sp-collor a{
+	color:red !important;
+}
+.head-bg-ex{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.head-bg-ex h1{
+	font-family: "proxima-nova", Gotham, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    width: 55%;
+    text-align: center;
+    margin:0 auto !important;
+}
+
+.form-inline .form-control {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;
+	width: 100%;
+}
+.btn:not(:disabled):not(.disabled) {
+	cursor: pointer;
+	width: 100%;
+	color: #fff;
+	background: #ff4814;
+	border: 1px solid #ff4814;
+}
+/*banner part 3 end here*/
+.tb-container-last{
+	border: 5px solid red;
+}
+
+.tb-container-last .row{
+	width:100%;
+	padding-top: 3%;
+	text-align: center;
+	font-family: "rooney-web", georgia, serif;
+}
+
+.last-heading{
+	
+	font-family: "rooney-web", georgia, serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+.impact-hr {
+	border-width: 3px 1px 0;
+	border-style: solid;
+	border-color: red;
+	width: 4%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.last-item h3{
+	font-size: 72px;
+}
+.last-content p {
+	font-size: 24px;
+	width: 85%;
+	margin:0 auto;
+	color: #000000;
+	font-family: 'Rooney-Web', Georgia, serif;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.17;
+	letter-spacing: normal;
+}
+
+
+
+
+
+
+
+
+/*content section end here*/
+
+
+
+
+
+
+
+/*footer start here*/
+.footer-section{
+	background: #121212;
+	font-family: "rooney-web", georgia, serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.footer-section .row{
+	margin: 0;
+	padding:0;
+}
+.footer-area1{
+	padding-top: 1% !important;
+}
+.footer-area2{
+	padding-bottom: 10% !important;
+}
+.brand{
+	font-size: 31.5px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+.site-footer__nav-heading {
+	font-family: "proxima-nova", Gotham, Helvetica, sans-serif !important;
+	font-weight: 400;
+	margin: 7px 0;
+	color: #ff4814 !important;
+	font-size: 18px;
+}
+.footer-text label{
+	font-family: "rooney-web", georgia, serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 21px;
+	width:60%;
+}
+.footer-area1 p{
+	font-weight: 400;
+	color: #ff4814;
+	font-size: 18px;
+}
+.footer-area1 li{
+	list-style: none;
+}
+.footer-area2 i{
+	color: #ff4814;
+	font-size: 26px;
+	padding-right:2%; 
+}
