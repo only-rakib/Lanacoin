@@ -458,3 +458,8 @@ a h3.title:hover{
   color: #006998 !important;
   letter-spacing: 3px;
 }
+footer ul li
+{
+  display: inline;
+  padding-right: 5px;
+}
