@@ -25,52 +25,72 @@
         </div>
     </div>
 </section>
+<section id="live-update" style="background-color: #2A2A2A;">
+    <div class="container-fluid px-lg-5 px-md-2 px-sm-0 px-0"
+        style="background-image:url('/static/images/17364.jpg'); background-repeat: no-repeat; ">
+        <div class="row">
+            <div class="col py-5">
+                <ul>
+                    <li>
+                        asd
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="recent-news">
     <div class="container-fluid px-lg-5 px-md-2 px-sm-0 px-0">
         <div class="row">
             <div class="col-lg-9">
-                <section id="section-top-news">
+
+                <!-----Top New Section----->
+                
+                <section id="section-top-news" class="mt-5">
                     <div class="row">
+                        {% for top_news in top_news %}
+
+                        {% if forloop.first %}
                         <div class="col-md-8 col-sm-12 col-tablet">
-                            <a href="#" title="Strong march in Entre Ríos after Etchevehere's complaint">
+                            <a href="#" title="{{top_news.sub_title}}">
                                 <div class="card big-image">
                                     <div class="card-body py-md-0 pr-md-4 pr-sm-0 pl-sm-0 px-0">
-                                        <h1 class="title">
-                                            <em class="highlight">Land grab. </em>
-                                            Strong march in Entre Ríos after Etchevehere's complaint
+                                        <h1 class="title px-2 px-md-0">
+                                            <em class="highlight">{{top_news.title}}</em>
+                                            {{top_news.sub_title}}
                                         </h1>
-                                        <p class="card-text text-muted mb-2">Producers from the province are
-                                            mobilized in Santa
-                                            Elena, in front of the former official's field; they went there to
-                                            reject the
-                                            usurpation
+                                        <p class="card-text text-muted mb-2 px-2 px-md-0">Producers from the province are
+                                            {{top_news.details}}
 
                                         </p>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <strong class="author px-2 px-md-0" title="{{top_news.reporter}}">
+                                            {{top_news.reporter}}</strong>
+
+                                        {% with top_news.cover_photo as img %}
+                                        <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                        {% endwith %}
                                     </div>
 
                                 </div>
                             </a>
                         </div>
+
                         <div class="col-md-4 col-sm-12">
+                            {% else %}
                             <div class="row">
                                 <div class="col">
-                                    <a href="#"
-                                        title="The vaccination plan that the Government plans at the end of the year">
+                                    <a href="#" title="{{top_news.sub_title}}">
                                         <div class="card small-image">
                                             <div class="card-body py-md-0 px-sm-0 px-0">
-                                                <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
-                                                    alt="Card image cap">
-                                                <h2 class="title">
-                                                    <em class="highlight">Massive and mandatory. </em>
-                                                    The vaccination plan that the Government plans at the end of the
-                                                    year
+                                                {% with top_news.cover_photo as img %}
+                                                <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                                {% endwith %}
+                                                <h2 class="title px-2 px-md-0">
+                                                    <em class="highlight">"{{top_news.title}}" </em>
+                                                    {{top_news.sub_title}}
                                                 </h2>
-                                                <strong class="author" title="By Jaime Rosemberg ">
-                                                    By Jaime Rosemberg
+                                                <strong class="author px-2 px-md-0" title="{{top_news.reporter}}">
+                                                    {{top_news.reporter}}
                                                 </strong>
                                                 <hr class="hide767">
                                             </div>
@@ -79,55 +99,46 @@
 
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <a href="#"
-                                        title="The vaccination plan that the Government plans at the end of the year">
-                                        <div class="card small-image">
-                                            <div class="card-body py-md-0 px-sm-0 px-0">
-                                                <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
-                                                    alt="Card image cap">
-                                                <h2 class="title">
-                                                    <em class="highlight">Massive and mandatory. </em>
-                                                    The vaccination plan that the Government plans at the end of the
-                                                    year
-                                                </h2>
-                                                <strong class="author" title="By Jaime Rosemberg ">
-                                                    By Jaime Rosemberg
-                                                </strong>
-                                                <hr class="hide767">
-                                            </div>
-                                        </div>
-                                    </a>
-
-                                </div>
-                            </div>
+                            {% endif %}
+                            {% endfor %}
                         </div>
-
                     </div>
                     <hr class="hide767">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                                <div class="card small-image">
-                                    <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                                        <h2 class="title">
-                                            <em class="highlight">Massive and mandatory. </em>
-                                            The vaccination plan that the Government plans at the end of the year
-                                        </h2>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
 
-                                    </div>
+                    <div class="row">
+                        {% for top_news_lower in top_news_lower %}
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#" title="{{top_news_lower.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with top_news_lower.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{top_news_lower.title}}</em>
+                                        {{top_news_lower.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{top_news_lower.reporter}}">
+                                        {{top_news_lower.reporter}}
+                                    </strong>
+
                                 </div>
                             </a>
                         </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
                     </div>
+
                 </section>
-                <section id="section-present-news">
+                
+                <!--------- Present News Section ----------->
+
+                <section id="section-present-news" class="mt-5">
                     <div class="row">
                         <div class="col ">
                             <div class="article-header">
@@ -139,27 +150,39 @@
                         </div>
                     </div>
                     <div class="row">
+                        {% for top_news_lower in top_news_lower %}
                         <div class="col-md-4 col-sm-12">
-                            <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                                <div class="card small-image">
-                                    <div class="card-body py-md-3 px-0 px-sm-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                                        <h2 class="title">
-                                            <em class="highlight">Massive and mandatory. </em>
-                                            The vaccination plan that the Government plans at the end of the year
-                                        </h2>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
+                            <a href="#" title="{{top_news_lower.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with top_news_lower.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{top_news_lower.title}}</em>
+                                        {{top_news_lower.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{top_news_lower.reporter}}">
+                                        {{top_news_lower.reporter}}
+                                    </strong>
 
-                                    </div>
                                 </div>
                             </a>
                         </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
                     </div>
 
                 </section>
-                <section id="section-more-news">
+
+                <!-------  More News Section -------------->
+                
+                <section id="section-more-news" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -168,26 +191,38 @@
                         </div>
                     </div>
                     <div class="row">
+                        {% for more_news in more_news %}
                         <div class="col-md-4 col-sm-12">
-                            <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                                <div class="card small-image">
-                                    <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                                        <h2 class="title">
-                                            <em class="highlight">Massive and mandatory. </em>
-                                            The vaccination plan that the Government plans at the end of the year
-                                        </h2>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
+                            <a href="#" title="{{more_news.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with more_news.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{more_news.title}}</em>
+                                        {{more_news.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{more_news.reporter}}">
+                                        {{more_news.reporter}}
+                                    </strong>
 
-                                    </div>
                                 </div>
                             </a>
                         </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
                     </div>
                 </section>
-                <section id="section-opinion">
+
+                <!-----------  Opinion Section --------------->
+                
+                <section id="section-opinion" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -200,7 +235,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" style="border:1px solid #ccc" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" style="border:1px solid #ccc"
+                                            src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
                                         <h2 class="title">
                                             Massive and mandatory.
                                             The vaccination plan that the Government plans at the end of the year
@@ -216,18 +252,22 @@
                         <div class="col-md-4 col-sm-12">
                             <div class="row">
                                 <div class="col">
-                                    <a href="#" title="The vaccination plan that the Government plans at the end of the year">
+                                    <a href="#"
+                                        title="The vaccination plan that the Government plans at the end of the year">
                                         <div class="card small-image mt-3 mx-3 mx-md-0" style="border:1px solid #ccc">
                                             <div class="card-body py-md-2 px-2">
-                                                
+
                                                 <h2 class="title">
-                                                    The vaccination plan that the Government plans at the end of the year
+                                                    The vaccination plan that the Government plans at the end of the
+                                                    year
                                                 </h2>
-                                                <img class="card-img-top" style="border-radius: 50%;width: 50px;height:50px" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                                <img class="card-img-top"
+                                                    style="border-radius: 50%;width: 50px;height:50px"
+                                                    src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
                                                 <strong class="author" title="By Jaime Rosemberg ">
                                                     By Jaime Rosemberg
                                                 </strong>
-                                                
+
                                             </div>
                                         </div>
                                     </a>
@@ -235,19 +275,23 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <a href="#" title="The vaccination plan that the Government plans at the end of the year">
+                                    <a href="#"
+                                        title="The vaccination plan that the Government plans at the end of the year">
                                         <div class="card small-image mt-3 mx-3 mx-md-0">
                                             <div class="card-body py-md-2 px-2" style="border:1px solid #ccc">
-                                               
+
                                                 <h2 class="title">
-                                                   Massive and mandatory.
-                                                    The vaccination plan that the Government plans at the end of the year
+                                                    Massive and mandatory.
+                                                    The vaccination plan that the Government plans at the end of the
+                                                    year
                                                 </h2>
-                                                <img class="card-img-top" style="border-radius: 50%;width: 50px;height:50px;" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                                <img class="card-img-top"
+                                                    style="border-radius: 50%;width: 50px;height:50px;"
+                                                    src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
                                                 <strong class="author" title="By Jaime Rosemberg ">
                                                     By Jaime Rosemberg
                                                 </strong>
-                                                
+
                                             </div>
                                         </div>
                                     </a>
@@ -258,9 +302,10 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
-                                           
+
                                             The vaccination plan that the Government plans at the end of the year
                                         </h2>
                                         <strong class="author" title="By Jaime Rosemberg ">
@@ -274,21 +319,31 @@
                     </div>
                     <hr class="hide767">
                 </section>
+
+                <!--------------------Editorial Section-------------------------->
+
                 <section id="section-editorials" class="px-2 px-md-0">
                     <div class="border-edit py-4 py-md-0 px-2 px-md-0">
                         <div class="row">
                             <div class="col-md-2">
-                                <h2 class="title text-uppercase"><a class="black" href="#">Editorials</a></h2>                          
+                                <h2 class="title text-uppercase"><a class="black" href="#">Editorials</a></h2>
                             </div>
                             <div class="col-md-10">
-                                &#9679; <a class="black" style="color: #000000;" href="#">History and the Supreme Court: Do not repeat mistakes</a> 
+                                <ul>
+                                    <li><a class="black" style="color: #000000;" href="#">History and the Supreme Court:
+                                            Do not repeat mistakes</a> </li>
+                                    <li>asdasd sdzc</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
                     <hr class="hide767">
                 </section>
-                <section id="section-otherthemes">
+
+                <!------------------Other Theme Section-------------------------->
+
+                <section id="section-otherthemes" class="mt-5">
                     <div class="row">
                         <div class="col ">
                             <div class="article-header">
@@ -300,19 +355,61 @@
                         </div>
                     </div>
                     <div class="row">
+                        {% for other_theme in other_theme %}
                         <div class="col-md-4 col-sm-12">
-                            <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                                <div class="card small-image">
-                                    <div class="card-body py-md-3 px-0 px-sm-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                                        <h2 class="title">
-                                            <em class="highlight">Massive and mandatory. </em>
-                                            The vaccination plan that the Government plans at the end of the year
-                                        </h2>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
+                            <a href="#" title="{{other_theme.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with other_theme.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{other_theme.title}}</em>
+                                        {{other_theme.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{other_theme.reporter}}">
+                                        {{other_theme.reporter}}
+                                    </strong>
 
+                                </div>
+                            </a>
+                        </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
+                    </div>
+
+                </section>
+
+                <!-----------------Story Section-------------------->
+
+                <section id="section-stories" class="mt-md-5 mt-0">
+                    <div class="row">
+                        <div class="col ">
+                            <div class="article-header">
+                                <a href="#">
+                                    <h3 class="title text-uppercase">Stories</h3>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#" style="background: #006998;"
+                                title="The vaccination plan that the Government plans at the end of the year">
+                                <div>
+                                    <img style="object-fit: cover;width: 100%;height: 100%;"
+                                        src="{% static 'images/3453096h800.webp' %}" alt="Card image cap">
+                                    <div style="background: #008185;" class="py-2 px-2">
+                                        <h2 class="title" style="color: #fff;">
+                                            <em style="color:#ccc;font-style: normal;">The home house</em>
+                                            They made it with 100 pallets, in Córdoba, to use between trips
+                                        </h2>
                                     </div>
                                 </div>
                             </a>
@@ -320,7 +417,8 @@
                     </div>
 
                 </section>
-                <section id="section-itmayinterestyou-news">
+                <!------------------It may interest you section---------------------->
+                <section id="section-itmayinterestyou-news" class="mt-5">
                     <div class="row">
                         <div class="col ">
                             <div class="article-header">
@@ -332,27 +430,36 @@
                         </div>
                     </div>
                     <div class="row">
+                        {% for interest in interest %}
                         <div class="col-md-4 col-sm-12">
-                            <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                                <div class="card small-image">
-                                    <div class="card-body py-md-3 px-0 px-sm-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                                        <h2 class="title">
-                                            <em class="highlight">Massive and mandatory. </em>
-                                            The vaccination plan that the Government plans at the end of the year
-                                        </h2>
-                                        <strong class="author" title="By Jaime Rosemberg ">
-                                            By Jaime Rosemberg
-                                        </strong>
+                            <a href="#" title="{{interest.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with interest.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{interest.title}}</em>
+                                        {{interest.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{interest.reporter}}">
+                                        {{interest.reporter}}
+                                    </strong>
 
-                                    </div>
                                 </div>
                             </a>
                         </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
                     </div>
 
                 </section>
-                
+
             </div>
             <div class="col-lg-3 sidebar_aside">
 
@@ -361,7 +468,7 @@
 
     </div>
 </section>
-<section id="section-the-most-read">
+<section id="section-the-most-read" class="mt-5">
     <div class="container-fluid px-lg-5 px-md-2 px-sm-0 px-0">
         <div class="row">
             <div class="col ">
@@ -374,23 +481,32 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-12">
-                <a href="#" title="The vaccination plan that the Government plans at the end of the year">
-                    <div class="card small-image">
-                        <div class="card-body py-md-3 px-0 px-sm-0">
-                            <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
-                            <h2 class="title">
-                                <em class="highlight">Massive and mandatory. </em>
-                                The vaccination plan that the Government plans at the end of the year
-                            </h2>
-                            <strong class="author" title="By Jaime Rosemberg ">
-                                By Jaime Rosemberg
-                            </strong>
+            {% for most_read in most_read %}
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#" title="{{most_read.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with most_read.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+                                        <em class="highlight">{{most_read.title}}</em>
+                                        {{most_read.sub_title}}
+                                    </h2>
+                                    <strong class="author px-2 px-md-0" title="{{most_read.reporter}}">
+                                        {{most_read.reporter}}
+                                    </strong>
 
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                </a>
-            </div>
+                        
+                        {% if forloop.counter|divisibleby:"6" %}
+                            </div>
+                            <hr class="hide767">
+                            <div class="row">
+                        {% endif %}
+                            
+                        {% endfor %}
         </div>
         <div class="row">
             <div class="col">
@@ -398,13 +514,15 @@
                     <div class="card small-image">
                         <div class="card-body py-md-3 px-0 px-sm-0">
                             <img class="card-img-top" src="{% static 'images/3452987h850.webp' %}" alt="Card image cap">
-                            <div style="position: absolute;background: #006998;color:#fff;width: 100px;left:1rem;bottom: 7rem;padding:2px 4px;">
+                            <div
+                                style="position: absolute;background: #006998;color:#fff;width: 100px;left:1rem;bottom: 7rem;padding:2px 4px;">
                                 Content Lab
                             </div>
-                            <div style="position: absolute;background: #fff;width: 328px;left:1rem;bottom: 2rem;padding: 1rem;">
+                            <div
+                                style="position: absolute;background: #fff;width: 328px;left:1rem;bottom: 2rem;padding: 1rem;">
                                 <h2 class="title">
                                     <em class="highlight">Deco</em>
-                                
+
                                     What's new in partitions
                                 </h2>
                             </div>
@@ -419,7 +537,7 @@
     <div class="container-fluid px-lg-5 px-md-2 px-sm-0 px-0">
         <div class="row">
             <div class="col-lg-9">
-                <section id="section-politics">
+                <section id="section-politics" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -434,7 +552,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-0 px-sm-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
                                             <em class="highlight">Massive and mandatory. </em>
                                             The vaccination plan that the Government plans at the end of the year
@@ -442,7 +561,7 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-            
+
                                     </div>
                                 </div>
                             </a>
@@ -450,7 +569,7 @@
                     </div>
                     <hr class="hide767">
                 </section>
-                <section id="section-business-community">
+                <section id="section-business-community" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -479,7 +598,8 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}"
+                                            alt="recent">
                                     </div>
 
                                 </div>
@@ -538,7 +658,7 @@
                     </div>
                     <hr class="hide767">
                 </section>
-                <section id="section-shows">
+                <section id="section-shows" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -567,7 +687,8 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}"
+                                            alt="recent">
                                     </div>
 
                                 </div>
@@ -630,7 +751,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
                                             <em class="highlight">Massive and mandatory. </em>
                                             The vaccination plan that the Government plans at the end of the year
@@ -647,7 +769,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
                                             <em class="highlight">Massive and mandatory. </em>
                                             The vaccination plan that the Government plans at the end of the year
@@ -663,7 +786,7 @@
                     </div>
                     <hr class="hide767">
                 </section>
-                <section id="section-sports">
+                <section id="section-sports" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -692,7 +815,8 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}"
+                                            alt="recent">
                                     </div>
 
                                 </div>
@@ -751,7 +875,7 @@
                     </div>
                     <hr class="hide767">
                 </section>
-                <section id="section-podcasts">
+                <section id="section-podcasts" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -780,7 +904,8 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}"
+                                            alt="recent">
                                     </div>
 
                                 </div>
@@ -839,7 +964,7 @@
                     </div>
                     <hr class="hide767">
                 </section>
-                <section id="section-lifestyle">
+                <section id="section-lifestyle" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -868,7 +993,8 @@
                                         <strong class="author" title="By Jaime Rosemberg ">
                                             By Jaime Rosemberg
                                         </strong>
-                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}" alt="recent">
+                                        <img class="card-img-bottom mt-4" src="{% static 'images/recent-1.webp' %}"
+                                            alt="recent">
                                     </div>
 
                                 </div>
@@ -931,7 +1057,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
                                             <em class="highlight">Massive and mandatory. </em>
                                             The vaccination plan that the Government plans at the end of the year
@@ -946,7 +1073,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="section-hashtag">
+                <section id="section-hashtag" class="mt-5">
                     <div class="row">
                         <div class="col">
                             <div class="article-header">
@@ -959,7 +1086,8 @@
                             <a href="#" title="The vaccination plan that the Government plans at the end of the year">
                                 <div class="card small-image">
                                     <div class="card-body py-md-3 px-sm-0 px-0">
-                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}" alt="Card image cap">
+                                        <img class="card-img-top" src="{% static 'images/3449885h186.webp' %}"
+                                            alt="Card image cap">
                                         <h2 class="title">
                                             <em class="highlight">Massive and mandatory. </em>
                                             The vaccination plan that the Government plans at the end of the year
@@ -984,108 +1112,107 @@
 {% endblock container %}
 
 {% block footer %}
-    <div class="row hide767">
-       <div class="col">
-            <ul style="font-weight: 700;">
-                <li>
-                    <a class="shadeblue" href="#">Last News  </a>
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Politics</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Economy</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">The world</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Society</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Opinion</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">sports</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Lifestyle</a>
-                    
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Shows</a>
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Print edition</a>
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">LN+</a>
-                    
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Club LA NACION</a>
-                     
-                </li>
-            </ul>
-        </div>
+<div class="row hide767">
+    <div class="col">
+        <ul style="font-weight: 700;">
+            <li>
+                <a class="shadeblue" href="#">Last News </a>
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Politics</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Economy</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">The world</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Society</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Opinion</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">sports</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Lifestyle</a>
+
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Shows</a>
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Print edition</a>
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">LN+</a>
+
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Club LA NACION</a>
+
+            </li>
+        </ul>
     </div>
-    <div class="row">
-        <div class="col">
-            <ul>
-                <li>
-                    Wine Club: 
-                    <a href="#" class="shadeblue">Bon Vivir</a>
-                </li>
-                <li>
-                    Shipments:
-                    <a href="#" class="shadeblue">HOP</a>
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Collections</a>
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Master in journalism</a>
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">LA NACION Foundation</a>
-                </li>
-                <li>
-                    <a href="#" class="shadeblue">Solidarity notices </a>
-                </li>
-            </ul>
-        </div>
+</div>
+<div class="row">
+    <div class="col">
+        <ul>
+            <li>
+                Wine Club:
+                <a href="#" class="shadeblue">Bon Vivir</a>
+            </li>
+            <li>
+                Shipments:
+                <a href="#" class="shadeblue">HOP</a>
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Collections</a>
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Master in journalism</a>
+            </li>
+            <li>
+                <a href="#" class="shadeblue">LA NACION Foundation</a>
+            </li>
+            <li>
+                <a href="#" class="shadeblue">Solidarity notices </a>
+            </li>
+        </ul>
     </div>
-    <div class="row hide767">
-        <div class="col">
-            <ul>
-                <li>Journals</li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">AWESOME!</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">HELLO!</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">ROLLING STONE</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">LIVING</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">BRANDO</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">YARD</a></li>
-                <li class="text-uppercases"><a href="#" class="shadeblue">PLACES</a></li>
-            </ul>
-            
-        </div>
+</div>
+<div class="row hide767">
+    <div class="col">
+        <ul>
+            <li>Journals</li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">AWESOME!</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">HELLO!</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">ROLLING STONE</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">LIVING</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">BRANDO</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">YARD</a></li>
+            <li class="text-uppercases"><a href="#" class="shadeblue">PLACES</a></li>
+        </ul>
+
     </div>
-    <hr class="hide767">
+</div>
+<hr class="hide767">
 {% endblock footer %}
-    

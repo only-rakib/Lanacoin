@@ -43,51 +43,86 @@ a.shadeblue:hover{
   padding-bottom: 180px;
 }
 
-.sidepanel ul li a {
+.sidepanel ul li a.items {
   /*padding: 8px 8px 8px 32px;*/
   border-bottom: 0;
   padding-top: .8125rem;
   padding-bottom: .8125rem;
   text-decoration: none;
   font-size: 14px;
-  color: black;
-  display: block;
-  width: calc(100% - 50px);
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
   color: #000;
   padding-left: 1.25rem;
   transition: all .2s ease-in-out;
-  
+  display: inline-block;
+  width: 50%;
 }
-.sidepanel ul li .button-item
-{
-  height: 2.5rem;
-  border: 0;
 
-  background: transparent;
-  z-index: 3;
-  width: 3.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sidepanel ul li{
+  cursor: pointer;
+}
+
+.sidepanel ul li i
+{
+  
+  padding-top:.8125rem;
+  padding-bottom:.8125rem;
+  padding-right: 1rem;
+  margin-left: 100px;
+  display: inline-block;
   
 }
-.sidepanel ul li a:hover {
-  color: #0074c4;
-  text-decoration: underline;
-}
-.sidepanel .topside-section a{
-  text-decoration: none;
-  padding: .8125rem 0px .8125rem 1.25rem;
-}
-.sidepanel ul li
+
+.sidepanel ul li.dropright
 {
   color:#000;
   font-size: 16px;
   font-weight: 600;
+  display: block;
 }
+.sidepanel ul li.dropright:hover {
+  color: #0074c4;
+  background: rgb(238, 237, 237);
+}
+.sidepanel ul li.dropright:hover .dropdown-menu{
+  display: block;
+}
+.sidepanel ul li.dropright:hover a.items {
+  color: #0074c4;
+  text-decoration: underline;
+}
+
+.sidepanel .dropdown-menu ul li{
+  padding: 10px;
+}
+.sidepanel .dropdown-menu ul li:hover{
+  color: #0074c4;
+  background: rgb(238, 237, 237);
+}
+
+.sidepanel .dropdown-menu ul li a{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  padding-left: 1.25rem;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+}
+.sidepanel .dropdown-menu ul li:hover a{
+  /*padding-top: 0px;
+  padding-bottom: 0px;*/
+  color: #0074c4;
+  text-decoration: underline;
+  background: rgb(238, 237, 237);
+}
+
+.sidepanel .topside-section a{
+  text-decoration: none;
+  padding: .8125rem 0px .8125rem 1.25rem;
+}
+
 .sidepanel .closebtn {
   position: absolute;
   top: -5px;
@@ -110,30 +145,7 @@ a.shadeblue:hover{
   color: #006998 !important;
   letter-spacing: 3px;
 }
-.sidepanel .dropright .btnr
-{
-  width: 250px;
-  border: none;
-  box-shadow: none;
-}
-.sidepanel .dropright .dropdown-menu
-{
-  position: absolute;
-  left: 250px;
-  border: none;
-  box-shadow: none;
-}
-.sidepanel .dropdown-menu .hasOptions
-{
-  position: absolute;
-  top:0px;
-  left:180px;
-  border:none;
-}
-.sidepanel .dropdown-menu .dropdown-submenu:hover .hasOptions
-{
-  display: block;
-}
+
 
 #overlay {
   position: fixed;
@@ -384,14 +396,14 @@ a h3.title:hover{
 {
   border:1px solid #ccc;
 }
- .big-image .card-body .title .highlight,.small-image .card-body .title .highlight
+em.highlight
 {
   transition: all .2s ease-in-out;
   color: #0074c4;
   font-style: normal;
   
 }
- a:hover .big-image .card-body .title .highlight,a:hover .small-image .card-body .title .highlight
+ a:hover em.highlight
 {
   color: #318ECE;
 }
@@ -430,7 +442,14 @@ a h3.title:hover{
   
 }
 
-
+#section-editorials ul li
+{
+  font-family: 'Roboto Slab', serif;
+  display: inline list-item;
+  padding-right: 1rem;
+  list-style-type: disc;
+  
+}
 /*Footer****************************************/
 
 
