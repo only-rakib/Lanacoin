@@ -217,3 +217,14 @@ line-height: 30px;
   text-align: center;
   box-shadow: 1px 1px 0 #999;
 }
+.img_hover-e img {
+  
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.img_hover-e:hover img {
+  filter: brightness(1.1);
+}
+a:hover.img_hover-e img {
+  filter: brightness(1.1);
+}

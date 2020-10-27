@@ -49,7 +49,7 @@
         </ul>
       </div>
       <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto lanacoin_logo_header" href="#">LA NACOIN</a>
+        <a class="navbar-brand mx-auto lanacoin_logo_header" href="{% url 'home' %}">LA NACOIN</a>
       </div>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -80,13 +80,13 @@
             <div class="dropdown-menu">
               <ul>
                 <li title="Transit">
-                  <a href="#">Transit</a>
+                  <a href="{% url 'transit' %}">Transit</a>
                 </li>
                 <li title="Weather">
-                  <a href="#">Weather</a>
+                  <a href="https://servicios.lanacion.com.ar/pronostico-del-tiempo">Weather</a>
                 </li>
                 <li title="LN DATA">
-                  <a href="#">LN DATA</a>
+                  <a href="{% url 'data' %}">LN DATA</a>
                 </li>
               </ul>
               
@@ -101,16 +101,16 @@
             <div class="dropdown-menu">
               <ul>
                 <li title="Dollar today">
-                  <a href="#">Dollar today </a>
+                  <a href="{% url 'dollar_today' %}">Dollar today </a>
                 </li>
                 <li title="Countryside">
                   <a href="#">Countryside </a>
                 </li>
                 <li title="Properties">
-                  <a href="#">Properties </a>
+                  <a href="{% url 'properties' %}">Properties </a>
                 </li>
                 <li title="Foreign trade">
-                  <a href="#">Foreign trade </a>
+                  <a href="{% url 'foregin_trade' %}">Foreign trade </a>
                 </li>
                 <li title="Autos">
                   <a href="#">Autos </a>
@@ -279,7 +279,7 @@
     
   <section>
     <footer>
-      <div class="container-fluid px-lg-5 px-md-3">
+      <div class="container-fluid px-lg-5 px-md-3 mt-4">
         <div class="row">
           <div class="col-md-4 col-sm-12 order-md-1 order-2 text-center text-md-left pt-3">
             <a href="https://www.facebook.com/lanacion"><i class="icons fab fa-facebook-f"></i></a>

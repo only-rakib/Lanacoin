@@ -1,0 +1,340 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<style>
+
+.com-anexo_dolar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 12px;
+    background: #5f5f5f;
+    border-radius: 3px;
+    border: solid 1px #dedede;
+}
+
+.com-anexo_dolar div {
+    margin: 16px 0;
+    color: #fff;
+    padding-left: 8px;
+}
+.com-anexo_dolar div:first-child {
+    grid-area: 1 / 1 / span 2 / span 3 ;
+    margin-bottom: 0;
+}
+.com-anexo_dolar div:last-child {
+    grid-area: 4 / 1 / span 2 / span 3 ;
+}
+.com-anexo_dolar div:nth-child(2), .com-anexo_dolar div:nth-child(3) {
+    border-right: solid 1px #999;
+}
+.com-anexo_dolar div:last-child {
+    background: #fff;
+    border: solid 1px #dedede;
+    padding: 0;
+    margin:0;
+}
+.com-anexo_dolar div h2 {
+    display: none;
+}
+.com-anexo_dolar div h3 {
+    margin: 0 0 8px 0;
+    display: block;
+    font-size: 12px;
+}
+
+.com-anexo_dolar div:first-child h3 {
+    margin: 0;
+}
+.com-anexo_dolar div p {
+    margin: 0;
+    display: inline-block;
+}
+.com-anexo_dolar div p span {
+    display: none;
+    color: #ccc;
+}
+.com-anexo_dolar div p strong {
+    margin-right: 8px;
+}
+.com-anexo_dolar div p strong:last-child {
+    margin:0;
+}
+.com-anexo_dolar div img {
+    height: 33px;
+    display: block;
+    margin: 4px auto;
+}
+
+@media screen and (min-width:370px) {
+    .com-anexo_dolar div {
+        padding-left: 12px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .com-anexo_dolar {
+        grid-template-columns: 180px 1fr 1fr 1fr 160px;
+    }
+    .com-anexo_dolar div:first-child, .com-anexo_dolar div:last-child {
+        grid-area: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:850px) {
+    .com-anexo_dolar {
+        grid-template-columns: 180px 230px 1fr 1fr 160px;
+    }
+    .com-anexo_dolar div {
+        margin: 16px 0;
+    }
+    .com-anexo_dolar div h3 {
+        display: inline-block;
+        margin: 0 8px 0 0;
+    }
+}
+
+@media screen and (min-width:1110px) {
+
+    .com-anexo_dolar {
+        background: none;
+        border-radius: none;
+        border: none;
+        grid-template-columns: 1fr 1fr 1fr 185px;
+        grid-column-gap: 3px;
+        font-size: 16px;
+    }
+
+    .com-anexo_dolar div {
+        background: #5f5f5f;
+        margin: 0;
+        padding: 18px;
+        border-radius: 3px;
+        border: none;
+    }
+    .com-anexo_dolar div:first-child {
+        display: none;
+    }
+
+    .com-anexo_dolar div h2 {
+        display: block;
+        font: normal normal 17px/20px 'suecaslabbold', sans-serif;
+        margin: 0 0 10px 0;
+    }
+    .com-anexo_dolar div h3 {
+        display: none;
+    }
+    .com-anexo_dolar div p span {
+        display: inline;
+    }
+
+    .com-anexo_dolar div img {
+        height: 38px;
+        margin: 0 auto;
+    }
+
+}
+
+</style>
+<title>Latest News of the Dollar Quote Today, Price of the Dollar on {{date}} - LA NACION</title>
+{% endblock title %}
+{% block container %}
+
+<section class="container-fluid px-lg-5 px-md-3">
+    <section class="com-anexo_dolar">
+        <div>
+            <h3>DOLLAR QUOTE TODAY <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8"><g fill="none" fill-rule="evenodd"><path d="M-3-2H9v12H-3z"></path><path fill="#F2F2F2" d="M5.227 4.396l-3.62 3.44a.612.612 0 0 1-.834 0 .54.54 0 0 1 0-.792L3.976 4 .773.956a.54.54 0 0 1 0-.792.612.612 0 0 1 .834 0l3.62 3.44a.544.544 0 0 1 0 .792z"></path></g></svg></h3>
+        </div>
+        <div>
+            <h2>NATION BANK DOLLAR </h2>
+            <h3>NATIONAL BANK: </h3>
+            <p><span>Buy: Sell </span> <strong id="spanCompra">$ 77.50 </strong> <span>: </span> <strong id="spanVenta">$ 83.50 </strong></p>
+        </div>
+        <div>
+            <h2>DOLLAR BLUE </h2>
+            <h3>BLUE: </h3>
+            <p><span>Buy: </span> <strong id="spanCompraBlue">$ 177.00 </strong> <span>Sale: </span> <strong id="spanVentaBlue">$ 183.00 </strong></p>
+        </div>
+        <div>
+            <h2>DOLLAR CASH WITH LIQUI </h2>
+            <h3>CCL: </h3>
+            <!--<p><span>Compra:</span> <strong id="spanCompraDccl">-</strong> <span>Venta:</span> <strong id="spanVentaDccl">-</strong></p>-->
+            <p><span>Reference: </span> <strong id="spanCompraDccl">$ 118.18 </strong></p>
+        </div>
+        <div class="logo">
+            <a class="" href="https://www.invertironline.com/external/productos?utm_source=lanacion&amp;utm_medium=referral&amp;utm_campaign=cobranding&amp;utm_term=dolar-hoy&amp;utm_content=logo&amp;id_origen=107" target="_blank" rel="nofollow">
+                <img src="{% static 'images/logo-invertir.png' %}" alt="invertirOnline.com ">
+            </a>
+        </div>
+    </section>
+	<div class="row">
+		<div class="col">
+			<div class="row mt-4">
+				<div class="col-12 mt-3 mb-3 sub__heading-politics">
+					<a href="#"> THE NATION | </a><span style="color: gray;"> Dollar today </span>
+				</div>
+				<div class="col-12 heading__main-politics">
+					<h1>Dollar price today </h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-sm-12">
+					<div class="row">
+						<div class="col-xl-7 col-lg-9 col-md-12">
+							<div class="row page__divider-ver">
+								<div class="col-12">
+
+									{% for x in data %}
+
+
+									{% if x.category == "news" %}
+
+									<div class="row mt-3">
+										<div class="card mr-md-4 ml-md-3 ml-0"
+											style="width: 100%; border-color: transparent;  border-bottom: 1px solid #e6e6e6;"
+											title="{{x.title}}">
+											<div class="row no-gutters">
+												<div class="col-md-4 pt-2">
+													<a href="#" class="img_hover-e">
+														{% with x.cover_pic as img %}
+														<img src="{% static img %}" class="card-img w-100" alt="...">
+														{% endwith %}
+													</a>
+												</div>
+												<div class="col-md-8">
+													<div class="card-body">
+														<h5 class="card-title article__heading-politics">
+															<a href="#">
+																{{x.title}}
+															</a>
+														</h5>
+
+														<p class="card-text text-uppercase" style="font-size: 12px;">
+
+															<a href="#">{{x.topic}}</a>
+														</p>
+														<p class="card-text text-uppercase"><small
+																class="text-muted">{{x.date}}</small></p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									{% else %}
+									<div class="card mr-md-4"
+										style="width: 100%; border-color: transparent;  border-bottom: 1px solid #e6e6e6;"
+										title="{{x.title}}">
+										<div class="row mt-3 mb-3">
+											<div class="col-12 col-md-7 order-2 order-md-1 mt-3 mt-md-0">
+												<div class="row">
+													<div class="col-12">
+														<h5 class="card-title article__heading-politics">
+															<a href="#">
+																{{x.title}}
+															</a>
+														</h5>
+													</div>
+													<div class="col-12">
+														<p class="card-text text-uppercase" style="font-size: 12px;"><a
+																href="#">{{x.topic}}</a></p>
+													</div>
+													<div class="col-12">
+														<p class="card-text text-uppercase"><small
+																class="text-muted">{{x.date}}</small></p>
+													</div>
+												</div>
+											</div>
+											{% if x.reporter and x.reporter.strip %}
+											<div class="col-12 col-md-5 order-1 order-md-2">
+												<div class="row">
+
+													<div class="col-5 order-2 order-md-1">
+														{% if x.pro_pic and x.pro_pic.strip %}
+
+														{% with x.pro_pic as img %}
+														<img src="{% static img %}" alt="profile" style="border-radius: 50%;width: 70px;
+															height: 70px;">
+														{% endwith %}
+
+														{% else %}
+
+														<div class="icon_section-politics">
+
+														</div>
+														{% endif %}
+													</div>
+													<div class="col-7 py-3 order-1 order-md-2">
+														<h6><a href="#">{{x.reporter}}</a></h6>
+													</div>
+
+												</div>
+                                            </div>
+                                            {%endif%}
+										</div>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<div class="row">
+										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
+											<a class="btn btn__politics" href="#">SEE MORE NOTES OF Dollar Quote Today, Dollar Price on {{date}} </a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-12 hide1023">
+							<div class="row pt-3 pb-3">
+								<div class="col-12">
+									<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">MOST
+										<strong>READ NOW</strong></h5>
+								</div>
+							</div>
+							<ol class="steps">
+
+								{% for y in more %}
+
+
+
+								<li>
+									<a href="#" class="black bluehover img_hover-e">
+										<div class="card" style="border: none;">
+											<div class="row no-gutters">
+												<div class="col-md-8">
+													<div class="py-2 pl-2 pr-1">
+														<p class="card-text">
+
+															{{y.title}}
+
+														</p>
+													</div>
+												</div>
+												<div class="col-md-4 pt-2">
+
+													{% with y.cover_pic as img %}
+													<img src="{% static img %}" class="card-img w-100" alt="...">
+													{% endwith %}
+
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								{% endfor %}
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-12">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{%endblock container%}
