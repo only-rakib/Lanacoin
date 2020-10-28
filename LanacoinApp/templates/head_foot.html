@@ -27,6 +27,8 @@
 </head>
 
 <body>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="27BO2H6C"></script>
   <section>
     <div id="overlay" onclick="closeNav()"></div>
     <nav class="navbar navbar-expand px-lg-5 px-md-3">
@@ -113,7 +115,7 @@
                   <a href="{% url 'foregin_trade' %}">Foreign trade </a>
                 </li>
                 <li title="Autos">
-                  <a href="#">Autos </a>
+                  <a href="{% url 'autos' %}">Autos </a>
                 </li>
                 <li title="Indices">
                   <a href="#">Indices </a>
@@ -124,6 +126,9 @@
               </ul>
               
             </div>
+          </li>
+          <li class="dropright" title="The World">
+            <a tabindex="-1" href="{% url 'world' %}" class="items">The world</a>
           </li>
           <li class="dropright">
             <a tabindex="-1" href="#" class="items">Society</a>
@@ -160,9 +165,6 @@
               </ul>
               
             </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">The World</a>
           </li>
           <li class="dropright">
             <a tabindex="-1" href="#" class="items">Sports</a>

@@ -33,7 +33,7 @@
 											title="{{x.title}}">
 											<div class="row no-gutters">
 												<div class="col-md-4 pt-2">
-													<a href="#" class="img_hover-e">
+													<a href="{% url 'article' %}" class="img_hover-e">
 														{% with x.cover_pic as img %}
 														<img src="{% static img %}" class="card-img w-100" alt="...">
 														{% endwith %}
@@ -42,7 +42,7 @@
 												<div class="col-md-8">
 													<div class="card-body">
 														<h5 class="card-title article__heading-politics">
-															<a href="#">
+															<a href="{% url 'article' %}">
 																{{x.title}}
 															</a>
 														</h5>

@@ -125,6 +125,10 @@ def home_view(request):
     ]
     return render(request, 'home_page.html', {'top_news': top_news, 'top_news_lower': top_news_lower, 'more_news': top_news_lower, 'other_theme': top_news_lower, 'interest': top_news_lower, 'most_read': top_news_lower})
 
+def article_view(request):
+    today = date.today()
+    d2 = today.strftime("%B %d")
+    return render(request, 'post_inside.html', {'data': lst, 'more': more,'date':d2})
 
 def politics_view(request):
 
@@ -203,3 +207,9 @@ def economy_foregin_trade_view(request):
     today = date.today()
     d2 = today.strftime("%B %d")
     return render(request, 'foregin_trade.html', {'data': lst, 'more': more,'date':d2})
+
+def economy_autos_view(request):
+    return render(request, 'autos.html', {'data': lst, 'more': more,})
+def the_world_view(request):
+    return render(request, 'world.html', {'data': lst, 'more': more,})
+
