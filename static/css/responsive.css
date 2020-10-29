@@ -64,5 +64,9 @@
     {
         height:auto !important;
     }
+    .margin_t
+    {
+        margin-top: .5rem;
+    }
     
 }

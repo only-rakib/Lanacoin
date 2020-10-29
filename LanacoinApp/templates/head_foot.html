@@ -31,7 +31,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="27BO2H6C"></script>
   <section>
     <div id="overlay" onclick="closeNav()"></div>
-    <nav class="navbar navbar-expand px-lg-5 px-md-3">
+    <nav class="navbar navbar-expand px-lg-5 px-md-3 smart-scroll" style="background: #fff;">
       <div class="w-100 order-1 order-md-0 dual-collapse2 hide767">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -68,209 +68,202 @@
       </div>
 
 
-      <div id="mySidepanel" class="sidepanel">
-        <div class="topside-section">
-          <a href="javascript:void(0)" style="float: left;font-size: 26px;" class="side-logo">LA COIN</a>
-          <a href="javascript:void(0)" style="float: right;" class="closebtn" onclick="closeNav()">×</a>
-        </div>
-        
-        <hr class="mt-5 mb-0">
-        <ul>
-          <li class="dropright" title="Last News">
-            <a tabindex="-1" href="#" class="items">Last News</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li title="Transit">
-                  <a href="{% url 'transit' %}">Transit</a>
-                </li>
-                <li title="Weather">
-                  <a href="https://servicios.lanacion.com.ar/pronostico-del-tiempo">Weather</a>
-                </li>
-                <li title="LN DATA">
-                  <a href="{% url 'data' %}">LN DATA</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright" title="Politics">
-            <a tabindex="-1" href="{% url 'politics' %}" class="items">Politics</a>
-          </li>
-          <li class="dropright" title="Economy">
-            <a tabindex="-1" href="#" class="items">Economy</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li title="Dollar today">
-                  <a href="{% url 'dollar_today' %}">Dollar today </a>
-                </li>
-                <li title="Countryside">
-                  <a href="#">Countryside </a>
-                </li>
-                <li title="Properties">
-                  <a href="{% url 'properties' %}">Properties </a>
-                </li>
-                <li title="Foreign trade">
-                  <a href="{% url 'foregin_trade' %}">Foreign trade </a>
-                </li>
-                <li title="Autos">
-                  <a href="{% url 'autos' %}">Autos </a>
-                </li>
-                <li title="Indices">
-                  <a href="#">Indices </a>
-                </li>
-                <li title="Profit calculator">
-                  <a href="#">Profit calculator </a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright" title="The World">
-            <a tabindex="-1" href="{% url 'world' %}" class="items">The world</a>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">Society</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">Opinion</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">Sports</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">Lifestyle</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items">Shows</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <hr class="my-0">
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items text-black-50">Print edition</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items text-black-50">Journals</a>
-            <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <div class="dropdown-menu">
-              <ul>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-                <li>
-                  <a href="#">aasdas</a>
-                </li>
-              </ul>
-              
-            </div>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items text-black-50">LN+</a>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items text-black-50">LA NACOIN kiosk</a>
-          </li>
-          <li class="dropright">
-            <a tabindex="-1" href="#" class="items text-black-50">Club LA NACOIN</a>
-          </li>
-        </ul>
-
-      </div>
+      <!--side panel-->
 
     </nav>
+    <div id="mySidepanel" class="sidepanel">
+      <div class="topside-section">
+        <a href="javascript:void(0)" style="float: left;font-size: 26px;" class="side-logo">LA COIN</a>
+        <a href="javascript:void(0)" style="float: right;" class="closebtn" onclick="closeNav()">×</a>
+      </div>
+      
+      <hr class="mt-5 mb-0">
+      <ul>
+        <li class="dropright" title="Last News">
+          <a tabindex="-1" href="#" class="items">Last News</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li title="Transit">
+                <a href="{% url 'transit' %}">Transit</a>
+              </li>
+              <li title="Weather">
+                <a href="https://servicios.lanacion.com.ar/pronostico-del-tiempo">Weather</a>
+              </li>
+              <li title="LN DATA">
+                <a href="{% url 'data' %}">LN DATA</a>
+              </li>
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright" title="Politics">
+          <a tabindex="-1" href="{% url 'politics' %}" class="items">Politics</a>
+        </li>
+        <li class="dropright" title="Economy">
+          <a tabindex="-1" href="#" class="items">Economy</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li title="Dollar today">
+                <a href="{% url 'dollar_today' %}">Dollar today </a>
+              </li>
+              <li title="Countryside">
+                <a href="#">Countryside </a>
+              </li>
+              <li title="Properties">
+                <a href="{% url 'properties' %}">Properties </a>
+              </li>
+              <li title="Foreign trade">
+                <a href="{% url 'foregin_trade' %}">Foreign trade </a>
+              </li>
+              <li title="Autos">
+                <a href="{% url 'autos' %}">Autos </a>
+              </li>
+              <li title="Indices">
+                <a href="#">Indices </a>
+              </li>
+              <li title="Profit calculator">
+                <a href="#">Profit calculator </a>
+              </li>
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright" title="The World">
+          <a tabindex="-1" href="{% url 'world' %}" class="items" title="The world">The world</a>
+        </li>
+        <li class="dropright" title="Society">
+          <a tabindex="-1" href="#" class="items" >Society</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" style="  transform: translateY(-50%);">
+            <ul>
+              <li><a href="{% url 'buenos_aires' %}" title="Buenos Aires ">Buenos Aires </a></li>
+              <li><a href="{% url 'security' %}" title="Security">Security </a></li>
+              <li><a href="{% url 'education' %}" title="Education">Education </a></li>
+              <li><a href="{% url 'culture' %}" title="Culture">Culture </a></li>
+              <li><a href="#" title="Community">Community </a></li>
+              <li><a href="{% url 'health' %}" title="Health">Health </a></li>
+              <li><a href="{% url 'science' %}" title="Science">Science </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropright" title="Opinion">
+          <a tabindex="-1" href="#" class="items">Opinion</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="#"  title="">aasdas</a>
+              </li>
+              <li>
+                <a href="{% url 'editorial' %}" title="Editorial">Editorial</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright">
+          <a tabindex="-1" href="#" class="items">Sports</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="{% url 'football' %}" title="Football">Football</a>
+              </li>
+              <li>
+                <a href="{% url 'rugby' %}" title="Rugby">Rugby</a>
+              </li>
+              <li>
+                <a href="{% url 'tennis' %}" title="Tennis">Tennis</a>
+              </li>
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright">
+          <a tabindex="-1" href="#" class="items">Lifestyle</a>
+          <i class="fas fa-chevron-right"></i>
+          <div class="dropdown-menu" style="  transform: translateY(-50%);">
+            <ul>
+              <li><a href="{% url 'fashion' %}" title="Fashion and beauty ">Fashion and beauty </a></li>
+              <li><a href="{% url 'tourism' %}" title="tourism ">tourism </a></li>
+              <li><a href="{% url 'technology' %}" title="Technology ">Technology </a></li>
+              <li><a href="#" title="Horoscope ">Horoscope </a></li>
+              <li><a href="#" title="Holidays ">Holidays </a></li>
+              <li><a href="https://servicios.lanacion.com.ar/loterias" title="Lottery and pools ">Lottery and pools </a></li>
+              <li><a href="https://recetas.lanacion.com.ar/recetas/" title="Cooking and recipes " >Cooking and recipes </a></li>
+              <li><a href="#" title="Podcasts " >Podcasts </a></li>
+              <li><a href="#" title="Sudoku ">Sudoku </a></li>
+
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright">
+          <a tabindex="-1" href="#" class="items">Shows</a>
+          <i class="fas fa-chevron-right"></i>
+          <div class="dropdown-menu">
+            <ul>
+              <li>
+                <a href="#">aasdas</a>
+              </li>
+              <li>
+                <a href="#">aasdas</a>
+              </li>
+              <li>
+                <a href="#">aasdas</a>
+              </li>
+            </ul>
+            
+          </div>
+        </li>
+        <hr class="my-0">
+        <li class="dropright" title="Print edition">
+          <a tabindex="-1" href="#" class="items text-black-50">Print edition</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  data-offset="boundary"></i>
+          <div class="dropdown-menu" style="  transform: translateY(-50%);">
+            <ul>
+              <li><a href="{% url 'magazine' %}" title="LA NACION Magazine ">LA NACION Magazine </a></li>
+              <li><a href="{% url 'saturday' %}" title="Saturday ">Saturday </a></li>
+              <li><a href="{% url 'ideas' %}" title="Ideas ">Ideas </a></li>
+              <li><a href="{% url 'editorial' %}" title="Editorials ">Editorials </a></li>
+              <li><a href="{% url 'readers_letter' %}" title="Readers letter ">Readers letter </a></li>
+              <li><a href="#" title="Humor ">Humor </a></li>
+              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-funebres" title="Funeral notices ">Funeral notices </a></li>
+              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-sociales" title="Social notices ">Social notices </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropright" title="Journals">
+          <a tabindex="-1" href="#" class="items text-black-50">Journals</a>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" style="  transform: translateY(-50%);">
+            <ul class="sublist__nav">
+              <li><a href="#" title="REPORTED! ">REPORTED! </a></li>
+              <li><a href="#" title="HI! ">HI! </a></li>
+              <li><a href="#" title="Rolling Stone ">Rolling Stone </a></li>
+              <li><a href="#" title="places ">places </a></li>
+              <li><a href="#" title="Living ">Living </a></li>
+              <li><a href="#" title="Brando ">Brando </a></li>
+              <li><a href="#" title="Yard ">Yard </a></li>
+            </ul>
+            
+          </div>
+        </li>
+        <li class="dropright" title="LN+">
+          <a tabindex="-1" href="https://lnmas.lanacion.com.ar/" class="items text-black-50">LN+</a>
+        </li>
+        <li class="dropright" title="LA NACOIN kiosk">
+          <a tabindex="-1" href="https://pdf.lanacion.com.ar/" class="items text-black-50">LA NACOIN kiosk</a>
+        </li>
+        <li class="dropright" title="Club LA NACOIN">
+          <a tabindex="-1" href="https://club.lanacion.com.ar/" class="items text-black-50">Club LA NACOIN</a>
+        </li>
+      </ul>
+
+    </div>
     <hr class="my-0">
 
   </section>
@@ -424,7 +417,24 @@
       </div>
     </footer>
   </section>
+  <script>
+    $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
 
+// detect scroll top or down
+if ($('.smart-scroll').length > 0) { // check if element exists
+    var last_scroll_top = 0;
+    $(window).on('scroll', function() {
+        scroll_top = $(this).scrollTop();
+        if(scroll_top < last_scroll_top) {
+            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+        }
+        else {
+            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+        }
+        last_scroll_top = scroll_top;
+    });
+}
+  </script>
 </body>
 
 </html>

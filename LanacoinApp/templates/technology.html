@@ -1,7 +1,7 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-<title>Latest news from LA NACOIN Data - LA NACION</title>
+<title>Latest Technology news - LA NACION</title>
 {% endblock title %}
 {% block container %}
 <section class="container-fluid px-lg-5 px-md-3 margin_t">
@@ -9,41 +9,13 @@
         <div class="col">
             <div class="row">
                 <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-                    <a href="#"> THE NATION </a>| <span style="color: gray;">LA NACION Data</span>
+                    <a href="#"> THE NATION </a>| <span style="color: gray;">Technology</span>
                 </div>
                 <div class="col-12 heading__main-politics">
-                    <h1>LA NACION Data </h1>
+                    <h1>Technology</h1>
                 </div>
             </div>
-            <div class="row my-3">
-                {% for i in cards %}               
-                <div class="col-md-6 col-12">
-                    <div class="card" style="box-shadow: -1px 6px 40px 4px rgba(0,0,0,.2);height: 100%;">
-                        <a title="{{i.title}}" href="#" class="img_hover-e figure" style="background: #E6E6E6;height: 407px;">
-                            <img class="d-flex justify-content-center align-items-center card-img-top"
-                                
-                                {% with i.cover_pic as img %}
-                                src="{% static img %}" style="height: auto;" alt="">
-                                {% endwith %}
-                                    
-                        </a>
-                        <div class="card-body">
-                            <a title="{{i.title}}" href="#" class="black bluehover">
-                                <h4 class="card-title" style="font-family: suecaslabmedium,Georgia">
-                                    {{i.title}}
-                                </h4>
-                            </a>
-                            <p class="card-text text-uppercase" style="font-size: 12px;">
-
-                                <a href="#">{{i.topic}}</a>
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
+            
             <div class="row mt-0 mt-md-4">
                 <div class="col-9">
                     <div class="row">
@@ -72,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
-                            <a class="btn btn__politics" href="#">SEE MORE from the nation data</a>
+                            <a class="btn btn__politics" href="#">SEE MORE Technology Notes</a>
                         </div>
                     </div>
                 </div>

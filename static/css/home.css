@@ -32,11 +32,15 @@ a.shadeblue
 a.shadeblue:hover{
   color:#318ECE;
 }
+.margin_t
+{
+  margin-top: 2rem;
+}
 /*Header*****************************************/
 .sidepanel {
   width: 0;
   position: absolute;
-  z-index: 2;
+  z-index: 1000;
   height: 100vh;
   top: 0;
   left: 0;
@@ -76,6 +80,11 @@ a.shadeblue:hover{
   
 }
 
+.sidepanel .dropdown-menu
+{
+  min-width: 12rem;
+
+}
 .sidepanel ul li.dropright
 {
   color:#000;
@@ -83,14 +92,14 @@ a.shadeblue:hover{
   font-weight: 600;
   display: block;
 }
-.sidepanel ul li.dropright:hover {
+.sidepanel ul li.dropright:hover{
   color: #0074c4;
   background: rgb(238, 237, 237);
 }
 .sidepanel ul li.dropright:hover .dropdown-menu{
   display: block;
 }
-.sidepanel ul li.dropright:hover a.items {
+.sidepanel ul li.dropright:hover a.items{
   color: #0074c4;
   text-decoration: underline;
 }
@@ -161,7 +170,7 @@ a.shadeblue:hover{
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -263,6 +272,19 @@ form.com-search input[type=text] {
     background: #328FCF;
     color: #fff;
   }
+  .smart-scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .scrolled-down{
+     transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+     transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
 /***********************HomePage****************************************/
 
 
@@ -331,7 +353,6 @@ form.com-search input[type=text] {
 }
 #sub-header .Newsletters a
 {
-  
   color: #0074c4;
 }
 #sub-header .Newsletters a:hover,.club a:hover
@@ -350,7 +371,7 @@ border-right: 1px solid #d9d9d9;
 
 }
 
- .card .big-image img
+.card .big-image img
 {
   transition: all .2s ease-in-out;
   filter: brightness(1.1);

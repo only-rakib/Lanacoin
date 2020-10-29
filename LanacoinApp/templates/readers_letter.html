@@ -1,0 +1,112 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Latest  news from letter from Readers- LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+	<div class="row">
+		<div class="col">
+			<div class="row">
+				<div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+					<a href="#"> THE NATION | </a><a href="#">Opinion |</a> <span style="color: gray;">Readers Letter </span>
+				</div>
+				<div class="col-12 heading__main-politics">
+					<h1>Readers Letter  </h1>
+					<p class="text-center">
+						Send your message to <a href="mailto:letters@lanacion.com.ar">letters@lanacion.com.ar</a> or by mail to: Av. Libertador 101, Vicente López - Buenos Aires - Argentina. CP: B1638BEA. 
+					</p>
+				</div>
+			</div>
+			<div class="row margin_t">
+				<div class="col-md-10 col-sm-12">
+					<div class="row">
+						<div class="col-xl-7 col-lg-9 col-md-12">
+							<div class="row page__divider-ver">
+								<div class="col-12">
+
+									{% for x in data %}
+
+									<div class="row mt-3">
+										<div class="card mr-md-4"
+											style="width: 100%; border-color: transparent;  border-bottom: 1px solid #e6e6e6;"
+											title="{{x.title}}">
+											<div class="row no-gutters">
+												
+												<div class="col-12">
+													<div class="card-body">
+														<h5 class="card-title article__heading-politics">
+															<a href="{% url 'article' %}">
+																{{x.title}}
+															</a>
+														</h5>
+														<p class="card-text text-uppercase"><small
+																class="text-muted">{{x.date}}</small></p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									
+									{% endfor %}
+									<div class="row">
+										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
+											<a class="btn btn__politics" href="#">SEE MORE NOTES FROM Letter from Readers </a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-12 hide1023">
+							<div class="row pt-3 pb-3">
+								<div class="col-12">
+									<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">Most
+										<strong>read now</strong></h5>
+								</div>
+							</div>
+							<ol class="steps">
+
+								{% for y in more %}
+
+
+
+								<li>
+									<a href="#" class="black bluehover img_hover-e">
+										<div class="card" style="border: none;">
+											<div class="row no-gutters">
+												<div class="col-md-8">
+													<div class="py-2 pl-2 pr-1">
+														<p class="card-text">
+
+															{{y.title}}
+
+														</p>
+													</div>
+												</div>
+												<div class="col-md-4 pt-2">
+
+													{% with y.cover_pic as img %}
+													<img src="{% static img %}" class="card-img w-100" alt="...">
+													{% endwith %}
+
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								{% endfor %}
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 col-sm-12">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{%endblock container%}

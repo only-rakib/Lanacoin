@@ -1,7 +1,7 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-<title>Latest news from El Mundo - LA NACION </title>
+<title>Latest Editorials  news - LA NACION </title>
 {% endblock title %}
 {% block container %}
 <section class="container-fluid px-lg-5 px-md-3 margin_t">
@@ -9,10 +9,10 @@
 		<div class="col">
 			<div class="row">
 				<div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-					<a href="#"> THE NATION | </a><span style="color: gray;">The world</span>
+					<a href="#"> THE NATION | </a><span style="color: gray;">Editorials </span>
 				</div>
 				<div class="col-12 heading__main-politics">
-					<h1>The world </h1>
+					<h1>Editorials </h1>
 				</div>
 			</div>
 			<div class="row margin_t">
@@ -24,22 +24,13 @@
 
 									{% for x in data %}
 
-
-									{% if x.category == "news" %}
-
 									<div class="row mt-3">
-										<div class="card mr-md-4 ml-md-3 ml-0"
+										<div class="card mr-md-4"
 											style="width: 100%; border-color: transparent;  border-bottom: 1px solid #e6e6e6;"
 											title="{{x.title}}">
 											<div class="row no-gutters">
-												<div class="col-md-4 pt-2">
-													<a href="{% url 'article' %}" class="img_hover-e">
-														{% with x.cover_pic as img %}
-														<img src="{% static img %}" class="card-img w-100" alt="...">
-														{% endwith %}
-													</a>
-												</div>
-												<div class="col-md-8">
+												
+												<div class="col-12">
 													<div class="card-body">
 														<h5 class="card-title article__heading-politics">
 															<a href="{% url 'article' %}">
@@ -48,7 +39,7 @@
 														</h5>
 
 														<p class="card-text text-uppercase" style="font-size: 12px;">
-
+ margin_t
 															<a href="#">{{x.topic}}</a>
 														</p>
 														<p class="card-text text-uppercase"><small
@@ -60,63 +51,11 @@
 
 									</div>
 
-									{% else %}
-									<div class="card mr-md-4"
-										style="width: 100%; border-color: transparent;  border-bottom: 1px solid #e6e6e6;"
-										title="{{x.title}}">
-										<div class="row mt-3 mb-3">
-											<div class="col-12 col-md-7 order-2 order-md-1 mt-3 mt-md-0">
-												<div class="row">
-													<div class="col-12">
-														<h5 class="card-title article__heading-politics">
-															<a href="#">
-																{{x.title}}
-															</a>
-														</h5>
-													</div>
-													<div class="col-12">
-														<p class="card-text text-uppercase" style="font-size: 12px;"><a
-																href="#">{{x.topic}}</a></p>
-													</div>
-													<div class="col-12">
-														<p class="card-text text-uppercase"><small
-																class="text-muted">{{x.date}}</small></p>
-													</div>
-												</div>
-											</div>
-											{% if x.reporter and x.reporter.strip %}
-											<div class="col-12 col-md-5 order-1 order-md-2">
-												<div class="row">
-
-													<div class="col-5 order-2 order-md-1">
-														{% if x.pro_pic and x.pro_pic.strip %}
-
-														{% with x.pro_pic as img %}
-														<img src="{% static img %}" alt="profile" style="border-radius: 50%;width: 70px;
-															height: 70px;">
-														{% endwith %}
-
-														{% else %}
-
-														<div class="icon_section-politics">
-
-														</div>
-														{% endif %}
-													</div>
-													<div class="col-7 py-3 order-1 order-md-2">
-														<h6><a href="#">{{x.reporter}}</a></h6>
-													</div>
-
-												</div>
-                                            </div>
-                                            {%endif%}
-										</div>
-									</div>
-									{% endif %}
+									
 									{% endfor %}
 									<div class="row">
 										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
-											<a class="btn btn__politics" href="#">SEE MORE NOTES FROM El Mundo </a>
+											<a class="btn btn__politics" href="#">SEE MORE Editorials  NOTES   </a>
 										</div>
 									</div>
 								</div>
