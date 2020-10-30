@@ -217,6 +217,10 @@ def economy_dollar_today_view(request):
     return render(request, 'dollar_today.html', {'data': lst, 'more': more, 'date': d2})
 
 
+def economy_field_view(request):
+    return render(request, 'field.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
 def economy_properties_view(request):
     today = date.today()
     d2 = today.strftime("%B %d")
@@ -231,6 +235,74 @@ def economy_foregin_trade_view(request):
 
 def economy_autos_view(request):
     return render(request, 'autos.html', {'data': lst, 'more': more, })
+
+
+def economy_indices_view(request):
+
+    table_data = [
+        {
+            'table_name': 'Argentina Indices',
+
+            'data1': [
+                {
+                    'company_name': 'Merval',
+                    'country': 'argentina',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '-0.75%',
+                    'date_time': '30.10 - 12:36',
+                },
+                {
+                    'company_name': 'Merval',
+                    'country': 'espana',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '0.00%',
+                    'date_time': '30.10 - 12:36',
+                },
+                {
+                    'company_name': 'Merval',
+                    'country': 'espana',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '0.75%',
+                    'date_time': '30.10 - 12:36',
+                }
+            ]
+        },
+        {
+            'table_name': 'Europe Indices',
+
+            'data1': [
+                {
+                    'company_name': 'Merval',
+                    'country': 'argentina',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '-0.75%',
+                    'date_time': '30.10 - 12:36',
+                },
+                {
+                    'company_name': 'Merval',
+                    'country': 'espana',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '0.00%',
+                    'date_time': '30.10 - 12:36',
+                },
+                {
+                    'company_name': 'Merval',
+                    'country': 'espana',
+                    'last': '1415554552',
+                    'previous': '445255414',
+                    'variation': '0.75%',
+                    'date_time': '30.10 - 12:36',
+                }
+            ]
+        },
+    ]
+
+    return render(request, 'indices.html', {'data': table_data})
 
 
 def the_world_view(request):
@@ -288,13 +360,18 @@ def lifestyle_tourism_view(request):
 def lifestyle_technology_view(request):
     return render(request, 'technology.html', {'data': lsst, 'more': moore})
 
+
 def print_edition_magazine_view(request):
     return render(request, 'magazine.html', {'data': lst, 'more': more})
 
+
 def print_edition_saturday_view(request):
     return render(request, 'saturday.html', {'data': lst, 'more': more})
+
+
 def print_edition_ideas_view(request):
     return render(request, 'ideas.html', {'data': lst, 'more': more})
+
 
 def print_edition_readers_letter_view(request):
     return render(request, 'readers_letter.html', {'data': lst, 'more': more})

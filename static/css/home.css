@@ -39,7 +39,7 @@ a.shadeblue:hover{
 /*Header*****************************************/
 .sidepanel {
   width: 0;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   height: 100vh;
   top: 0;
@@ -473,6 +473,73 @@ em.highlight
   display: inline list-item;
   padding-right: 1rem;
   list-style-type: disc;
+  
+}
+
+/***Indices**********************************************/
+
+.sec-table tbody
+{
+  font-size: 12px;
+
+}
+.sec-table thead tr
+{
+  color: #6f6f6f;
+  font-size: 11px;
+  line-height: 12px;
+
+}
+.sec-table .country_name:before
+{
+  content: "";
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 19px;
+  height: 11px;
+  margin-left: 0;
+}
+.sec-table .country_name.argentina:before
+{
+  background-image: url("/static/images/ARGENTINA.gif");
+}
+.sec-table .country_name.espana:before
+{
+  background-image: url("/static/images/ESPANA.gif");
+}
+
+.sec-table .variation.up:before
+{
+  content: "\f063";
+  margin-right: 3px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: rotate(180deg);
+  display: inline-block;
+  
+  color: #6c9b4a;
+  
+}
+.sec-table .variation.down:before
+{
+  content: "\f063";
+  margin-right: 3px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: none;
+  display: inline-block;
+  
+  color: #bf3939;
   
 }
 /*Footer****************************************/

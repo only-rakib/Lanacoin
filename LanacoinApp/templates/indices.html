@@ -1,0 +1,62 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Indices - THE NATION</title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+    <div class="row">
+        <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+            <a href="#"> THE NATION | </a><span style="color: gray;">Indices </span>
+        </div>
+        <div class="col-12 heading__main-politics">
+            <h1>Indices </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+
+            {% for x in data %}
+            <div class="border border-dark p-3 sec-table mt-5">
+                <table class="table table-striped table-borderless">
+                    <thead>
+                        <strong class="p-3 text-uppercase" title="{{x.table_name}}">{{x.table_name}}</strong>
+                        <tr class="text-uppercase">
+                            <th scope="col">Description</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">previous </th>
+                            <th scope="col">variation</th>
+                            <th scope="col">date / time </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {% for y in x.data1 %} 
+                        <tr>
+                            <td class="country_name {{y.country}}"><a href="#">{{y.company_name}}</a></td>
+                            <td>{{y.last}}</td>
+                            <td>{{y.previous}}</td>
+                            {% if "-" in y.variation %}
+                            <td class="variation down">{{y.variation}}</td> 
+                            {% else %}
+                            <td class="variation up">{{y.variation}}</td> 
+                            {% endif %}
+
+                            <td>{{y.date_time}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-3">
+
+        </div>
+        <div class="col-3 hide767">
+
+        </div>
+    </div>
+</section>
+{%endblock container%}
