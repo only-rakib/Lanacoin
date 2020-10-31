@@ -263,3 +263,42 @@ a:hover.img_hover-e img {
 #sticky {
   max-width: 19.4rem;
 }
+
+/*profile card*/
+
+.line_top{
+	font-family: suecaslabmedium,Georgia,"serif";
+	font-size: 11px;
+	border-top: 3px solid #000;
+	min-width: 100px;
+	display: inline-block;
+	padding-top: 10px !important;
+}
+.card_text{
+	font-size: 16px;
+	text-transform: none;
+	transition: .2s ease;
+	padding-bottom: 10px !important;
+}
+.card_link{
+	font-family: Arial;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.card__image{
+	padding:0 5px;
+}
+.custom_hover{
+	height: 100px; width: 100px; background-color: #e6e3d8; border-color: transparent!important;
+}
+.custom_hover-img:hover{
+	background-color: #fff;
+}
+
+.top__tex-px{
+	color: gray;
+}
+.top__tex-bx h2{
+	font-family: suecaslabmedium,Georgia,"serif";
+	font-size: 35px;
+}

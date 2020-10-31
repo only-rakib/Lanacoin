@@ -336,6 +336,51 @@ def society_science_view(request):
 def opinion_editorial_view(request):
     return render(request, 'editorial.html', {'data': lst, 'more': more, })
 
+def opinion_columnists_view(request):
+    columnists=[
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+        {
+            'name':'Joaquín Morales Solá',
+            'pro_pic':'images/3207350w90.webp',
+        },
+    ]
+    return render(request, 'columnists.html', {'data':columnists,})
+
 
 def sports_football_view(request):
     return render(request, 'football.html', {'data': lst, 'more': more, })

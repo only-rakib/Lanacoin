@@ -20,6 +20,7 @@ urlpatterns = [
     path('health/',views.society_health_view,name="health"),
     path('science/',views.society_science_view,name="science"),
     path('editorial/',views.opinion_editorial_view,name="editorial"),
+    path('columnists/',views.opinion_columnists_view,name="columnists"),
     path('football/',views.sports_football_view,name="football"),
     path('rugby/',views.sports_rugby_view,name="rugby"),
     path('tennis/',views.sports_tennis_view,name="tennis"),

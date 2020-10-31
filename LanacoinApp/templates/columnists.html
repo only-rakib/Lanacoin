@@ -1,0 +1,51 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>All Columnists - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+	<div class="row">
+		<div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+			<a href="#"> THE NATION | </a><span style="color: gray;">All columnists </span>
+		</div>
+		<div class="col-12 heading__main-politics">
+			<h1>All columnists </h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-md-8">
+			<div class="row">
+		
+				{% for x in data %}
+				<div class="col-lg-3 col-md-4 col-sm-6 col-6 pt-2">
+					<div class="card border">
+						<div class="card-body text-center pt-0">
+							<h3 class="line_top"></h3>
+							<h2 class="card_text"><a href="#" style="color: #000;">{{x.name}}</a>
+							</h2>
+							<a class="card_link" href="#">SEE NOTES </a>
+							<div class="pt-1"></div>
+							<a class="card__image" href="#">
+								<div class="rounded-circle m-auto custom_hover">
+									<div class="image__bacground">
+										
+										{% with x.pro_pic as img %}
+										<img class="rounded-circle custom_hover-img" src="{% static img %}" alt="Bologna">
+										{% endwith %}
+											
+									</div>
+								</div>
+								<div class="pb-3"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+		
+			</div>
+		</div>
+		<div class="col-4 d-none d-md-block"></div>
+	</div>
+</section>
+{% endblock container %}
