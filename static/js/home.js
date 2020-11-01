@@ -12,5 +12,14 @@ function closeNav() {
   window.removeEventListener('scroll', noScroll)
 }
 function noScroll() {
+  
   window.scrollTo(0, 0)
+}
+function color_change(clr)
+{
+  if(clr==="")
+  {
+    clr="white";
+  }
+  $(".smart-scroll").css("background-color", clr);
 }

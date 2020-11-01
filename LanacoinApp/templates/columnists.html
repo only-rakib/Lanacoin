@@ -22,11 +22,11 @@
 					<div class="card border">
 						<div class="card-body text-center pt-0">
 							<h3 class="line_top"></h3>
-							<h2 class="card_text"><a href="#" style="color: #000;">{{x.name}}</a>
+							<h2 class="card_text"><a href="{% url 'author' %}" style="color: #000;">{{x.name}}</a>
 							</h2>
-							<a class="card_link" href="#">SEE NOTES </a>
+							<a class="card_link" href="{% url 'author' %}">SEE NOTES </a>
 							<div class="pt-1"></div>
-							<a class="card__image" href="#">
+							<a class="card__image" href="{% url 'author' %}">
 								<div class="rounded-circle m-auto custom_hover">
 									<div class="image__bacground">
 										

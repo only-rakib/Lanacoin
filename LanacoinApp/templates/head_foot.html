@@ -19,19 +19,20 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
   <script src="{% static 'js/home.js' %}"></script>
-  
+
   {% block title %}
-    
+
   {% endblock title %}
-    
+
 </head>
 
 <body>
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="27BO2H6C"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0"
+    nonce="27BO2H6C"></script>
   <section>
     <div id="overlay" onclick="closeNav()"></div>
-    <nav class="navbar navbar-expand px-lg-5 px-md-3 smart-scroll" style="background: #fff;">
+    <nav class="navbar navbar-expand px-lg-5 px-md-3 smart-scroll">
       <div class="w-100 order-1 order-md-0 dual-collapse2 hide767">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
@@ -76,7 +77,7 @@
         <a href="javascript:void(0)" style="float: left;font-size: 26px;" class="side-logo">LA COIN</a>
         <a href="javascript:void(0)" style="float: right;" class="closebtn" onclick="closeNav()">×</a>
       </div>
-      
+
       <hr class="mt-5 mb-0">
       <ul>
         <li class="dropright" title="Last News">
@@ -94,7 +95,7 @@
                 <a href="{% url 'data' %}">LN DATA</a>
               </li>
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright" title="Politics">
@@ -127,14 +128,14 @@
                 <a href="#">Profit calculator </a>
               </li>
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright" title="The World">
           <a tabindex="-1" href="{% url 'world' %}" class="items" title="The world">The world</a>
         </li>
         <li class="dropright" title="Society">
-          <a tabindex="-1" href="#" class="items" >Society</a>
+          <a tabindex="-1" href="#" class="items">Society</a>
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul>
@@ -154,14 +155,14 @@
           <div class="dropdown-menu">
             <ul>
               <li>
-                <a href="{% url 'columnists' %}"  title="">Columnists</a>
+                <a href="{% url 'columnists' %}" title="">Columnists</a>
               </li>
               <li>
                 <a href="{% url 'editorial' %}" title="Editorial">Editorial</a>
               </li>
-              
+
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright">
@@ -179,7 +180,7 @@
                 <a href="{% url 'tennis' %}" title="Tennis">Tennis</a>
               </li>
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright">
@@ -192,13 +193,15 @@
               <li><a href="{% url 'technology' %}" title="Technology ">Technology </a></li>
               <li><a href="#" title="Horoscope ">Horoscope </a></li>
               <li><a href="#" title="Holidays ">Holidays </a></li>
-              <li><a href="https://servicios.lanacion.com.ar/loterias" title="Lottery and pools ">Lottery and pools </a></li>
-              <li><a href="https://recetas.lanacion.com.ar/recetas/" title="Cooking and recipes " >Cooking and recipes </a></li>
-              <li><a href="#" title="Podcasts " >Podcasts </a></li>
+              <li><a href="https://servicios.lanacion.com.ar/loterias" title="Lottery and pools ">Lottery and pools </a>
+              </li>
+              <li><a href="https://recetas.lanacion.com.ar/recetas/" title="Cooking and recipes ">Cooking and recipes
+                </a></li>
+              <li><a href="#" title="Podcasts ">Podcasts </a></li>
               <li><a href="#" title="Sudoku ">Sudoku </a></li>
 
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright">
@@ -216,13 +219,14 @@
                 <a href="#">aasdas</a>
               </li>
             </ul>
-            
+
           </div>
         </li>
         <hr class="my-0">
         <li class="dropright" title="Print edition">
           <a tabindex="-1" href="#" class="items text-black-50">Print edition</a>
-          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  data-offset="boundary"></i>
+          <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            data-offset="boundary"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul>
               <li><a href="{% url 'magazine' %}" title="LA NACION Magazine ">LA NACION Magazine </a></li>
@@ -230,9 +234,11 @@
               <li><a href="{% url 'ideas' %}" title="Ideas ">Ideas </a></li>
               <li><a href="{% url 'editorial' %}" title="Editorials ">Editorials </a></li>
               <li><a href="{% url 'readers_letter' %}" title="Readers letter ">Readers letter </a></li>
-              <li><a href="#" title="Humor ">Humor </a></li>
-              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-funebres" title="Funeral notices ">Funeral notices </a></li>
-              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-sociales" title="Social notices ">Social notices </a></li>
+              <li><a href="{% url 'humor' %}" title="Humor ">Humor </a></li>
+              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-funebres"
+                  title="Funeral notices ">Funeral notices </a></li>
+              <li><a href="http://servicios.lanacion.com.ar/edicion-impresa/avisos-sociales"
+                  title="Social notices ">Social notices </a></li>
             </ul>
           </div>
         </li>
@@ -249,7 +255,7 @@
               <li><a href="#" title="Brando ">Brando </a></li>
               <li><a href="#" title="Yard ">Yard </a></li>
             </ul>
-            
+
           </div>
         </li>
         <li class="dropright" title="LN+">
@@ -267,11 +273,11 @@
     <hr class="my-0">
 
   </section>
-  
+
   {% block container %}
-    
+
   {% endblock container %}
-    
+
   <section>
     <footer>
       <div class="container-fluid px-lg-5 px-md-3 mt-4">
@@ -383,11 +389,11 @@
           </div>
         </div>
         <hr class="hide767" style="display: block;">
-        
+
         {% block footer %}
-          
+
         {% endblock footer %}
-          
+
         <div class="row">
           <div class="col-8 text-left hide1023">
             <a style="padding-left: 0px;" class="footer-link" href="#">Site Map</a>
@@ -420,20 +426,27 @@
   <script>
     $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
 
-// detect scroll top or down
-if ($('.smart-scroll').length > 0) { // check if element exists
-    var last_scroll_top = 0;
-    $(window).on('scroll', function() {
+    // detect scroll top or down
+    if ($('.smart-scroll').length > 0) { // check if element exists
+      var last_scroll_top = 0;
+      $(window).on('scroll', function () {
         scroll_top = $(this).scrollTop();
-        if(scroll_top < last_scroll_top) {
-            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+        //console.log(scroll_top + " " + last_scroll_top);
+        if (scroll_top == 0) {
+          //color_change("");
         }
+        else if (scroll_top < last_scroll_top) {
+          $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+          $(".smart-scroll").css("background-color", "white");
+        }
+
         else {
-            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+          $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+          $(".smart-scroll").css("background-color", "white");
         }
         last_scroll_top = scroll_top;
-    });
-}
+      });
+    }
   </script>
 </body>
 

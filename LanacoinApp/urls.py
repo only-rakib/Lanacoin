@@ -31,6 +31,8 @@ urlpatterns = [
     path('saturday/',views.print_edition_saturday_view,name="saturday"),
     path('ideas/',views.print_edition_ideas_view,name="ideas"),
     path('readers-letter/',views.print_edition_readers_letter_view,name="readers_letter"),
+    path('humor/',views.print_edition_humor_view,name="humor"),
     
     path('article/',views.article_view,name="article"),
+    path('author/',views.author_view,name="author"),
 ]

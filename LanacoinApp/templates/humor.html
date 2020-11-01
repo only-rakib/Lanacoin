@@ -1,0 +1,155 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Humor and jokes - LA NACION </title>
+{% endblock title %}
+{% block container %}.
+<section class="container-fluid px-lg-5 px-md-3 ">
+    <div class="row">
+        <div class="col">
+            <div class="row margin_t">
+                <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                    <a href="#"> THE NATION | </a><span style="color: gray;">Humor and jokes </span>
+                </div>
+                <div class="col-12 heading__main-politics">
+                    <h1>Humor and jokes </h1>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-md-6">
+
+                    {% for x in jokes %}
+                    <div class="row">
+                        {% if x.img1 and x.img1.strip and x.img2 and x.img2.strip %}
+                        <div class="col-12 col-md-6 mb-5">
+                            <div class="card">
+                                <div class="d-inline">
+                                    <h2 class="title d-inline text-uppercase">{{x.title}}</h2>
+                                    <span role="button" class="shadeblue d-inline text-uppercase ml-2 font-weight-bold"
+                                        data-toggle="modal" data-target=".bd-example-modal-lg">{{x.author}}</span>
+                                </div>
+                                <div class="card-body border border-dark p-1">
+                                    {% with x.img1 as img1 %}
+                                    <img class="card-img-bottom" src="{% static img1 %}" alt="Card image cap">
+                                    {% endwith %}
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-5">
+                            <div class="card">
+                                <div class="d-inline">
+                                    <h2 class="title d-inline text-uppercase">{{x.title}}</h2>
+                                    <span role="button" class="shadeblue d-inline text-uppercase ml-2 font-weight-bold"
+                                        data-toggle="modal" data-target=".bd-example-modal-lg">{{x.author}}</span>
+                                </div>
+                                <div class="card-body border border-dark p-1">
+                                    {% with x.img2 as img2 %}
+                                    <img class="card-img-bottom" src="{% static img2 %}" alt="Card image cap">
+                                    {% endwith %}
+                                </div>
+
+                            </div>
+                        </div>
+                        {% else %}
+
+                        {% if x.img1 and x.img1.strip %}
+                        <div class="col mb-5">
+                            <div class="card">
+                                <div class="d-inline">
+                                    <h2 class="title d-inline text-uppercase">{{x.title}}</h2>
+                                    <span role="button" class="shadeblue d-inline text-uppercase ml-2 font-weight-bold"
+                                        data-toggle="modal" data-target=".bd-example-modal-lg">{{x.author}}</span>
+                                </div>
+                                <div class="card-body border border-dark p-1">
+                                    {% with x.img1 as img1 %}
+                                    <img class="card-img-bottom " src="{% static img1 %}" alt="Card image cap">
+                                    {% endwith %}
+                                </div>
+
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="col mb-5">
+                            <div class="card">
+                                <div class="d-inline">
+                                    <h2 class="title d-inline text-uppercase">{{x.title}}</h2>
+                                    <span role="button" class="shadeblue d-inline text-uppercase ml-2 font-weight-bold"
+                                        data-toggle="modal" data-target=".bd-example-modal-lg">{{x.author}}</span>
+                                </div>
+                                <div class="card-body border border-dark p-1">
+                                    {% with x.img2 as img2 %}
+                                    <img class="card-img-bottom" src="{% static img2 %}" alt="Card image cap">
+                                    {% endwith %}
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endif %}
+
+
+                        {% endif %}
+
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------------------------------Modaaaaaaaaaaaaaaaal-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="border: none;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div style="width: 110px;">
+                                            {% with data.pro_pic as img %}
+                                            <img style="border-radius: 50%;width: 100px;height: 100px;"
+                                                src="{% static img %}" alt="{{data.name}}">
+                                            {% endwith %}
+                                        </div>
+                                        <div style="margin-left: 130px;margin-top: -88px;">
+                                            <span style="font-family: suecaslabmedium,Georgia">
+                                                <h2 class="m-0 title">{{data.nick_name}}</h2>
+                                                <h6>{{data.name}}</h6>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5rem;">
+                                    <div class="col" style="font-family: Arial,sans-serif">
+                                        Email: <a href="mailto:nik@gaturro.com">nik@gaturro.com</a><br>
+                                        Website: <a href="http://www.gaturro.com ">http://www.gaturro.com </a>
+                                    </div>
+                                </div>
+                                <div class="row margin_t">
+                                    <div class="col bio" style="font-size: 14px; font-family: Arial;line-height: 1;font-size: 100%;">
+                                        <p>
+                                            {{data.bio}}
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock container %}

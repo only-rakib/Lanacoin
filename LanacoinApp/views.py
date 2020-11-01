@@ -336,50 +336,51 @@ def society_science_view(request):
 def opinion_editorial_view(request):
     return render(request, 'editorial.html', {'data': lst, 'more': more, })
 
+
 def opinion_columnists_view(request):
-    columnists=[
+    columnists = [
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
         {
-            'name':'Joaquín Morales Solá',
-            'pro_pic':'images/3207350w90.webp',
+            'name': 'Joaquín Morales Solá',
+            'pro_pic': 'images/3207350w90.webp',
         },
     ]
-    return render(request, 'columnists.html', {'data':columnists,})
+    return render(request, 'columnists.html', {'data': columnists, })
 
 
 def sports_football_view(request):
@@ -420,3 +421,80 @@ def print_edition_ideas_view(request):
 
 def print_edition_readers_letter_view(request):
     return render(request, 'readers_letter.html', {'data': lst, 'more': more})
+
+
+def print_edition_humor_view(request):
+    joke = [
+        {
+            'title': 'Gaturro',
+            'author': 'by Liniers ',
+            'img1': 'images/3275561h134.jpg',
+            'img2': 'images/3275561h134.jpg',
+
+        },
+        {
+            'title': 'Gaturro',
+            'author': 'by Liniers ',
+            'img1': 'images/3275561h134.jpg',
+            'img2': '',
+
+        },
+        {
+            'title': 'Gaturro',
+            'author': 'by Liniers ',
+            'img1': '',
+            'img2': 'images/3275561h134.jpg',
+
+        },
+    ]
+    personal_data = {
+        'nick_name': 'Nik',
+        'name': 'Cristian The bell',
+        'pro_pic': 'images/3275561h134.jpg',
+        'bio': '''WHO IS NIK?
+
+                    Cristian Dzwonik, Nik, was born in Buenos Aires 49 years ago. He is a graduate of the National College of Buenos Aires and a Graphic Designer received from the UBA. He also completed studies in advertising, computer graphics and digital photomontage.
+
+                    From the age of 12 he studied at the Carlos Garaycochea drawing school and began to work regularly as a graphic humorist at the age of 17 in Muy Interesante magazine. His first cartoons of political humor were published in the newspaper El Cronista Comercial. At 22 he joined LA NACION and since then he has worked as a current graphic humorist in various sections.
+
+                    Since October 1992 the political joke of the main body accompanies the daily readers of the newspaper. In April 1994, "La Foto que Habla" began to be published. Around the same time, Nik's humor reaches La Revista del Domingo, a page that received numerous international awards.
+
+                    In 1996 Gaturro, Agatha, Gaturrin, Mamurra, Gatulongo and the whole feline family took shape in the daily strip of the Last Page of LA NACION. From there, the elusive pussycat walks through the office, tries to win over his "amigovia" Agatha, tries to study "Brutish English" at school or educates his nephew Gaturrín.
+
+                    Gaturro's strip already reaps a legion of fans of all ages and from various countries, thanks to the internet.
+
+                    At the beginning of 1997, LANACION.com added Nik's humorous page to its edition, where you can find all the jokes from the newspaper, wallpapers and unpublished drawings.
+                Cristian Dzwonik, Nik, was born in Buenos Aires 49 years ago. He is a graduate of the National College of Buenos Aires and a Graphic Designer received from the UBA. He also completed studies in advertising, computer graphics and digital photomontage.
+
+                    From the age of 12 he studied at the Carlos Garaycochea drawing school and began to work regularly as a graphic humorist at the age of 17 in Muy Interesante magazine. His first cartoons of political humor were published in the newspaper El Cronista Comercial. At 22 he joined LA NACION and since then he has worked as a current graphic humorist in various sections.
+
+                    Since October 1992 the political joke of the main body accompanies the daily readers of the newspaper. In April 1994, "La Foto que Habla" began to be published. Around the same time, Nik's humor reaches La Revista del Domingo, a page that received numerous international awards.
+
+                    In 1996 Gaturro, Agatha, Gaturrin, Mamurra, Gatulongo and the whole feline family took shape in the daily strip of the Last Page of LA NACION. From there, the elusive pussycat walks through the office, tries to win over his "amigovia" Agatha, tries to study "Brutish English" at school or educates his nephew Gaturrín.
+
+                    Gaturro's strip already reaps a legion of fans of all ages and from various countries, thanks to the internet.
+
+                    At the beginning of 1997, LANACION.com added Nik's humorous page to its edition
+        ''',
+    }
+    return render(request, 'humor.html', {'jokes': joke, 'data': personal_data})
+
+
+def author_view(request):
+    personal_data = {
+        'name': 'Joaquin Morales Solá',
+        'pro_pic': 'images/3275561h134.jpg',
+        'bio': '''He has practiced journalism since he was 16 years old when he joined the newspaper 
+        La Gaceta de Tucumán. In 1975, Clarín summoned him to be deputy secretary of the Political section. 
+        For 12 years he was second editor in chief and author of the Sunday political column of that 
+        newspaper. He was a political columnist for the Telefé newscast and Bernardo Neustadt's 
+        "Tiempo Nuevo" program. During 1997, he hosted "Dos en la noticias" together with Magdalena 
+        Ruiz Guiñazú, on the former Channel 9. Currently, he is a political columnist for the newspaper 
+        LA NACION. In 1990, the Italian government awarded him the Order of Merit of the Italian Republic. 
+        Later, in 1992, Spain distinguished him with the Order of Isabel la Católica. In 1998, he received 
+        the National Order of Merit awarded by the Republic of France. In his latest book, "Sin excusas" 
+        (South American), Morales Solá reveals dialogues with former vice president Chacho Alvarez, about 
+        the secret plot of bribery in the Senate,
+        the causes of his resignation and the errors that led to the failure of the Alliance . ''',
+    }
+    return render(request, 'post_inside_info.html', {'bio_data': personal_data, 'data': lst, 'more': more})
