@@ -17,7 +17,7 @@
         <div class="col-12 col-md-6">
 
             {% for x in data %}
-            <div class="border border-dark p-3 sec-table mt-5">
+            <div class="border p-3 sec-table mt-5 table-responsive">
                 <table class="table table-striped table-borderless">
                     <thead>
                         <strong class="p-3 text-uppercase" title="{{x.table_name}}">{{x.table_name}}</strong>
@@ -30,16 +30,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
-                        {% for y in x.data1 %} 
+
+                        {% for y in x.data1 %}
                         <tr>
                             <td class="country_name {{y.country}}"><a href="#">{{y.company_name}}</a></td>
                             <td>{{y.last}}</td>
                             <td>{{y.previous}}</td>
                             {% if "-" in y.variation %}
-                            <td class="variation down">{{y.variation}}</td> 
+                            <td class="variation down">{{y.variation}}</td>
                             {% else %}
-                            <td class="variation up">{{y.variation}}</td> 
+                            <td class="variation up">{{y.variation}}</td>
                             {% endif %}
 
                             <td>{{y.date_time}}</td>
@@ -51,10 +51,73 @@
             {% endfor %}
 
         </div>
-        <div class="col-3">
+        <div class="col-3 d-none d-xl-block">
+            <div class="border  mt-5">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr style="background-color: #F0F0F0;" class="border">
+                            <td colspan="2">
+                                <a href="https://www.invertironline.com/external/productos?utm_source=lanacion&utm_medium=referral&utm_campaign=cobranding&utm_term=divisas&utm_content=logo&id_origen=107">
 
+                                    <span style="color: #6f6f6f;">Provided by:</span>
+                                    <span class="img-logo logo-invertir"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 15px;line-height: 20px;min-height: 20px;height: 20px;">
+                        <tr>
+                            <td colspan="2" class="text-uppercase">
+                                Indicators <strong>Economic</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="economics-indicator">
+                                <a href="{% url 'dollar_today' %}" class="shadeblue"><strong>Dollar price today </strong></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Bonds </a>
+                            </td>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Choices </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Indices </a>
+                            </td>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Merval 25  </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Merval </a>
+                            </td>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Burcap </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Merval Argentina </a>
+                            </td>
+                            <td class="economics-indicator">
+                                <a href="{%url 'indices'%}" class="shadeblue">Foreign exchange </a>
+                            </td>
+
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="col-3 hide767">
+        <div class="col-3 d-none d-md-block">
 
         </div>
     </div>
