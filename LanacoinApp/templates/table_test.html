@@ -1,0 +1,50 @@
+{% load static %}
+<div id="table-scroll" class="table-scroll">
+    <div class="table-wrap">
+        <table class="main-table sortable">
+            <thead>
+
+                <tr>
+                    <th class="fixed-side" scope="col">Pos.</th>
+                    <th class="fixed-side" scope="col" style="pointer-events: none;"> </th>
+                    <th class="fixed-side" scope="col" style="pointer-events: none;"> </th>
+                    <th scope="col">Pts</th>
+                    <th scope="col" style="pointer-events: none;">PJ</th>
+                    <th scope="col">G</th>
+                    <th scope="col">E</th>
+                    <th scope="col">P</th>
+                    <th scope="col">DG</th>
+                    <th scope="col">Pr.</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for x in data %}
+                <tr>
+                    <td class="fixed-side">{{x.id}}</td>
+                    <td class="fixed-side">
+
+                        {% with x.flag as flag %}
+                        <img src="{% static flag %}" alt="">
+                        {% endwith %}
+                    </td>
+                    <td class="fixed-side">{{x.name}}</a></td>
+                    <td>{{x.pts}}</td>
+                    <td>{{x.pj}}</td>
+                    <td>{{x.g}}</td>
+                    <td>{{x.e}}</td>
+                    <td>{{x.p}}</td>
+                    <td>{{x.dg}}</td>
+                    <td>Cell content</td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');
+    });
+</script>

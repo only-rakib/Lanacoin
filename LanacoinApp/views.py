@@ -387,6 +387,58 @@ def sports_football_view(request):
     return render(request, 'football.html', {'data': lst, 'more': more, })
 
 
+def sports_statistics_view(request):
+    sp_data = [
+        {
+            'id': 1,
+            'flag': 'images/Paris Saint Germain.png',
+                    'name': 'Paris Saint Germain',
+                    'pts': 14,
+                    'pj': 6,
+                    'g': 2,
+                    'e': 1,
+                    'p': 3,
+                    'dg': 15,
+        },
+
+        {
+            'id': 2,
+            'flag': 'images/Real Madrid .png',
+                    'name': 'Real Madrid ',
+                    'pts': 15,
+                    'pj': 6,
+                    'g': 8,
+                    'e': 1,
+                    'p': 4,
+                    'dg': 15,
+
+        },
+        {
+            'id': 3,
+            'flag': 'images/Club Brugge.png',
+                    'name': 'Club Brugge ',
+                    'pts': 12,
+                    'pj': 6,
+                    'g': 5,
+                    'e': 1,
+                    'p': 2,
+                    'dg': 15,
+        },
+        {
+            'id': 4,
+            'flag': 'images/Galatasaray.png',
+                    'name': 'Galatasaray ',
+                    'pts': 10,
+                    'pj': 6,
+                    'g': 2,
+                    'e': 1,
+                    'p': 1,
+                    'dg': 15,
+        },
+    ]
+    return render(request, 'statistics.html', {'data': sp_data, })
+
+
 def sports_rugby_view(request):
     return render(request, 'rugby.html', {'data': lst, 'more': more, })
 

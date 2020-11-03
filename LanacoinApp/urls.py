@@ -22,6 +22,7 @@ urlpatterns = [
     path('editorial/',views.opinion_editorial_view,name="editorial"),
     path('columnists/',views.opinion_columnists_view,name="columnists"),
     path('football/',views.sports_football_view,name="football"),
+    path('statistics/',views.sports_statistics_view,name="statistics"),
     path('rugby/',views.sports_rugby_view,name="rugby"),
     path('tennis/',views.sports_tennis_view,name="tennis"),
     path('fashion/',views.lifestyle_fashion_view,name="fashion"),

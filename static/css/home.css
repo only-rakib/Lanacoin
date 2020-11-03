@@ -285,6 +285,18 @@ form.com-search input[type=text] {
   .scrolled-up{
      transform:translateY(0); transition: all 0.3s ease-in-out;
   }
+  
+  .content {
+    /* This is the magic bit for Firefox */
+    overflow-x: visible;
+    scrollbar-width: none;
+  }
+  
+  .content::-webkit-scrollbar {
+    /* This is the magic bit for WebKit */
+    display: none;
+  }
+  
 /***********************HomePage****************************************/
 
 

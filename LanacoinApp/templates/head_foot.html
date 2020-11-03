@@ -33,7 +33,7 @@
   <section>
     <div id="overlay" onclick="closeNav()"></div>
     <nav class="navbar navbar-expand px-lg-5 px-md-3 smart-scroll">
-      <div class="w-100 order-1 order-md-0 dual-collapse2 hide767">
+      <div class="w-100 order-1 order-md-0 dual-collapse2 hide767" >
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <button class="btn" type="button" onclick="openNav()">
@@ -52,7 +52,7 @@
         </ul>
       </div>
       <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto lanacoin_logo_header" href="{% url 'home' %}">LA NACOIN</a>
+        <a class="navbar-brand mx-auto lanacoin_logo_header"  href="{% url 'home' %}">LA NACOIN</a>
       </div>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -172,6 +172,12 @@
             <ul>
               <li>
                 <a href="{% url 'football' %}" title="Football">Football</a>
+              </li>
+              <li>
+                <a href="{% url 'statistics' %}" title="Fixture">Fixture</a>
+              </li>
+              <li>
+                <a href="{% url 'statistics' %}" title="Positions">Positions</a>
               </li>
               <li>
                 <a href="{% url 'rugby' %}" title="Rugby">Rugby</a>

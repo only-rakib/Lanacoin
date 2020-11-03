@@ -1,0 +1,173 @@
+<div class="table-wrapper">
+    <table id="table">
+        
+    </table>
+
+    <script>
+        var $table = $('#table')
+
+        function buildTable($el) {
+            var cells = +$('#cells').val()
+            var rows = +$('#rows').val()
+            var i
+            var j
+            var row
+            var columns = [
+                {
+                    field: 'id',
+                    title: 'Pos.',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0',
+                    width: 20,
+                },
+                {
+                    field: 'flag',
+                    title: '',
+                    sortable: false,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+                    width: 30,
+
+                },
+                {
+                    field: 'name',
+                    title: '',
+                    
+                    sortable: false,
+                    valign: 'middle',
+                    class: 'border-left-0',
+
+                },
+                {
+                    field: 'pts',
+                    title: 'Pts',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0',
+
+                },
+                {
+                    field: 'pj',
+                    title: 'PJ',
+                    sortable: false,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+
+                },
+                {
+                    field: 'g',
+                    title: 'G',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+
+                },
+                {
+                    field: 'e',
+                    title: 'E',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+
+                },
+                {
+                    field: 'p',
+                    title: 'P',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+
+                },
+                {
+                    field: 'dg',
+                    title: 'DG',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-right-0 border-left-0',
+
+                },
+                {
+                    field: 'pr',
+                    title: 'Pr.',
+                    sortable: true,
+                    valign: 'middle',
+                    class: 'border-left-0',
+
+                },
+            ]
+            var data = []
+
+
+            var data = [
+                {
+                    'id': 1,
+                    'flag':'<img src="/static/images/Paris Saint Germain.png">',
+                    'name': 'Paris Saint Germain',
+                    'pts': 16,
+                    'pj': 6,
+                    'g':5,
+                    'e':1,
+                    'p':0,
+                    'dg':15,
+                },
+                
+                {
+                    'id': 2,
+                    'flag':'<img src="/static/images/Real Madrid .png">',
+                    'name': 'Real Madrid ',
+                    'pts': 16,
+                    'pj': 6,
+                    'g':5,
+                    'e':1,
+                    'p':0,
+                    'dg':15,
+
+                },
+                {
+                    'id': 3,
+                    'flag':'<img src="/static/images/Club Brugge.png">',
+                    'name': 'Club Brugge ',
+                    'pts': 16,
+                    'pj': 6,
+                    'g':5,
+                    'e':1,
+                    'p':0,
+                    'dg':15,
+                },
+                {
+                    'id': 4,
+                    'flag':'<img src="/static/images/Galatasaray.png">',
+                    'name': 'Galatasaray ',
+                    'pts': 16,
+                    'pj': 6,
+                    'g':5,
+                    'e':1,
+                    'p':0,
+                    'dg':15,
+                },
+            ]
+            
+            $el.bootstrapTable('destroy').bootstrapTable({
+                height: $('#height').prop('checked') ? 400 : undefined,
+                columns: columns,
+                data: data,
+                toolbar: false,
+                search: false,
+                showColumns: false,
+                clickToSelect: true,
+                fixedColumns: true,
+                fixedNumber: 3,
+                /*fixedRightNumber: +$('#fixedRightNumber').val()*/
+            })
+        }
+
+        $(function () {
+            buildTable($table)
+
+            $('#build').click(function () {
+                buildTable($table)
+            })
+        })
+    </script>
+</div>
