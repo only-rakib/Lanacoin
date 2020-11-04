@@ -335,114 +335,36 @@ a:hover.img_hover-e img {
 .btn_custom{
 	font-size: 12px;
 }
-.icon_btn{
+.icon_btn-g{
+	margin: 0 2px;
 	padding: 1px 7px;
-	border-radius: 4px;
+	border-radius: 1px;
 	background-color: green;
 	color: #fff;
 	border-color: #000;
 }
-.icon_btn-g{
+.icon_btn-e{
+	margin: 0 2px;
 	padding: 1px 7px;
-	border-radius: 4px;
-	background-color:wheat;
+	border-radius: 1px;
+	background-color:#ccc;
 	color: #fff;
 	border-color: #000;
 }
-.i_btn{
+.icon_btn-p{
+	margin: 0 2px;
 	padding: 1px 7px;
 	border-radius: 1px;
 	background-color:red;
 	color: #fff;
 	border-color: #000;
 }
-/*
-.table-statics table {
-	width:100%;
-	margin:auto;
-	border-collapse:separate;
-	border-spacing:0;
-	font-size: 14px;
-	font-family: Arial,Helvetica,sans-serif;
-	line-height: 1;
-	font-style: normal;
-	font-weight: 400;
-}
 
-.table-statics table th{
-	background: #ccc;
-}*/
-/*Table Test
-.table-scroll {
-	position:relative;
-	width:600px;
-	margin:auto;
-	overflow: hidden;
-	
-}
-.table-wrap {
-	
-	width:100%;
-	overflow-x:auto;
-}
-.table-scroll table {
-	width:100%;
-	margin:auto;
-	border-collapse:separate;
-	border-spacing:0;
-	font-size: 14px;
-	font-family: Arial,Helvetica,sans-serif;
-	line-height: 1;
-	font-style: normal;
-	font-weight: 400;
-}
-.table-scroll thead th
-{
-	background: #F3F3F3 !important;
-	padding:10px 10px;
-	white-space:nowrap;
-	vertical-align:top;
-	cursor: pointer;
-}
-.table-scroll tbody th, 
-.table-scroll tbody td {
-	padding:10px 10px;
-	
-	background:#fff;
-	white-space:nowrap;
-	vertical-align:top;
-}
-.table-scroll thead, .table-scroll tfoot {
-	background:#fff;
-}
-.clone {
-	position:absolute;
-	top:0;
-	left:0;
-	pointer-events:none;
-}
-.clone th, .clone td {
-	visibility:hidden
-}
-.clone td, .clone th {
-	border-color:#ccc;
-}
-.clone tbody th {
-	visibility:visible;
-	color:red;
-}
-.clone .fixed-side {
-
-	background:#fff;
-	visibility:visible;
-}
-
-.clone thead, .clone tfoot{background:transparent;}*/
 /*table statistics*/
 .table-statics table {
 	position: relative;
 	width: 700px;
-	background-color: #fff;
+	background: #F3F3F3;;
 	overflow: hidden;
 	border-collapse: collapse;
 	margin-right: 5rem;
@@ -459,24 +381,24 @@ a:hover.img_hover-e img {
   }
   
   .table-statics thead th {
-	background-color: #fff;
+	background-color: #F3F3F3;
 	min-width: 50px;
 	height: 32px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #F3F3F3;
 	cursor: pointer;
   }
-  
+
   .table-statics thead th:nth-child(1) {/*first cell in the header*/
 	position: relative;
 	width: 250px;
 	display: block; /*seperates the first cell in the header from the header*/
-	background-color: #fff;
+	background-color: #F3F3F3;
   }
   .table-statics thead th:last-child {/*first cell in the header*/
 	/*position: relative;*/
 	width: 400px;
 	/*border-bottom: 1px solid #ccc;*/
-	background-color: #fff;
+	background-color: #F3F3F3;
   }
   
   
@@ -493,7 +415,7 @@ a:hover.img_hover-e img {
   .table-statics tbody td {
 	background-color: #fff;
 	min-width: 50px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #F3F3F3;
   }
   
   .table-statics tbody tr td:nth-child(1) {  /*the first cell in each tr*/
@@ -510,34 +432,4 @@ a:hover.img_hover-e img {
 	width: 400px;
 	background-color: #fff;
   }
-  /***************ToolTip*******************/
   
-  .tooltip .tooltiptext {
-	visibility: hidden;
-	width: auto;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
-	position: absolute;
-	z-index: 1;
-	bottom: 150%;
-	left: 50%;
-	margin-left: -60px;
-  }
-  
-  .tooltip .tooltiptext::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: black transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-	visibility: visible;
-  }

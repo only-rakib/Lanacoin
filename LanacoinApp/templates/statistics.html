@@ -90,7 +90,7 @@
 								<ul>
 									<li class="icon-circulo">
 										<a href="#">2019</a>
-									</li class="icon-circulo">
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -164,37 +164,46 @@
 									<!-- Tab part start -->
 									<ul class="nav nav-tabs custom_nav-t" id="myTab" role="tablist">
 										<li class="nav-item custom_nav-i">
-											<a class="nav-link active custom_nav-l" id="home-tab" data-toggle="tab"
-												href="#home" role="tab" aria-controls="home"
+											<a class="nav-link active custom_nav-l" id="position-tab" data-toggle="tab"
+												href="#position" role="tab" aria-controls="position"
 												aria-selected="true">POSITION</a>
 										</li>
 										<li class="nav-item custom_nav-i">
-											<a class="nav-link custom_nav-l" id="profile-tab" data-toggle="tab"
-												href="#profile" role="tab" aria-controls="profile"
+											<a class="nav-link custom_nav-l" id="fixture-tab" data-toggle="tab"
+												href="#fixture" role="tab" aria-controls="fixture"
 												aria-selected="false">FIXTURE AND RESULTS</a>
 										</li>
 										<li class="nav-item custom_nav-i">
-											<a class="nav-link custom_nav-l" id="contact-tab" data-toggle="tab"
-												href="#contact" role="tab" aria-controls="contact"
+											<a class="nav-link custom_nav-l" id="scores-tab" data-toggle="tab"
+												href="#scores" role="tab" aria-controls="scores"
 												aria-selected="false">SCORERS</a>
 										</li>
 									</ul>
 									<div class="tab-content" id="myTabContent">
-										<div class="tab-pane fade show active" id="home" role="tabpanel"
-											aria-labelledby="home-tab">
+										<div class="tab-pane fade show active" id="position" role="tabpanel"
+											aria-labelledby="position-tab">
+											<table style="display: none;">
+												<tbody>
+													<!--This table is for bug remove-->
+												</tbody>
+											</table>	
+											
+											{% for i in data %}
+													
 											<div class="row">
-												<div class="col-12 mt-5 table-statics" >
+												<div class="col-12 mt-5 table-statics">
 													<!-- Table part start -->
 													{% include 'table_statistics.html' %}
 													<!-- Table part end -->
-													
+
 												</div>
 											</div>
+											{% endfor %}
 										</div>
-										<div class="tab-pane fade" id="profile" role="tabpanel"
-											aria-labelledby="profile-tab">...</div>
-										<div class="tab-pane fade" id="contact" role="tabpanel"
-											aria-labelledby="contact-tab">...</div>
+										<div class="tab-pane fade" id="fixture" role="tabpanel"
+											aria-labelledby="fixture-tab">...</div>
+										<div class="tab-pane fade" id="scores" role="tabpanel"
+											aria-labelledby="scores-tab">...</div>
 									</div>
 									<!-- Tab part end -->
 								</div>
@@ -206,4 +215,20 @@
 		</div>
 	</div>
 </section>
+<script>
+	$("[rel=tooltip]").tooltip({ html: true });
+	$(document).ready(function () {
+		$('tbody').scroll(function (e) { //detect a scroll event on the tbody
+			/*
+		Setting the thead left value to the negative valule of tbody.scrollLeft will make it track the movement
+		of the tbody element. Setting an elements left value to that of the tbody.scrollLeft left makes it maintain 			it's relative position at the left of the table.    
+		*/
+			$('thead').css("left", -$("tbody").scrollLeft()); //fix the thead relative to the body scrolling
+			$('thead th:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first cell of the header
+			$('tbody td:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first column of tdbody
+
+		});
+	});
+
+</script>
 {%endblock container%}

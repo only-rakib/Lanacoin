@@ -1,51 +1,96 @@
 {% load static %}
-<div id="table-scroll" class="table-scroll">
-    <div class="table-wrap">
-        <table class="main-table sortable table-responsive">
-            <thead>
 
-                <tr>
-                    <th class="fixed-side" scope="col">Pos.</th>
-                    <th class="fixed-side" scope="col" style="pointer-events: none;"> </th>
-                    <th class="fixed-side" scope="col" style="pointer-events: none;"> </th>
-                    <th scope="col">Pts</th>
-                    <th scope="col" style="pointer-events: none;">PJ</th>
-                    <th scope="col">G</th>
-                    <th scope="col">E</th>
-                    <th scope="col">P</th>
-                    <th scope="col">DG</th>
-                    <th scope="col">Pr.</th>
+<h2 class="title">zxc</h2>
+<table class="sortable">
+    
+    <thead>
 
-                </tr>
-            </thead>
-            <tbody>
+        <tr>
 
-                {% for x in data %}
-                <tr>
-                    <td class="fixed-side">{{x.id}}</td>
-                    <td class="fixed-side">
+            <th>Pos.</th>
+            <th>Pts</th>
+            <th style="pointer-events: none">PJ</th>
+            <th>G</th>
+            <th>E</th>
+            <th>P</th>
+            <th>DG</th>
+            <th>Pr.</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>asdasdasssssssssss
+            </td>
+            <td>zxczxc</td>
+            <td>zszxc</td>
+            <td>zxczxc</td>
+            <td>123123</td>
+            <td>2342435</td>
+            <td>34534</td> 
+            <td>345</td>
+            
+        </tr>
+        <tr>
+            <td>asdasdasssssssssss
+            </td>
+            <td>zxczxc</td>
+            <td>zszxc</td>
+            <td>zxczxc</td>
+            <td>123123</td>
+            <td>2342435</td>
+            <td>34534</td> 
+            <td>345</td>
+            
+        </tr>
+       
+    </tbody>
+</table>
 
-                        {% with x.flag as flag %}
-                        <img src="{% static flag %}" alt="">
-                        {% endwith %}
-                    </td>
-                    <td class="fixed-side">{{x.Name}}</a></td>
-                    <td>{{x.Pts}}</td>
-                    <td>{{x.PJ}}</td>
-                    <td>{{x.G}}</td>
-                    <td>{{x.E}}</td>
-                    <td>{{x.P}}</td>
-                    <td>{{x.DG}}</td>
-                    <td>Cell content</td>
-                </tr>
-                {% endfor %}
-        </table>
-    </div>
-</div>
 
-<script>
-    // requires jquery library
-jQuery(document).ready(function() {
-   jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');   
- });
-</script>
+<h2 class="title">zxc</h2>
+<table class="sortable">
+    
+    <thead>
+
+        <tr>
+
+            <th>Pos.</th>
+            <th>Pts</th>
+            <th style="pointer-events: none">PJ</th>
+            <th>G</th>
+            <th>E</th>
+            <th>P</th>
+            <th>DG</th>
+            <th>Pr.</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>asdasdasssssssssss
+            </td>
+            <td>zxczxc</td>
+            <td>zszxc</td>
+            <td>zxczxc</td>
+            <td>123123</td>
+            <td>2342435</td>
+            <td>34534</td> 
+            <td>345</td>
+            
+        </tr>
+        <tr>
+            <td>asdasdasssssssssss
+            </td>
+            <td>zxczxc</td>
+            <td>zszxc</td>
+            <td>zxczxc</td>
+            <td>123123</td>
+            <td>2342435</td>
+            <td>34534</td> 
+            <td>345</td>
+            
+        </tr>
+       
+    </tbody>
+</table>

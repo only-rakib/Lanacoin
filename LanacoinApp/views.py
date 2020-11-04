@@ -390,139 +390,261 @@ def sports_football_view(request):
 def sports_statistics_view(request):
     sp_data = [
         {
-            'Pos': 1,
-            'Flag': 'images/Paris Saint Germain.png',
-            'Name': 'Paris Saint Germain',
-            'Pts': 14,
-            'PJ': 6,
-            'G': 2,
-            'E': 1,
-            'P': 3,
-            'DG': 15,
-            'recent_result': [
+            'table_title': 'GROUP A',
+            'last_col_name': 'Recent Results',
+
+            'tbody':
+            [
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 1,
+                    'Flag': 'images/Paris Saint Germain.png',
+                    'Name': 'Paris Saint Germain',
+                    'Pts': 14,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 3,
+                    'DG': 15,
+                    'recent_result': [
+                        {
+                            'date': 'Wednesday 4th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 15th October 2020',
+                            'result': 'Won',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 10th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 20th October 2020',
+                            'result': 'Tie',
+                            'vs': '3-0 vs FCB'
+                        },
+                    ]
+                },
+
+                {
+                    'Pos': 2,
+                    'Flag': 'images/Real Madrid .png',
+                    'Name': 'Real Madrid ',
+                    'Pts': 15,
+                    'PJ': 6,
+                    'G': 8,
+                    'E': 1,
+                    'P': 4,
+                    'DG': 15,
+                    'recent_result': [
+                        {
+                            'date': 'Wednesday 1th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 30th October 2020',
+                            'result': 'Won',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 14th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 11th October 2020',
+                            'result': 'Tie',
+                            'vs': '3-0 vs FCB'
+                        },
+                    ]
+
                 },
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Won',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 3,
+                    'Flag': 'images/Club Brugge.png',
+                    'Name': 'Club Brugge ',
+                    'Pts': 12,
+                    'PJ': 6,
+                    'G': 5,
+                    'E': 1,
+                    'P': 2,
+                    'DG': 15,
+                    'recent_result': [
+                        {
+                            'date': 'Wednesday 6th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 5th October 2020',
+                            'result': 'Won',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 7th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 8th October 2020',
+                            'result': 'Tie',
+                            'vs': '3-0 vs FCB'
+                        },
+                    ]
                 },
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 4,
+                    'Flag': 'images/Galatasaray.png',
+                    'Name': 'Galatasaray ',
+                    'Pts': 10,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 1,
+                    'DG': 15,
+                    'recent_result': [
+                        {
+                            'date': 'Wednesday 1th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 2th October 2020',
+                            'result': 'Won',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 3th October 2020',
+                            'result': 'Lost',
+                            'vs': '3-0 vs FCB'
+                        },
+                        {
+                            'date': 'Wednesday 4th October 2020',
+                            'result': 'Tie',
+                            'vs': '3-0 vs FCB'
+                        },
+                    ]
+                },
+            ]
+        },
+        {
+            'table_title': 'GROUP B',
+            'last_col_name': 'Pr.',
+
+            'tbody': [
+                {
+                    'Pos': 1,
+                    'Flag': 'images/Paris Saint Germain.png',
+                    'Name': 'Paris Saint Germain',
+                    'Pts': 14,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 3,
+                    'DG': 15,
+                    'Pr': 14,
+                },
+
+                {
+                    'Pos': 2,
+                    'Flag': 'images/Real Madrid .png',
+                    'Name': 'Real Madrid ',
+                    'Pts': 15,
+                    'PJ': 6,
+                    'G': 8,
+                    'E': 1,
+                    'P': 4,
+                    'DG': 15,
+                    'Pr': 12,
                 },
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Tie',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 3,
+                    'Flag': 'images/Club Brugge.png',
+                    'Name': 'Club Brugge ',
+                    'Pts': 12,
+                    'PJ': 6,
+                    'G': 5,
+                    'E': 1,
+                    'P': 2,
+                    'DG': 15,
+                    'Pr': 20,
+                },
+                {
+                    'Pos': 4,
+                    'Flag': 'images/Galatasaray.png',
+                    'Name': 'Galatasaray ',
+                    'Pts': 10,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 1,
+                    'DG': 15,
+                    'Pr': 10,
                 },
             ]
         },
 
         {
-            'Pos': 2,
-            'Flag': 'images/Real Madrid .png',
-            'Name': 'Real Madrid ',
-            'Pts': 15,
-            'PJ': 6,
-            'G': 8,
-            'E': 1,
-            'P': 4,
-            'DG': 15,
-            'recent_result': [
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Won',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Tie',
-                    'vs': '3-0 vs FCB'
-                },
-            ]
+            'table_title': 'GROUP C',
+            'last_col_name': 'Pr.',
 
-        },
-        {
-            'Pos': 3,
-            'Flag': 'images/Club Brugge.png',
-            'Name': 'Club Brugge ',
-            'Pts': 12,
-            'PJ': 6,
-            'G': 5,
-            'E': 1,
-            'P': 2,
-            'DG': 15,
-            'recent_result': [
+            'tbody': [
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 1,
+                    'Flag': 'images/Paris Saint Germain.png',
+                    'Name': 'Paris Saint Germain',
+                    'Pts': 14,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 3,
+                    'DG': 15,
+                    'Pr': 14,
+                },
+
+                {
+                    'Pos': 2,
+                    'Flag': 'images/Real Madrid .png',
+                    'Name': 'Real Madrid ',
+                    'Pts': 15,
+                    'PJ': 6,
+                    'G': 8,
+                    'E': 1,
+                    'P': 4,
+                    'DG': 15,
+                    'Pr': 12,
                 },
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Won',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 3,
+                    'Flag': 'images/Club Brugge.png',
+                    'Name': 'Club Brugge ',
+                    'Pts': 12,
+                    'PJ': 6,
+                    'G': 5,
+                    'E': 1,
+                    'P': 2,
+                    'DG': 15,
+                    'Pr': 20,
                 },
                 {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Tie',
-                    'vs': '3-0 vs FCB'
-                },
-            ]
-        },
-        {
-            'Pos': 4,
-            'Flag': 'images/Galatasaray.png',
-            'Name': 'Galatasaray ',
-            'Pts': 10,
-            'PJ': 6,
-            'G': 2,
-            'E': 1,
-            'P': 1,
-            'DG': 15,
-            'recent_result': [
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Won',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Lost',
-                    'vs': '3-0 vs FCB'
-                },
-                {
-                    'date': 'Wednesday 4th October 2020',
-                    'result': 'Tie',
-                    'vs': '3-0 vs FCB'
+                    'Pos': 4,
+                    'Flag': 'images/Galatasaray.png',
+                    'Name': 'Galatasaray ',
+                    'Pts': 10,
+                    'PJ': 6,
+                    'G': 2,
+                    'E': 1,
+                    'P': 1,
+                    'DG': 15,
+                    'Pr': 10,
                 },
             ]
         },
+
     ]
     return render(request, 'statistics.html', {'data': sp_data, })
 

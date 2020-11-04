@@ -1,73 +1,78 @@
 {% load static %}
+
+<h2 class="title">{{i.table_title}}</h2>
 <table class="sortable">
+    
     <thead>
+
         <tr>
+
             <th>Pos.</th>
-            
             <th>Pts</th>
-            <th style="pointer-events: none;!important">PJ</th>
+            <th style="pointer-events: none">PJ</th>
             <th>G</th>
             <th>E</th>
             <th>P</th>
             <th>DG</th>
-            <th> Pr.</th>
+            
+            {% if i.last_col_name == "Recent Results" %}
+            <th style="pointer-events: none">{{i.last_col_name}}</th>
+            {% else %}
+            <th>{{i.last_col_name}}</th>
+            {% endif %}
+                
+            
         </tr>
     </thead>
     <tbody>
-        {% for x in data %}
-                <tr>
-                    <td>{{x.Pos}}
-                        {% with x.Flag as flag %}
-                        <img style="margin:0 1rem;" src="{% static flag %}" alt="">
-                        {{x.Name}}
-                        {% endwith %}
-                    </td>
-                    <td>{{x.Pts}}</td>
-                    <td>{{x.PJ}}</td>
-                    <td>{{x.G}}</td>
-                    <td>{{x.E}}</td>
-                    <td>{{x.P}}</td>
-                    <td>{{x.DG}}</td>
-                    <td>
-                        
-                        {% for y in x.recent_result %}
-                            
-                            {% if y.result == "Lost" %}
-                            <span class="i_btn">
-                                P
-                                
-                            </span>
-                            {% elif y.result == "Won" %}
-                            <span class="icon_btn">
-                                G
-                                
-                            </span>
-                            {% else %}
-                            <span class="icon_btn-g">
-                                E
-                                
-                            </span>
-                            {% endif %}
-                                
-                        {% endfor %}
-                            
-                    </td>
-                </tr>
+        {% for x in i.tbody %}
+        <tr>
+            <td>{{x.Pos}}
+                {% with x.Flag as flag %}
+                <img style="margin:0 1rem;" src="{% static flag %}" alt="">
+                {{x.Name}}
+                {% endwith %}
+            </td>
+            <td>{{x.Pts}}</td>
+            <td>{{x.PJ}}</td>
+            <td>{{x.G}}</td>
+            <td>{{x.E}}</td>
+            <td>{{x.P}}</td>
+            <td>{{x.DG}}</td>
+
+            {% if i.last_col_name == "Recent Results" %}
+
+            <td>
+
+                {% for y in x.recent_result %}
+
+                {% if y.result == "Lost" %}
+
+                <span class="icon_btn-p" rel='tooltip' title="{{y.date}}<br>{{y.result}}<br>{{y.vs}}">
+                    P
+
+                </span>
+
+
+                {% elif y.result == "Won" %}
+                <span class="icon_btn-g" rel='tooltip' title="{{y.date}}<br>{{y.result}}<br>{{y.vs}}">
+                    G
+
+                </span>
+                {% else %}
+                <span class="icon_btn-e" rel='tooltip' title="{{y.date}}<br>{{y.result}}<br>{{y.vs}}">
+                    E
+
+                </span>
+                {% endif %}
+
                 {% endfor %}
+
+            </td>
+            {% else %}
+            <td>{{x.Pr}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
-<script>
-    $(document).ready(function () {
-        $('tbody').scroll(function (e) { //detect a scroll event on the tbody
-            /*
-        Setting the thead left value to the negative valule of tbody.scrollLeft will make it track the movement
-        of the tbody element. Setting an elements left value to that of the tbody.scrollLeft left makes it maintain 			it's relative position at the left of the table.    
-        */
-            $('thead').css("left", -$("tbody").scrollLeft()); //fix the thead relative to the body scrolling
-            $('thead th:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first cell of the header
-            $('tbody td:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first column of tdbody
-            
-        });
-    });
-
-</script>
