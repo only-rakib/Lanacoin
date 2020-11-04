@@ -11,6 +11,7 @@ urlpatterns = [
     path('properties/',views.economy_properties_view,name="properties"),
     path('foregin-trade/',views.economy_foregin_trade_view,name="foregin_trade"),
     path('autos/',views.economy_autos_view,name="autos"),
+    path('profit-calculator/',views.economy_profit_calculator_view,name="profit_calculator"),
     path('indices/',views.economy_indices_view,name="indices"),
     path('world/',views.the_world_view,name="world"),
     path('buenos-aires/',views.society_buenos_aires_view,name="buenos_aires"),

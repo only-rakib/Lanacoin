@@ -236,6 +236,9 @@ def economy_foregin_trade_view(request):
 def economy_autos_view(request):
     return render(request, 'autos.html', {'data': lst, 'more': more, })
 
+def economy_profit_calculator_view(request):
+    return render(request, 'profit_calculator.html', {'data': lst, 'more': more, })
+
 
 def economy_indices_view(request):
 

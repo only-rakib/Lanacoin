@@ -576,6 +576,80 @@ em.highlight
   margin-right: 3px;
   vertical-align: middle;
 }
+
+/*******************Profit Calculator*********************/
+#calculator
+{
+  font-family: 'suecaslabmedium', Georgia;
+}
+
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+.panel-body {
+	padding: 15px;
+}
+.panel-default {
+	border-color: #ddd;
+}
+.panel-default > .panel-heading {
+  background-color: #e2f6ff;
+	text-transform: uppercase;
+	font-family: 'suecaslabbold', Georgia;
+}
+.panel-default > .panel-heading {
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;
+}
+.panel-default > .panel-heading {
+	color: #333;
+	background-color: #E2F6FF;
+  border-color: #ddd;
+  padding: 10px 15px;
+}
+
+.help-block {
+	margin-top: -10px;
+	margin-bottom: 10px;
+	color: #a9a9a9;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#sueldoEnMano {
+  font-size: 40px;
+}
+.text-success {
+  color: #00ae69;
+}
+
+.radio-inline, .checkbox-inline {
+	position: relative;
+	display: inline-block;
+	padding-right: 8px;
+	margin-bottom: 0;
+	font-weight: normal;
+	
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Footer****************************************/
 
 

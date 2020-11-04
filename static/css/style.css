@@ -2,50 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-*{
+* {
 	margin: 0;
 	padding: 0;
 	outline: 0;
 	/*overflow-x: hidden;*/
 }
 
-a:hover,
-a:focus {
-  outline: none;
-  text-decoration: none;
-}
-input:focus,
-textarea:focus {
-  outline: none !important;
+a:hover, a:focus {
+	outline: none;
+	text-decoration: none;
 }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+input:focus, textarea:focus {
+	outline: none !important;
 }
-textarea:hover, 
-input:hover, 
-textarea:active, 
-input:active, 
-textarea:focus, 
-input:focus,
-button:focus,
-button:active,
-button:hover,
-label:focus,
-.btn:active,
-.btn.active
-{
-    outline:0px !important;
-    -webkit-appearance:none;
-    box-shadow: none !important;
+
+input:focus, select:focus, textarea:focus, button:focus {
+	outline: none;
 }
-a{
-  transition: all .2s ease-in-out;
+
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus, button:focus, button:active, button:hover, label:focus, .btn:active, .btn.active {
+	outline: 0px !important;
+	-webkit-appearance: none;
+	box-shadow: none !important;
 }
-ul,ol{
+
+a {
+	transition: all .2s ease-in-out;
+}
+
+ul, ol {
 	list-style-type: none;
 }
 
@@ -56,58 +43,64 @@ ul,ol{
 	margin-right: auto;
 	width: 470px;
 }
-.sub__heading-politics a{
+
+.sub__heading-politics a {
 	color: gray;
 }
-.heading__main-politics h1{
-	font-family: suecaslabmedium,Georgia,"serif";
+
+.heading__main-politics h1 {
+	font-family: suecaslabmedium, Georgia, "serif";
 	font-size: 35px;
 }
-.page__divider-ver{
+
+.page__divider-ver {
 	border-right: 1px solid #e6e6e6;
 }
-.article__heading-politics a{
-	font-family: suecaslabmedium,Georgia,"serif";
+
+.article__heading-politics a {
+	font-family: suecaslabmedium, Georgia, "serif";
 	font-size: 19px;
 	line-height: 26px;
 	color: #000;
 }
 
-.article__heading-politics a:hover{
-	color:#0074c4;
+.article__heading-politics a:hover {
+	color: #0074c4;
 	transition: .2s ease;
 }
 
-.btn__politics{
+.btn__politics {
 	color: #0075c4;
-    display: inline-block;
-    border: 1px solid #0075c4;
-    border-radius: 3px;
-    padding: 10px 20px;
-    font-family: Arial;
-    font-size: 14px;
-    cursor: pointer;
-    text-transform: uppercase;
-    line-height: 21px;
+	display: inline-block;
+	border: 1px solid #0075c4;
+	border-radius: 3px;
+	padding: 10px 20px;
+	font-family: Arial;
+	font-size: 14px;
+	cursor: pointer;
+	text-transform: uppercase;
+	line-height: 21px;
 }
-.btn__politics:hover{
+
+.btn__politics:hover {
 	background-color: #0074c4;
 	color: #fff;
 }
 
 .btn__social {
 	max-width: 36px;
-    max-height: 36px;
+	max-height: 36px;
 	border: 1px solid #0074c4;
 	color: #000;
 	padding: 5px 9px;
 }
-.btn__social:hover{
+
+.btn__social:hover {
 	background-color: #0074c4;
 	color: #fff;
 }
 
-.comment__text{
+.comment__text {
 	font-family: Arial;
 	font-size: 12px;
 	color: #565656;
@@ -115,13 +108,13 @@ ul,ol{
 	text-transform: none;
 }
 
-.top__text{
+.top__text {
 	font-family: Arial;
 	font-size: 16px;
 	font-weight: 700;
 }
 
-.sub__text-politics{
+.sub__text-politics {
 	font-family: Arial;
 	font-size: 15px;
 	color: gray;
@@ -134,208 +127,221 @@ ul,ol{
 	line-height: 30px;
 	font-weight: 700;
 	margin: 0.1em 0.1em 0.2em 0;
-  }
-.content__text-politics{
-	font-size: 19px;
-line-height: 30px;
 }
 
-.custom__btn-politics:hover{
+.content__text-politics {
+	font-size: 19px;
+	line-height: 30px;
+}
+
+.custom__btn-politics:hover {
 	background-color: #006998;
 	color: #fff;
 }
 
-.icon_section-politics{
-    position: relative;
-}
-.icon_section-politics:after{
-	    content: " ";
-    display: block;
-    background-image: url(../svg/lapicera.svg);
-    width: 70px;
-    height: 70px;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-color: #e6e3d8;
-   
-    border-radius: 50px;
-    
-    background-size: 37%;
-    background-position: center;
+.icon_section-politics {
+	position: relative;
 }
 
+.icon_section-politics:after {
+	content: " ";
+	display: block;
+	background-image: url(../svg/lapicera.svg);
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	position: absolute;
+	background-color: #e6e3d8;
+	border-radius: 50px;
+	background-size: 37%;
+	background-position: center;
+}
 
+.custom__btn {
+	display: inline-block;
+	margin-right: 35px;
+	float: left;
+}
 
-
-.custom__btn{
-    display: inline-block;
-    margin-right: 35px;
-    float:left;
- }
-
-.image__area-post{
+.image__area-post {
 	justify-content: center;
-    max-height: 622px;
-    max-width: 935px;
+	max-height: 622px;
+	max-width: 935px;
 }
-.text__top-politics{
+
+.text__top-politics {
 	color: #0074c4;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
-.head__text-first{
-	font: 43px suecaslabmedium,Georgia,"serif";
+.head__text-first {
+	font: 43px suecaslabmedium, Georgia, "serif";
 	line-height: 54px;
 	color: #000;
 }
-  
+
 .steps {
-  max-width: 350px;
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  padding-left: 40px;
-}
-.steps li {
-  margin: 0 0 .5rem 0;
-  counter-increment: my-awesome-counter;
-  position: relative;
-}
-.steps li::before {
-  content: counter(my-awesome-counter);
-  /*color: #fcd000;*/
-  color: rgb(236, 234, 234);
-  font-size: 1.0rem;
-  font-weight: bold;
-  position: absolute;
-  --size: 32px;
-  left: calc(-1 * var(--size) - 10px);
-  line-height: var(--size);
-  width: var(--size);
-  height: var(--size);
-  top: 1rem;
-  /*transform: rotate(-10deg);*/
-  background: black;
-  text-align: center;
-  box-shadow: 1px 1px 0 #999;
-}
-.img_hover-e img {
-  
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-.img_hover-e:hover img {
-  filter: brightness(1.1);
-}
-a:hover.img_hover-e img {
-  filter: brightness(1.1);
+	max-width: 350px;
+	counter-reset: my-awesome-counter;
+	list-style: none;
+	padding-left: 40px;
 }
 
+.steps li {
+	margin: 0 0 .5rem 0;
+	counter-increment: my-awesome-counter;
+	position: relative;
+}
+
+.steps li::before {
+	content: counter(my-awesome-counter);
+	/*color: #fcd000;*/
+	color: rgb(236, 234, 234);
+	font-size: 1.0rem;
+	font-weight: bold;
+	position: absolute;
+	--size: 32px;
+	left: calc(-1 * var(--size) - 10px);
+	line-height: var(--size);
+	width: var(--size);
+	height: var(--size);
+	top: 1rem;
+	/*transform: rotate(-10deg);*/
+	background: black;
+	text-align: center;
+	box-shadow: 1px 1px 0 #999;
+}
+
+.img_hover-e img {
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.img_hover-e:hover img {
+	filter: brightness(1.1);
+}
+
+a:hover.img_hover-e img {
+	filter: brightness(1.1);
+}
 
 /*Politics post*/
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 .li__2nd {
 	max-width: 350px;
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  padding-left: 40px;
+	counter-reset: my-awesome-counter;
+	list-style: none;
+	padding-left: 40px;
 }
+
 .li__2nd li {
-  margin: 0 0 0.5rem 0;
-  counter-increment: my-awesome-counter;
-  position: relative;
+	margin: 0 0 0.5rem 0;
+	counter-increment: my-awesome-counter;
+	position: relative;
 }
+
 .li__2nd li::before {
-  content: counter(my-awesome-counter);
-  color: #000;
-  font-size: 1.5rem;
-  font-weight: bold;
-  position: absolute;
-  --size: 32px;
-  left: 1rem !important;
-  
-  top: 0;
-  
-  background: #fff;
-  text-align: center;
-  z-index: 5;
-  
+	content: counter(my-awesome-counter);
+	color: #000;
+	font-size: 1.5rem;
+	font-weight: bold;
+	position: absolute;
+	--size: 32px;
+	left: 1rem !important;
+	top: 0;
+	background: #fff;
+	text-align: center;
+	z-index: 5;
 }
+
 #sticky {
-  max-width: 19.4rem;
+	max-width: 19.4rem;
 }
 
 /*profile card*/
 
-.line_top{
-	font-family: suecaslabmedium,Georgia,"serif";
+.line_top {
+	font-family: suecaslabmedium, Georgia, "serif";
 	font-size: 11px;
 	border-top: 3px solid #000;
 	min-width: 100px;
 	display: inline-block;
 	padding-top: 10px !important;
 }
-.card_text{
+
+.card_text {
 	font-size: 16px;
 	text-transform: none;
 	transition: .2s ease;
 	padding-bottom: 10px !important;
 }
-.card_link{
+
+.card_link {
 	font-family: Arial;
 	font-size: 11px;
 	text-transform: uppercase;
 }
-.card__image{
-	padding:0 5px;
+
+.card__image {
+	padding: 0 5px;
 }
-.custom_hover{
-	height: 100px; width: 100px; background-color: #e6e3d8; border-color: transparent!important;
+
+.custom_hover {
+	height: 100px;
+	width: 100px;
+	background-color: #e6e3d8;
+	border-color: transparent!important;
 }
-.custom_hover-img:hover{
+
+.custom_hover-img:hover {
 	background-color: #fff;
 }
 
-.top__tex-px{
+.top__tex-px {
 	color: gray;
 }
-.top__tex-bx h2{
-	font-family: suecaslabmedium,Georgia,"serif";
+
+.top__tex-bx h2 {
+	font-family: suecaslabmedium, Georgia, "serif";
 	font-size: 35px;
 }
 
 /**********************Statistics************************************/
 
-
-.icon-circulo{
+.icon-circulo {
 	list-style-type: disc!important;
 	color: #d4d4d4;
 	margin-left: 18px;
 }
-.custom_nav-t{
+
+.custom_nav-t {
 	border: none !important;
 	color: #006998;
 }
-.custom_nav-i{
+
+.custom_nav-i {
 	border: none !important;
 	color: #006998;
 }
-.custom_nav-l{
+
+.custom_nav-l {
 	border: none !important;
 	color: #006998;
 }
+
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
 	color: #549f42;
 	border-bottom: 2px solid #549f42 !important;
 	font-weight: 700!important;
 }
 
-
-.btn_custom{
+.btn_custom {
 	font-size: 12px;
 }
-.icon_btn-g{
+
+.icon_btn-g {
 	margin: 0 2px;
 	padding: 1px 7px;
 	border-radius: 1px;
@@ -343,93 +349,107 @@ a:hover.img_hover-e img {
 	color: #fff;
 	border-color: #000;
 }
-.icon_btn-e{
+
+.icon_btn-e {
 	margin: 0 2px;
 	padding: 1px 7px;
 	border-radius: 1px;
-	background-color:#ccc;
+	background-color: #ccc;
 	color: #fff;
 	border-color: #000;
 }
-.icon_btn-p{
+
+.icon_btn-p {
 	margin: 0 2px;
 	padding: 1px 7px;
 	border-radius: 1px;
-	background-color:red;
+	background-color: red;
 	color: #fff;
 	border-color: #000;
 }
 
 /*table statistics*/
+
 .table-statics table {
 	position: relative;
 	width: 700px;
-	background: #F3F3F3;;
+	background: #F3F3F3;
+	;
 	overflow: hidden;
 	border-collapse: collapse;
 	margin-right: 5rem;
 	font-size: 14px;
-  }
-  
-  
-  /*thead*/
-  .table-statics thead {
+}
+
+/*thead*/
+
+.table-statics thead {
 	position: relative;
-	display: block; /*seperates the header from the body allowing it to be positioned*/
+	display: block;
+	/*seperates the header from the body allowing it to be positioned*/
 	width: 700px;
 	overflow: visible;
-  }
-  
-  .table-statics thead th {
+}
+
+.table-statics thead th {
 	background-color: #F3F3F3;
 	min-width: 50px;
 	height: 32px;
 	border-bottom: 1px solid #F3F3F3;
 	cursor: pointer;
-  }
+}
 
-  .table-statics thead th:nth-child(1) {/*first cell in the header*/
+.table-statics thead th:nth-child(1) {
+	/*first cell in the header*/
 	position: relative;
 	width: 250px;
-	display: block; /*seperates the first cell in the header from the header*/
+	display: block;
+	/*seperates the first cell in the header from the header*/
 	background-color: #F3F3F3;
-  }
-  .table-statics thead th:last-child {/*first cell in the header*/
+}
+
+.table-statics thead th:last-child {
+	/*first cell in the header*/
 	/*position: relative;*/
 	width: 400px;
 	/*border-bottom: 1px solid #ccc;*/
 	background-color: #F3F3F3;
-  }
-  
-  
-  /*tbody*/
-  .table-statics tbody {
+}
+
+/*tbody*/
+
+.table-statics tbody {
 	position: relative;
-	display: block; /*seperates the tbody from the header*/
+	display: block;
+	/*seperates the tbody from the header*/
 	width: 700px;
 	height: auto;
 	overflow-x: scroll;
 	overflow-y: visible;
-  }
-  
-  .table-statics tbody td {
+}
+
+.table-statics tbody td {
 	background-color: #fff;
 	min-width: 50px;
 	border-bottom: 1px solid #F3F3F3;
-  }
-  
-  .table-statics tbody tr td:nth-child(1) {  /*the first cell in each tr*/
+}
+
+.table-statics tbody tr td:nth-child(1) {
+	/*the first cell in each tr*/
 	position: relative;
-	display: block; /*seperates the first column from the tbody*/
+	display: block;
+	/*seperates the first column from the tbody*/
 	height: 40px;
 	width: 250px;
 	background-color: #fff;
-  }
-  .table-statics tbody tr td:last-child {  /*the first cell in each tr*/
+}
+
+.table-statics tbody tr td:last-child {
+	/*the first cell in each tr*/
 	position: relative;
-	display: block; /*seperates the first column from the tbody*/
+	display: block;
+	/*seperates the first column from the tbody*/
 	height: 40px;
 	width: 400px;
 	background-color: #fff;
-  }
-  
+}
