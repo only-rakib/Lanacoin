@@ -38,6 +38,10 @@
     {
         border:none;
     }
+    .table-statics table
+    {
+        width: 300px!important;
+    }
 }
 @media(max-width:767px)
 {

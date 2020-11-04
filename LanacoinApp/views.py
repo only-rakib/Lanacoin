@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from datetime import date
-
+import json
 lst = [
     {
         'category': 'news',
@@ -390,50 +390,138 @@ def sports_football_view(request):
 def sports_statistics_view(request):
     sp_data = [
         {
-            'id': 1,
-            'flag': 'images/Paris Saint Germain.png',
-                    'name': 'Paris Saint Germain',
-                    'pts': 14,
-                    'pj': 6,
-                    'g': 2,
-                    'e': 1,
-                    'p': 3,
-                    'dg': 15,
+            'Pos': 1,
+            'Flag': 'images/Paris Saint Germain.png',
+            'Name': 'Paris Saint Germain',
+            'Pts': 14,
+            'PJ': 6,
+            'G': 2,
+            'E': 1,
+            'P': 3,
+            'DG': 15,
+            'recent_result': [
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Won',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Tie',
+                    'vs': '3-0 vs FCB'
+                },
+            ]
         },
 
         {
-            'id': 2,
-            'flag': 'images/Real Madrid .png',
-                    'name': 'Real Madrid ',
-                    'pts': 15,
-                    'pj': 6,
-                    'g': 8,
-                    'e': 1,
-                    'p': 4,
-                    'dg': 15,
+            'Pos': 2,
+            'Flag': 'images/Real Madrid .png',
+            'Name': 'Real Madrid ',
+            'Pts': 15,
+            'PJ': 6,
+            'G': 8,
+            'E': 1,
+            'P': 4,
+            'DG': 15,
+            'recent_result': [
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Won',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Tie',
+                    'vs': '3-0 vs FCB'
+                },
+            ]
 
         },
         {
-            'id': 3,
-            'flag': 'images/Club Brugge.png',
-                    'name': 'Club Brugge ',
-                    'pts': 12,
-                    'pj': 6,
-                    'g': 5,
-                    'e': 1,
-                    'p': 2,
-                    'dg': 15,
+            'Pos': 3,
+            'Flag': 'images/Club Brugge.png',
+            'Name': 'Club Brugge ',
+            'Pts': 12,
+            'PJ': 6,
+            'G': 5,
+            'E': 1,
+            'P': 2,
+            'DG': 15,
+            'recent_result': [
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Won',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Tie',
+                    'vs': '3-0 vs FCB'
+                },
+            ]
         },
         {
-            'id': 4,
-            'flag': 'images/Galatasaray.png',
-                    'name': 'Galatasaray ',
-                    'pts': 10,
-                    'pj': 6,
-                    'g': 2,
-                    'e': 1,
-                    'p': 1,
-                    'dg': 15,
+            'Pos': 4,
+            'Flag': 'images/Galatasaray.png',
+            'Name': 'Galatasaray ',
+            'Pts': 10,
+            'PJ': 6,
+            'G': 2,
+            'E': 1,
+            'P': 1,
+            'DG': 15,
+            'recent_result': [
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Won',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Lost',
+                    'vs': '3-0 vs FCB'
+                },
+                {
+                    'date': 'Wednesday 4th October 2020',
+                    'result': 'Tie',
+                    'vs': '3-0 vs FCB'
+                },
+            ]
         },
     ]
     return render(request, 'statistics.html', {'data': sp_data, })

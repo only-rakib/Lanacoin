@@ -1,7 +1,7 @@
 {% load static %}
 <div id="table-scroll" class="table-scroll">
     <div class="table-wrap">
-        <table class="main-table sortable">
+        <table class="main-table sortable table-responsive">
             <thead>
 
                 <tr>
@@ -29,13 +29,13 @@
                         <img src="{% static flag %}" alt="">
                         {% endwith %}
                     </td>
-                    <td class="fixed-side">{{x.name}}</a></td>
-                    <td>{{x.pts}}</td>
-                    <td>{{x.pj}}</td>
-                    <td>{{x.g}}</td>
-                    <td>{{x.e}}</td>
-                    <td>{{x.p}}</td>
-                    <td>{{x.dg}}</td>
+                    <td class="fixed-side">{{x.Name}}</a></td>
+                    <td>{{x.Pts}}</td>
+                    <td>{{x.PJ}}</td>
+                    <td>{{x.G}}</td>
+                    <td>{{x.E}}</td>
+                    <td>{{x.P}}</td>
+                    <td>{{x.DG}}</td>
                     <td>Cell content</td>
                 </tr>
                 {% endfor %}
@@ -44,7 +44,8 @@
 </div>
 
 <script>
-    jQuery(document).ready(function () {
-        jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');
-    });
+    // requires jquery library
+jQuery(document).ready(function() {
+   jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');   
+ });
 </script>

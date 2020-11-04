@@ -1,173 +1,73 @@
-<div class="table-wrapper">
-    <table id="table">
-        
-    </table>
-
-    <script>
-        var $table = $('#table')
-
-        function buildTable($el) {
-            var cells = +$('#cells').val()
-            var rows = +$('#rows').val()
-            var i
-            var j
-            var row
-            var columns = [
-                {
-                    field: 'id',
-                    title: 'Pos.',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0',
-                    width: 20,
-                },
-                {
-                    field: 'flag',
-                    title: '',
-                    sortable: false,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-                    width: 30,
-
-                },
-                {
-                    field: 'name',
-                    title: '',
-                    
-                    sortable: false,
-                    valign: 'middle',
-                    class: 'border-left-0',
-
-                },
-                {
-                    field: 'pts',
-                    title: 'Pts',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0',
-
-                },
-                {
-                    field: 'pj',
-                    title: 'PJ',
-                    sortable: false,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-
-                },
-                {
-                    field: 'g',
-                    title: 'G',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-
-                },
-                {
-                    field: 'e',
-                    title: 'E',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-
-                },
-                {
-                    field: 'p',
-                    title: 'P',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-
-                },
-                {
-                    field: 'dg',
-                    title: 'DG',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-right-0 border-left-0',
-
-                },
-                {
-                    field: 'pr',
-                    title: 'Pr.',
-                    sortable: true,
-                    valign: 'middle',
-                    class: 'border-left-0',
-
-                },
-            ]
-            var data = []
-
-
-            var data = [
-                {
-                    'id': 1,
-                    'flag':'<img src="/static/images/Paris Saint Germain.png">',
-                    'name': 'Paris Saint Germain',
-                    'pts': 16,
-                    'pj': 6,
-                    'g':5,
-                    'e':1,
-                    'p':0,
-                    'dg':15,
-                },
-                
-                {
-                    'id': 2,
-                    'flag':'<img src="/static/images/Real Madrid .png">',
-                    'name': 'Real Madrid ',
-                    'pts': 16,
-                    'pj': 6,
-                    'g':5,
-                    'e':1,
-                    'p':0,
-                    'dg':15,
-
-                },
-                {
-                    'id': 3,
-                    'flag':'<img src="/static/images/Club Brugge.png">',
-                    'name': 'Club Brugge ',
-                    'pts': 16,
-                    'pj': 6,
-                    'g':5,
-                    'e':1,
-                    'p':0,
-                    'dg':15,
-                },
-                {
-                    'id': 4,
-                    'flag':'<img src="/static/images/Galatasaray.png">',
-                    'name': 'Galatasaray ',
-                    'pts': 16,
-                    'pj': 6,
-                    'g':5,
-                    'e':1,
-                    'p':0,
-                    'dg':15,
-                },
-            ]
+{% load static %}
+<table class="sortable">
+    <thead>
+        <tr>
+            <th>Pos.</th>
             
-            $el.bootstrapTable('destroy').bootstrapTable({
-                height: $('#height').prop('checked') ? 400 : undefined,
-                columns: columns,
-                data: data,
-                toolbar: false,
-                search: false,
-                showColumns: false,
-                clickToSelect: true,
-                fixedColumns: true,
-                fixedNumber: 3,
-                /*fixedRightNumber: +$('#fixedRightNumber').val()*/
-            })
-        }
+            <th>Pts</th>
+            <th style="pointer-events: none;!important">PJ</th>
+            <th>G</th>
+            <th>E</th>
+            <th>P</th>
+            <th>DG</th>
+            <th> Pr.</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in data %}
+                <tr>
+                    <td>{{x.Pos}}
+                        {% with x.Flag as flag %}
+                        <img style="margin:0 1rem;" src="{% static flag %}" alt="">
+                        {{x.Name}}
+                        {% endwith %}
+                    </td>
+                    <td>{{x.Pts}}</td>
+                    <td>{{x.PJ}}</td>
+                    <td>{{x.G}}</td>
+                    <td>{{x.E}}</td>
+                    <td>{{x.P}}</td>
+                    <td>{{x.DG}}</td>
+                    <td>
+                        
+                        {% for y in x.recent_result %}
+                            
+                            {% if y.result == "Lost" %}
+                            <span class="i_btn">
+                                P
+                                
+                            </span>
+                            {% elif y.result == "Won" %}
+                            <span class="icon_btn">
+                                G
+                                
+                            </span>
+                            {% else %}
+                            <span class="icon_btn-g">
+                                E
+                                
+                            </span>
+                            {% endif %}
+                                
+                        {% endfor %}
+                            
+                    </td>
+                </tr>
+                {% endfor %}
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $('tbody').scroll(function (e) { //detect a scroll event on the tbody
+            /*
+        Setting the thead left value to the negative valule of tbody.scrollLeft will make it track the movement
+        of the tbody element. Setting an elements left value to that of the tbody.scrollLeft left makes it maintain 			it's relative position at the left of the table.    
+        */
+            $('thead').css("left", -$("tbody").scrollLeft()); //fix the thead relative to the body scrolling
+            $('thead th:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first cell of the header
+            $('tbody td:nth-child(1)').css("left", $("tbody").scrollLeft()); //fix the first column of tdbody
+            
+        });
+    });
 
-        $(function () {
-            buildTable($table)
-
-            $('#build').click(function () {
-                buildTable($table)
-            })
-        })
-    </script>
-</div>
+</script>
