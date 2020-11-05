@@ -245,7 +245,7 @@ def economy_indices_view(request):
     table_data = [
         {
             'table_name': 'Argentina Indices',
-
+            
             'data1': [
                 {
                     'company_name': 'Merval',
@@ -275,7 +275,7 @@ def economy_indices_view(request):
         },
         {
             'table_name': 'Europe Indices',
-
+            
             'data1': [
                 {
                     'company_name': 'Merval',
@@ -393,6 +393,7 @@ def sports_football_view(request):
 def sports_statistics_view(request):
     sp_data = [
         {
+            'table_id':'1',
             'table_title': 'GROUP A',
             'last_col_name': 'Recent Results',
 
@@ -535,6 +536,7 @@ def sports_statistics_view(request):
             ]
         },
         {
+            'table_id':'2',
             'table_title': 'GROUP B',
             'last_col_name': 'Pr.',
 
@@ -592,6 +594,7 @@ def sports_statistics_view(request):
         },
 
         {
+            'table_id':'3',
             'table_title': 'GROUP C',
             'last_col_name': 'Pr.',
 

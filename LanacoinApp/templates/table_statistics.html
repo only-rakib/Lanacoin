@@ -1,7 +1,7 @@
 {% load static %}
 
 <h2 class="title">{{i.table_title}}</h2>
-<table class="sortable">
+<table class="sortable" id="t{{i.table_id}}">
     
     <thead>
 
@@ -76,3 +76,17 @@
         {% endfor %}
     </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+		$('#t{{i.table_id}} tbody').scroll(function (e) { //detect a scroll event on the tbody
+			/*
+		Setting the thead left value to the negative valule of tbody.scrollLeft will make it track the movement
+		of the tbody element. Setting an elements left value to that of the tbody.scrollLeft left makes it maintain 			it's relative position at the left of the table.    
+		*/
+			$('#t{{i.table_id}} thead').css("left", -$("#t{{i.table_id}} tbody").scrollLeft()); //fix the thead relative to the body scrolling
+			$('#t{{i.table_id}} thead th:nth-child(1)').css("left", $("#t{{i.table_id}} tbody").scrollLeft()); //fix the first cell of the header
+			$('#t{{i.table_id}} tbody td:nth-child(1)').css("left", $("#t{{i.table_id}} tbody").scrollLeft()); //fix the first column of tdbody
+
+		});
+	});
+</script>
