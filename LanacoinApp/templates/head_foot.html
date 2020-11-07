@@ -247,7 +247,7 @@
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul class="sublist__nav">
-              <li><a href="#" title="REPORTED! ">REPORTED! </a></li>
+              <li><a href="{% url 'awesome' %}" title="AWESOME! ">AWESOME! </a></li>
               <li><a href="#" title="HI! ">HI! </a></li>
               <li><a href="#" title="Rolling Stone ">Rolling Stone </a></li>
               <li><a href="#" title="places ">places </a></li>
@@ -432,10 +432,8 @@
       $(window).on('scroll', function () {
         scroll_top = $(this).scrollTop();
         //console.log(scroll_top + " " + last_scroll_top);
-        if (scroll_top == 0) {
-          //color_change("");
-        }
-        else if (scroll_top < last_scroll_top) {
+        
+        if (scroll_top < last_scroll_top) {
           $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
           $(".smart-scroll").css("background-color", "white");
         }

@@ -453,3 +453,26 @@ a:hover.img_hover-e img {
 	width: 400px;
 	background-color: #fff;
 }
+
+/*****************Journal Template**************************/
+
+
+.custom_pc{
+	padding: 0 .45rem;
+}
+.btn-s{
+	font-size: 17px;
+	border-radius: 50%;
+	text-transform: none;
+	padding: .23rem .45rem;
+	color:#e61f63;
+	border-color: transparent;
+}
+.nav-body li a{
+	color: #fff;
+}
+
+.nav-body li a:hover{
+	color: #E288A6;
+	transition: .2s ease;
+}

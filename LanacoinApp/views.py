@@ -766,3 +766,6 @@ def author_view(request):
         the causes of his resignation and the errors that led to the failure of the Alliance . ''',
     }
     return render(request, 'post_inside_info.html', {'bio_data': personal_data, 'data': lst, 'more': more})
+
+def journal_awesome_view(request):
+    return render(request, 'journal_template.html')
