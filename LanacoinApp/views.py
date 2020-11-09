@@ -62,6 +62,8 @@ lsst = [
         'title': ''' The minimum wage will increase by 28%, far from the expectations of the unions ''',
         'topic': 'present',
         'cover_pic': 'images/3275561h134.jpg',
+        'reporter':'By María Ayuso ',
+        'date':'October 31, 2020 '
     },
     {
 
@@ -111,12 +113,16 @@ top_cards = [
     {
         'title': '''Coronavirus Cases on the rise or fall? The situation by party and commune throughout the country''',
         'topic': 'present',
-        'cover_pic': 'images/3358974h407.webp',
+        'cover_pic': 'images/H6PXHJEHNZCWPN7TQ2E4VMKWOE.jpg',
+        'reporter':'By María Ayuso ',
+        'date':'October 31, 2020 '
     },
     {
         'title': '''Mobility monitor: this is the movement of citizens since the beginning of the quarantine''',
         'topic': 'present',
-        'cover_pic': 'images/3359066h407.gif',
+        'cover_pic': 'images/ZQCDK4B7WBCGDL56BTR4ZVDP5Q.jpg',
+        'reporter':'By María Ayuso ',
+        'date':'October 31, 2020 '
     },
 ]
 
@@ -236,6 +242,7 @@ def economy_foregin_trade_view(request):
 def economy_autos_view(request):
     return render(request, 'autos.html', {'data': lst, 'more': more, })
 
+
 def economy_profit_calculator_view(request):
     return render(request, 'profit_calculator.html', {'data': lst, 'more': more, })
 
@@ -245,7 +252,7 @@ def economy_indices_view(request):
     table_data = [
         {
             'table_name': 'Argentina Indices',
-            
+
             'data1': [
                 {
                     'company_name': 'Merval',
@@ -275,7 +282,7 @@ def economy_indices_view(request):
         },
         {
             'table_name': 'Europe Indices',
-            
+
             'data1': [
                 {
                     'company_name': 'Merval',
@@ -312,28 +319,56 @@ def the_world_view(request):
     return render(request, 'world.html', {'data': lst, 'more': more, })
 
 
-def society_buenos_aires_view(request):
-    return render(request, 'buenos_aires.html', {'data': lst, 'more': more, })
+def society_views(request, society):
+    page_info = {}
+    if society == "buenos_aires":
+        page_info = {
+            'page_title': 'Latest news from Buenos Aires - LA NACION',
+            'sub_link': 'Buenos Aires',
+            'main_title': 'Buenos Aires',
+            'view_more': 'SEE MORE NOTES FROM  Buenos Aires',
+        }
+    elif society == "security":
+        page_info = {
+            'page_title': 'Latest news on Security  - LA NACION',
+            'sub_link': 'Security',
+            'main_title': 'Security',
+            'view_more': 'SEE MORE NOTES FROM  Security ',
+        }
+    elif society == "education":
+        page_info = {
+            'page_title': 'Latest news on Education  - LA NACION ',
+            'sub_link': 'Education',
+            'main_title': 'Education',
+            'view_more': 'SEE MORE NOTES FROM  Education',
+        }
+    elif society == "culture":
+        page_info = {
+            'page_title': 'Latest news from Culture  - LA NACION',
+            'sub_link': 'Culture',
+            'main_title': 'Culture',
+            'view_more': 'SEE MORE NOTES FROM Culture',
+        }
+    elif society == "health":
+        page_info = {
+            'page_title': 'Latest health news - LA NACION',
+            'sub_link': 'Health',
+            'main_title': 'Health',
+            'view_more': 'SEE MORE health NOTES',
+        }
+    elif society == "science":
+        page_info = {
+            'page_title': 'Latest science news - LA NACION',
+            'sub_link': 'Science',
+            'main_title': 'Science',
+            'view_more': 'SEE MORE science NOTES',
+        }
 
+    return render(request, 'society_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
 
-def society_security_view(request):
-    return render(request, 'security.html', {'data': lst, 'more': more, })
+def society_community_view(request):
 
-
-def society_education_view(request):
-    return render(request, 'education.html', {'data': lst, 'more': more, })
-
-
-def society_culture_view(request):
-    return render(request, 'culture.html', {'data': lst, 'more': more, })
-
-
-def society_health_view(request):
-    return render(request, 'health.html', {'data': lst, 'more': more, })
-
-
-def society_science_view(request):
-    return render(request, 'science.html', {'data': lst, 'more': more, })
+    return render(request, 'community.html', {'data': lsst, 'more': moore, 'cards': top_cards})
 
 
 def opinion_editorial_view(request):
@@ -393,7 +428,7 @@ def sports_football_view(request):
 def sports_statistics_view(request):
     sp_data = [
         {
-            'table_id':'1',
+            'table_id': '1',
             'table_title': 'GROUP A',
             'last_col_name': 'Recent Results',
 
@@ -536,7 +571,7 @@ def sports_statistics_view(request):
             ]
         },
         {
-            'table_id':'2',
+            'table_id': '2',
             'table_title': 'GROUP B',
             'last_col_name': 'Pr.',
 
@@ -594,7 +629,7 @@ def sports_statistics_view(request):
         },
 
         {
-            'table_id':'3',
+            'table_id': '3',
             'table_title': 'GROUP C',
             'last_col_name': 'Pr.',
 
@@ -767,5 +802,71 @@ def author_view(request):
     }
     return render(request, 'post_inside_info.html', {'bio_data': personal_data, 'data': lst, 'more': more})
 
+
 def journal_awesome_view(request):
-    return render(request, 'journal_template.html',{'data': lsst, 'more': moore, 'cards': top_cards})
+    return render(request, 'awesome.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_hi_view(request):
+    return render(request, 'hi.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_rolling_stone_view(request):
+    return render(request, 'rolling_stone.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_palces_view(request):
+    return render(request, 'places.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_living_view(request):
+    return render(request, 'living.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_brando_view(request):
+    return render(request, 'brand.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def journal_yard_view(request):
+    return render(request, 'yard.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+
+def awesome_sub_menus_view(request, parameter):
+    page_info = {}
+    if parameter == "healthy_kitchen":
+        page_info = {
+            'page_title': 'Latest news from Healthy Kitchen - LA NACION',
+            'sub_link': 'Healthy kitchen',
+            'main_title': 'Healthy kitchen',
+            'view_more': 'SEE MORE NOTES FROM Healthy Kitchen',
+        }
+    elif parameter == "travels":
+        page_info = {
+            'page_title': 'Latest news from OHLALÁ! Travels - LA NACION',
+            'sub_link': 'OHLALÁ! Travels',
+            'main_title': 'OHLALÁ! Travels',
+            'view_more': 'SEE MORE NOTES FROM OHLALÁ! Travels',
+        }
+    elif parameter == "makers":
+        page_info = {
+            'page_title': 'Latest news from  OHLALÁ! makers  - LA NACION',
+            'sub_link': ' OHLALÁ! makers ',
+            'main_title': ' OHLALÁ! makers ',
+            'view_more': 'SEE MORE NOTES FROM  OHLALÁ! makers ',
+        }
+    elif parameter == "factory":
+        page_info = {
+            'page_title': 'Latest news from OHLALÁ Factory  - LA NACION',
+            'sub_link': 'OHLALÁ Factory ',
+            'main_title': 'OHLALÁ Factory ',
+            'view_more': 'SEE MORE NOTES FROM OHLALÁ Factory ',
+        }
+    elif parameter == "fest":
+        page_info = {
+            'page_title': 'Latest news from OH DEAR! Fest  - LA NACION',
+            'sub_link': 'OH DEAR! Fest ',
+            'main_title': 'OH DEAR! Fest ',
+            'view_more': 'SEE MORE NOTES FROM OH DEAR! Fest ',
+        }
+    
+    return render(request, 'awesome_sub_menu.html', {'pg_info': page_info, 'data': lst, 'more': more})

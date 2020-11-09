@@ -94,7 +94,52 @@ ul, ol {
 
 .awesome .btn__politics:hover {
 	color: #fff;
-	background-color: #e61f63;
+	background-color:  #E0081D;
+} 
+.hi .btn__politics {
+	color:  #E0081D;
+	border: 1px solid  #E0081D;
+}
+
+.hi .btn__politics:hover {
+	color: #fff;
+	background-color:  #E0081D;
+}
+.places .btn__politics {
+	color:  #009C8A;
+	border: 1px solid  #009C8A;
+}
+
+.places .btn__politics:hover {
+	color: #fff;
+	background-color:  #009C8A;
+}
+.stone .btn__politics {
+	color:  #000;
+	border: 1px solid  #000;
+}
+
+.stone .btn__politics:hover {
+	color: #fff;
+	background-color:  #000;
+}
+.brando .btn__politics {
+	color:  #E54000;
+	border: 1px solid  #E54000;
+}
+
+.brando .btn__politics:hover {
+	color: #fff;
+	background-color:  #E54000;
+}
+.yard .btn__politics {
+	color:  #DC9A44;
+	border: 1px solid  #DC9A44;
+}
+
+.yard .btn__politics:hover {
+	color: #fff;
+	background-color:  #DC9A44;
 }
 
 .btn__social {
@@ -484,6 +529,17 @@ a:hover.img_hover-e img {
 	color: #fff;
 	border: 1px solid #fff;
 }
+.rolling .btn-s {
+
+	color: white;
+	background-color: black;
+}
+.rolling .btn-s:hover {
+
+	color: black;
+	background-color: white;
+	border-color: black;
+}
 
 .nav-body li a {
 	color: #fff;
@@ -493,7 +549,7 @@ a:hover.img_hover-e img {
 	color: #E288A6;
 	transition: .2s ease;
 }
-
+/*********************Journal*************************/
 .banner {
 	position: relative;
 	zoom: 1;
@@ -660,4 +716,17 @@ a:hover.img_hover-e img {
 		background-position: right;
 		background-repeat: no-repeat;
 	}
+}
+
+/**********Community**************/
+.community-top-menu
+{
+	margin-top: .7rem;
+}
+.community-top-menu ul li
+{
+	font-family: suecaslabmedium, Georgia, "serif";
+	display: inline list-item;
+	margin-right: 1rem;
+	font-size: 18px;
 }

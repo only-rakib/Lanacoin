@@ -1,0 +1,157 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Latest news from Places Magazine - THE NATION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 py-0 py-md-5" style="background:#009C8A;">
+	
+		<div class="row pt-3 pb-2">
+			<div class="col-sm-4 d-none d-sm-block">
+				<div class="row">
+					<div class="col-sm-12" style="color: #009C8A;">
+						<button onclick="window.location.href='https://twitter.com/RevistaOhlala';" class="btn-s" href="#"><i style="width:19px;height: 15px;" class="fab fa-twitter"></i></button>
+						<button onclick="window.location.href='https://www.facebook.com/ohlalarevista';" class="btn-s" href="#"><i style="width:19px;height: 15px;" class="fab fa-facebook-f"></i></button>
+						<button onclick="window.location.href='https://www.instagram.com/revistaohlala/';" class="btn-s"href=""><i style="width:19px;height: 15px;" class="fab fa-instagram"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="row pt-3 pb-3">
+					<div class="col-sm-6 col-6 offset-3 offset-sm-0">
+						<p class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 66.564">
+								<defs>
+									<style>
+										.cls-1 { fill: #fff; }
+									 </style>
+								</defs>
+								<g id="lugares-bco_1_" data-name="lugares-bco (1)" transform="translate(0 0.003)">
+									<g id="lugares" transform="translate(0 -0.003)">
+										<path id="Path_120" data-name="Path 120" class="cls-1" d="M375.955,47.205a18.312,18.312,0,0,0-12.981-17.73c-7.5-3.263-15.694-5.027-15.694-10.85,0-2.56,2.3-6.267,8.823-6.267a21.741,21.741,0,0,1,12.251,3.7L374.7,5.567A32.408,32.408,0,0,0,356.108.012c-11.383,0-22.936,5.371-22.936,18.612,0,10.228,5.121,14.288,11.562,17.865,5.371,3,17.113,5.206,17.113,11.638,0,3.881-1.764,6.083-8.2,6.083a24.968,24.968,0,0,1-14.552-5.559l-7.323,9.884a33.711,33.711,0,0,0,21.611,8.026C367.312,66.56,376,59.4,376,47.245Zm-50.022,18.3V53.6H301.251V39.976h21.674V28.069H301.251V12.993H324.59V1.073H287.138V65.531Zm-62.282-45.25a7.551,7.551,0,0,1-8.012,8.2h-9V12.993h9a7.377,7.377,0,0,1,8.013,7.31ZM280.5,65.513,263.4,38.562a18.2,18.2,0,0,0,14.387-18.254c0-11.123-8.671-19.248-22.148-19.248H232.527V65.517h14.114V35.034L264.5,65.473Zm-77.269-28.2H190.9l4.848-15.707c.7-2.381,1.343-5.206,1.343-5.206s.7,2.905,1.419,5.206Zm23.993,28.2L203.866,1.073h-13.59L167.259,65.531h14.924L187.21,49.3H206.8l4.924,16.231ZM136.642,33V44.9h16.41a15.555,15.555,0,0,1-15.873,9.266A20.058,20.058,0,0,1,118.128,33a19.7,19.7,0,0,1,18.8-20.64,21.432,21.432,0,0,1,16.114,6.714l8.729-8.563a32.26,32.26,0,0,0-24.83-10.5A31.96,31.96,0,0,0,104.22,33,31.893,31.893,0,0,0,137.206,66.52c17.551,0,31.5-12.265,31.5-33.523ZM97.134,39.309V1.073H83.786V39.309A14.279,14.279,0,0,1,69.579,54.3c-7.941,0-13.312-6.218-13.312-14.991V1.073H41.378V39.309c0,17.65,13.384,27.175,28.2,27.175A26.016,26.016,0,0,0,97.135,39.309Zm-60.089,26.2V53.6H14.109V1.073H0V65.531Z" transform="translate(0 0.003)"></path>
+									</g>
+								</g>
+							</svg>
+                        </p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row pb-5"></div>
+	
+</section>
+<section class="container-fluid px-lg-5 px-md-3">
+	
+		<div class="row" style="margin-top: -2rem;">
+			{% for i in cards %}   
+			<div class="col-md-6 col-sm-12 pt-3 pt-md-0 px-0 px-md-3" >
+				<div class="card" style="box-shadow: -1px 6px 40px 4px rgba(0,0,0,.2);height: 100%;">
+					<a title="{{i.title}}" href="#" class="img_hover-e figure" style="background: #E6E6E6;">
+						<img class="d-flex justify-content-center align-items-center card-img-top"
+							
+							{% with i.cover_pic as img %}
+							src="{% static img %}" style="height: auto;" alt="">
+							{% endwith %}
+								
+					</a>
+					<div class="card-body">
+						<a title="{{i.title}}" href="#" class="black bluehover">
+							<h4 class="card-title" style="font-family: suecaslabmedium,Georgia">
+								{{i.title}}
+							</h4>
+						</a>
+						<p class="card-text text-uppercase" style="font-size: 12px;">
+
+							<a href="#" style="color: #009C8A;">{{i.topic}}</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	
+</section>
+
+<section class="container-fluid px-lg-5 px-md-3">
+	<div class="row mt-0 mt-md-4">
+		<div class="col-9">
+			<div class="row">
+				
+				{% for x in data %}
+					   
+				<div class="col-12 col-md-4">
+					
+						<div class="card-body py-md-3 px-sm-0 px-0">
+							<a href="#" class="black bluehover img_hover-e" title="{{x.title}}">
+							{% with x.cover_pic as img %}
+							<img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+							{% endwith %}
+							<h5 class="card-title px-2 px-md-0" style="font-family: suecaslabmedium,Georgia">
+								{{x.title}}
+							</h5>
+							 </a>
+							 <p class="card-text text-uppercase" style="font-size: 12px;">
+
+								<a href="#" style="color: #009C8A;">present</a>
+							</p>
+						</div>
+					
+				</div>
+				{% endfor %}
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3 places">
+					<a class="btn btn__politics" href="#">SEE MORE NOTES FROM Places Magazine </a>
+				</div>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="row">
+				<div class="col hide1023">
+					<div class="row pt-3 pb-3">
+						<div class="col-12">
+							<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">
+							  most  <strong>read now</strong></h5>
+						</div>
+					</div>
+					<ol class="steps">
+
+						{% for y in more %}
+
+
+
+						<li>
+							<a href="#" class="black bluehover img_hover-e">
+								<div class="card" style="border: none;">
+									<div class="row no-gutters">
+										<div class="col-md-8">
+											<div class="py-2 pl-2 pr-1">
+												<p class="card-text">
+
+													{{y.title}}
+
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 pt-2">
+
+											{% with y.cover_pic as img %}
+											<img src="{% static img %}" class="card-img w-100" alt="...">
+											{% endwith %}
+
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{% endfor %}
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock container %}

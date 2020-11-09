@@ -133,13 +133,13 @@
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul>
-              <li><a href="{% url 'buenos_aires' %}" title="Buenos Aires ">Buenos Aires </a></li>
-              <li><a href="{% url 'security' %}" title="Security">Security </a></li>
-              <li><a href="{% url 'education' %}" title="Education">Education </a></li>
-              <li><a href="{% url 'culture' %}" title="Culture">Culture </a></li>
-              <li><a href="#" title="Community">Community </a></li>
-              <li><a href="{% url 'health' %}" title="Health">Health </a></li>
-              <li><a href="{% url 'science' %}" title="Science">Science </a></li>
+              <li><a href="{% url 'society_common' society='buenos_aires' %}" title="Buenos Aires ">Buenos Aires </a></li>
+              <li><a href="{% url 'society_common' society='security' %}" title="Security">Security </a></li>
+              <li><a href="{% url 'society_common' society='education' %}" title="Education">Education </a></li>
+              <li><a href="{% url 'society_common' society='culture' %}" title="Culture">Culture </a></li>
+              <li><a href="{% url 'community' %}" title="Community">Community </a></li>
+              <li><a href="{% url 'society_common' society='health' %}" title="Health">Health </a></li>
+              <li><a href="{% url 'society_common' society='science' %}" title="Science">Science </a></li>
             </ul>
           </div>
         </li>
@@ -248,12 +248,12 @@
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul class="sublist__nav">
               <li><a href="{% url 'awesome' %}" title="AWESOME! ">AWESOME! </a></li>
-              <li><a href="#" title="HI! ">HI! </a></li>
-              <li><a href="#" title="Rolling Stone ">Rolling Stone </a></li>
-              <li><a href="#" title="places ">places </a></li>
-              <li><a href="#" title="Living ">Living </a></li>
-              <li><a href="#" title="Brando ">Brando </a></li>
-              <li><a href="#" title="Yard ">Yard </a></li>
+              <li><a href="{% url 'hi' %}" title="HI! ">HI! </a></li>
+              <li><a href="{% url 'rolling_stone' %}" title="Rolling Stone ">Rolling Stone </a></li>
+              <li><a href="{% url 'places' %}" title="places ">places </a></li>
+              <li><a href="{% url 'living' %}" title="Living ">Living </a></li>
+              <li><a href="{% url 'brando' %}" title="Brando ">Brando </a></li>
+              <li><a href="{% url 'yard' %}" title="Yard ">Yard </a></li>
             </ul>
 
           </div>

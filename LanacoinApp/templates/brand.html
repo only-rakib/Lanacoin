@@ -1,0 +1,153 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Latest news from Brando Magazine - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3" style="background:#E54000;">
+	
+		<div class="row pt-3 pb-2 py-0 py-md-5">
+			<div class="col-sm-4 d-none d-sm-block">
+				<div class="row">
+					<div class="col-sm-12" style="color: #E54000;">
+						<button onclick="window.location.href='https://twitter.com/RevistaOhlala';" class="btn-s" href="#"><i style="width:19px;height: 15px;" class="fab fa-twitter"></i></button>
+						<button onclick="window.location.href='https://www.facebook.com/ohlalarevista';" class="btn-s" href="#"><i style="width:19px;height: 15px;" class="fab fa-facebook-f"></i></button>
+						<button onclick="window.location.href='https://www.instagram.com/revistaohlala/';" class="btn-s"href=""><i style="width:19px;height: 15px;" class="fab fa-instagram"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<div class="row pt-3 pb-3">
+					<div class="col-sm-6 col-6 offset-3 offset-sm-0">
+						<p class="text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="brando-blanco" viewBox="0 0 348.926 70.995">
+								<defs>
+									<style>
+										.cls-1 { fill: #fff; }
+									 </style>
+								</defs>
+								<path id="Path_34" data-name="Path 34" class="cls-1" d="M216.892,41.984,194.609,0H173.024V66.1L152.71,0h-26.74L106.875,64.067,93.924,45.852a18.571,18.571,0,0,0,17.28-17.06V18.933A18.933,18.933,0,0,0,92.151,0H57.142V70.986H74.3v-25.5l17.5,25.5H122.3l3.682-11.843h26.74l3.636,11.843h33.76V27.779l23.959,43.207H234.06V0H216.892ZM93.558,25.7c0,4.226-1.046,5.836-5.463,5.836H74.236V16.38H88.1c4.417,0,5.454,1.619,5.463,5.845Zm37.093,17.82,8.68-27.508,8.717,27.508ZM45.179,35.155A18.928,18.928,0,0,0,54.17,19.17,19.609,19.609,0,0,0,34.063,0H0V70.986H35.246A19.6,19.6,0,0,0,55.357,51.821,19.2,19.2,0,0,0,45.179,35.164ZM17.123,16.389H30.717c3.782,0,5.346,1.407,5.346,5.072v2.171c0,3.669-1.528,5.072-5.346,5.072H17.123ZM37.147,49.244c0,3.819-1.66,5.28-5.724,5.28h-14.3V41.718h14.3c4.055,0,5.724,1.461,5.724,5.28ZM329.873,0h-17.5a19.032,19.032,0,0,0-19.04,19.04V51.962a19.032,19.032,0,0,0,19.04,19.024H330a18.829,18.829,0,0,0,18.924-18.928V18.933A18.933,18.933,0,0,0,329.873,0Zm1.843,49.782a4.715,4.715,0,0,1-4.7,4.72H315.294a4.691,4.691,0,0,1-4.7-4.691v-28.7a4.715,4.715,0,0,1,4.7-4.728h11.718a4.691,4.691,0,0,1,4.7,4.7ZM272.07,0H236.858V70.986h35.366A18.9,18.9,0,0,0,291.1,52.058V18.933A19,19,0,0,0,272.07,0Zm1.752,49.774a4.716,4.716,0,0,1-4.7,4.728H254.039V16.488h15.105a4.691,4.691,0,0,1,4.686,4.686Z" transform="translate(0 0.002)"></path>
+							</svg>
+                        </p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row pb-5"></div>
+	
+</section>
+<section class="container-fluid px-lg-5 px-md-3">
+	
+		<div class="row" style="margin-top: -2rem;">
+			{% for i in cards %}   
+			<div class="col-md-6 col-sm-12 pt-3 pt-md-0 px-0 px-md-3">
+				<div class="card" style="box-shadow: -1px 6px 40px 4px rgba(0,0,0,.2);height: 100%;">
+					<a title="{{i.title}}" href="#" class="img_hover-e figure" style="background: #E6E6E6;">
+						<img class="d-flex justify-content-center align-items-center card-img-top"
+							
+							{% with i.cover_pic as img %}
+							src="{% static img %}" style="height: auto;" alt="">
+							{% endwith %}
+								
+					</a>
+					<div class="card-body">
+						<a title="{{i.title}}" href="#" class="black bluehover">
+							<h4 class="card-title" style="font-family: suecaslabmedium,Georgia">
+								{{i.title}}
+							</h4>
+						</a>
+						<p class="card-text text-uppercase" style="font-size: 12px;">
+
+							<a href="#" style="color: #E54000;">{{i.topic}}</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	
+</section>
+
+<section class="container-fluid px-lg-5 px-md-3">
+	<div class="row mt-0 mt-md-4">
+		<div class="col-9">
+			<div class="row">
+				
+				{% for x in data %}
+					   
+				<div class="col-12 col-md-4">
+					
+						<div class="card-body py-md-3 px-sm-0 px-0">
+							<a href="#" class="black bluehover img_hover-e" title="{{x.title}}">
+							{% with x.cover_pic as img %}
+							<img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+							{% endwith %}
+							<h5 class="card-title px-2 px-md-0" style="font-family: suecaslabmedium,Georgia">
+								{{x.title}}
+							</h5>
+							 </a>
+							 <p class="card-text text-uppercase" style="font-size: 12px;">
+
+								<a href="#" style="color: #E54000;">present</a>
+							</p>
+						</div>
+					
+				</div>
+				{% endfor %}
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3 brando">
+					<a class="btn btn__politics" href="#">SEE MORE NOTES FROM Brando Magazine! </a>
+				</div>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="row">
+				<div class="col hide1023">
+					<div class="row pt-3 pb-3">
+						<div class="col-12">
+							<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">
+							  most  <strong>read now</strong></h5>
+						</div>
+					</div>
+					<ol class="steps">
+
+						{% for y in more %}
+
+
+
+						<li>
+							<a href="#" class="black bluehover img_hover-e">
+								<div class="card" style="border: none;">
+									<div class="row no-gutters">
+										<div class="col-md-8">
+											<div class="py-2 pl-2 pr-1">
+												<p class="card-text">
+
+													{{y.title}}
+
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 pt-2">
+
+											{% with y.cover_pic as img %}
+											<img src="{% static img %}" class="card-img w-100" alt="...">
+											{% endwith %}
+
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{% endfor %}
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock container %}

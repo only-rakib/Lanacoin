@@ -1,7 +1,7 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-<title>Latest news from Campo - LA NACION</title>
+<title>Community - LA NACION </title>
 {% endblock title %}
 {% block container %}
 <section class="container-fluid px-lg-5 px-md-3 margin_t">
@@ -9,16 +9,29 @@
         <div class="col">
             <div class="row">
                 <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-                    <a href="#"> THE NATION |</a> <a href="#"> Economy | </a> <span style="color: gray;">Field</span>
+                    <a href="#"> THE NATION </a>| <span style="color: gray;">Community </span>
                 </div>
-                <div class="col-12 heading__main-politics">
-                    <h1>Field </h1>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-3 heading__main-politics">
+                    <h1><strong>Community</strong></h1>
+                    
+                </div>
+                <div class="col-12 col-md-9 community-top-menu">
+                    <ul>
+                        
+                        <li><a href="#" class="black">Let's talk about everything </a></li>
+                        <li><a href="#" class="black">Racism</a></li>
+                        <li><a href="#" class="black">Diversity </a></li>
+                        <li><a href="#" class="black">Hunger for the future </a></li>
+                        
+                    </ul>
                 </div>
             </div>
             <div class="row my-3">
                 {% for i in cards %}               
                 <div class="col-md-6 col-12">
-                    <div class="card" style="box-shadow: -1px 6px 40px 4px rgba(0,0,0,.2);height: 100%;">
+                    <div class="card" style="height: 100%;">
                         <a title="{{i.title}}" href="#" class="img_hover-e figure" style="background: #E6E6E6;">
                             <img class="d-flex justify-content-center align-items-center card-img-top"
                                 
@@ -33,10 +46,12 @@
                                     {{i.title}}
                                 </h4>
                             </a>
-                            <p class="card-text text-uppercase" style="font-size: 12px;">
+                            <p class="card-text" style="font-size: 14px;font-weight: 600;">
 
-                                <a href="#">{{i.topic}}</a>
+                                <a href="#" class="black">{{i.reporter}}</a><br>
+                                <span class="text-muted pt-5">{{i.date}}</span>
                             </p>
+                            
 
                         </div>
                     </div>
@@ -44,7 +59,24 @@
                 {% endfor %}
 
             </div>
-            <div class="row mt-0 mt-md-4">
+            <hr>
+            <div class="row">
+                <div class="col community-top-menu">
+                    <ul>
+                        <li><a href="#">Discrimination</a></li>
+                        <li><a href="#">Diversity </a></li>
+                        <li><a href="#">Addictions </a></li>
+                        <li><a href="#">Human rights</a></li>
+                        <li><a href="#">Grooming </a></li>
+                        <li><a href="#">Sexual abuse </a></li>
+                        <li><a href="#">Poverty </a></li>
+                        <li><a href="#">Alcohol </a></li>
+                        <li><a href="#">Teenagers </a></li>
+                        <li><a href="#">Gender identity </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-9">
                     <div class="row">
                         
@@ -61,10 +93,13 @@
                                         {{x.title}}
                                     </h5>
                                      </a>
-                                     <p class="card-text text-uppercase" style="font-size: 12px;">
+                                     
+                                    <p class="card-text" style="font-size: 14px;font-weight: 600;">
 
-                                        <a href="#">present</a>
+                                        <a href="#" class="black">{{x.reporter}}</a><br>
+                                        <span class="text-muted pt-5">{{x.date}}</span>
                                     </p>
+                                    
                                 </div>
                             
                         </div>
@@ -72,7 +107,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
-                            <a class="btn btn__politics" href="#">SEE MORE Field Notes</a>
+                            <a class="btn btn__politics" href="#">SEE MORE NOTES COMMUNITY </a>
                         </div>
                     </div>
                 </div>
@@ -81,8 +116,8 @@
                         <div class="col hide1023">
                             <div class="row pt-3 pb-3">
                                 <div class="col-12">
-                                    <h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">
-                                      most  <strong>read now</strong></h5>
+                                    <h6 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">
+                                      <strong>Most Read Community </strong></h6>
                                 </div>
                             </div>
                             <ol class="steps">
