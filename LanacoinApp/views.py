@@ -768,4 +768,4 @@ def author_view(request):
     return render(request, 'post_inside_info.html', {'bio_data': personal_data, 'data': lst, 'more': more})
 
 def journal_awesome_view(request):
-    return render(request, 'journal_template.html')
+    return render(request, 'journal_template.html',{'data': lsst, 'more': moore, 'cards': top_cards})

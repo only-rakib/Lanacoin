@@ -87,6 +87,16 @@ ul, ol {
 	color: #fff;
 }
 
+.awesome .btn__politics {
+	color: #e61f63;
+	border: 1px solid #e61f63;
+}
+
+.awesome .btn__politics:hover {
+	color: #fff;
+	background-color: #e61f63;
+}
+
 .btn__social {
 	max-width: 36px;
 	max-height: 36px;
@@ -456,23 +466,198 @@ a:hover.img_hover-e img {
 
 /*****************Journal Template**************************/
 
-
-.custom_pc{
+.custom_pc {
 	padding: 0 .45rem;
 }
-.btn-s{
+
+.btn-s {
 	font-size: 17px;
 	border-radius: 50%;
 	text-transform: none;
 	padding: .23rem .45rem;
-	color:#e61f63;
+	color: inherit;
 	border-color: transparent;
 }
-.nav-body li a{
+
+.btn-s:hover {
+	background: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.nav-body li a {
 	color: #fff;
 }
 
-.nav-body li a:hover{
+.nav-body li a:hover {
 	color: #E288A6;
 	transition: .2s ease;
+}
+
+.banner {
+	position: relative;
+	zoom: 1;
+	border: 1px solid #000;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-image: url(/static/images/bkg-1260x150.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1366px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 163px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-1366x163.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 152px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-1280x152.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 984px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 150px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-984x150.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 117px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-768x117.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 708px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 170px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-708x170.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 187px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-420x187.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 382px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 170px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-382x170.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+/*
+
+
+@media screen and (max-width: 360px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 160px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-360x160.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+	
+}
+*/
+
+@media screen and (max-width: 320px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 142px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-320x142.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 288px) {
+	.banner {
+		position: relative;
+		zoom: 1;
+		border: 1px solid #000;
+		height: 160px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-image: url(/static/images/bkg-288x160.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
 }

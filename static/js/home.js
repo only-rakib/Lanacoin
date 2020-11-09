@@ -21,5 +21,6 @@ function color_change(clr)
   {
     clr="white";
   }
+  console.log(clr);
   $(".smart-scroll").css("background-color", clr);
 }
