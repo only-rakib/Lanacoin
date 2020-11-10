@@ -20,10 +20,10 @@
                 <div class="col-12 col-md-9 community-top-menu">
                     <ul>
                         
-                        <li><a href="#" class="black">Let's talk about everything </a></li>
-                        <li><a href="#" class="black">Racism</a></li>
-                        <li><a href="#" class="black">Diversity </a></li>
-                        <li><a href="#" class="black">Hunger for the future </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='everything' %}" class="black">Let's talk about everything </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='racism' %}" class="black">Racism</a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='diversity' %}" class="black">Diversity </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='hunger' %}" class="black">Hunger for the future </a></li>
                         
                     </ul>
                 </div>
@@ -63,21 +63,21 @@
             <div class="row">
                 <div class="col community-top-menu">
                     <ul>
-                        <li><a href="#">Discrimination</a></li>
-                        <li><a href="#">Diversity </a></li>
-                        <li><a href="#">Addictions </a></li>
-                        <li><a href="#">Human rights</a></li>
-                        <li><a href="#">Grooming </a></li>
-                        <li><a href="#">Sexual abuse </a></li>
-                        <li><a href="#">Poverty </a></li>
-                        <li><a href="#">Alcohol </a></li>
-                        <li><a href="#">Teenagers </a></li>
-                        <li><a href="#">Gender identity </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='discrimination' %}">Discrimination</a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='diversity' %}">Diversity </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='addictions' %}">Addictions </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='human_rights' %}">Human rights</a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='grooming' %}">Grooming </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='sexual_abuse' %}">Sexual abuse </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='proverty' %}">Poverty </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='alcohol' %}">Alcohol </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='teenagers' %}">Teenagers </a></li>
+                        <li><a href="{% url 'community_common_menu' clicked='gender_identity' %}">Gender identity </a></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="col-9">
+                <div class="col-12 col-md-9">
                     <div class="row">
                         
                         {% for x in data %}
@@ -94,7 +94,7 @@
                                     </h5>
                                      </a>
                                      
-                                    <p class="card-text" style="font-size: 14px;font-weight: 600;">
+                                    <p class="card-text px-2 p-md-0" style="font-size: 14px;font-weight: 600;">
 
                                         <a href="#" class="black">{{x.reporter}}</a><br>
                                         <span class="text-muted pt-5">{{x.date}}</span>

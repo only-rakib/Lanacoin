@@ -363,12 +363,110 @@ def society_views(request, society):
             'main_title': 'Science',
             'view_more': 'SEE MORE science NOTES',
         }
-
+    elif society =="community":
+        return render(request, 'community.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+    
     return render(request, 'society_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
 
-def society_community_view(request):
 
-    return render(request, 'community.html', {'data': lsst, 'more': moore, 'cards': top_cards})
+
+def society_community_sub_menu_common_view(request,clicked):
+    page_info = {}
+    if clicked == "discrimination":
+        page_info = {
+            'page_title': 'Latest news on Discrimination  - LA NACION',
+            'sub_link': 'Discrimination ',
+            'main_title': 'Discrimination ',
+            'view_more': 'SEE MORE NOTES on Discrimination ',
+        }
+    elif clicked == "diversity":
+        page_info = {
+            'page_title': 'Diversity - LA NACION',
+            'sub_link': 'Diversity',
+            'main_title': 'Diversity',
+            'view_more': 'SEE MORE From Diversity',
+        }
+        return render(request,'community_diversity.html',{'pg_info': page_info,'data': lsst, 'more': moore,})
+    elif clicked == "addictions":
+        page_info = {
+            'page_title': 'Latest Addictions  news - LA NACION',
+            'sub_link': 'Addictions ',
+            'main_title': 'Addictions ',
+            'view_more': 'SEE MORE Addictions  NOTES',
+        }
+    elif clicked == "human_rights":
+        page_info = {
+            'page_title': 'Latest news on Human rights   - LA NACION',
+            'sub_link': 'Human rights  ',
+            'main_title': 'Human rights  ',
+            'view_more': 'SEE MORE NOTES on Human rights  ',
+        }
+    elif clicked == "grooming":
+        page_info = {
+            'page_title': 'Latest Grooming  news - LA NACION',
+            'sub_link': 'Grooming ',
+            'main_title': 'Grooming ',
+            'view_more': 'SEE MORE Grooming  NOTES',
+        }
+    elif clicked == "sexual_abuse":
+        page_info = {
+            'page_title': 'Latest news on Sexual abuse   - LA NACION',
+            'sub_link': 'Sexual abuse  ',
+            'main_title': 'Sexual abuse  ',
+            'view_more': 'SEE MORE NOTES on Sexual abuse  ',
+        }
+    
+    elif clicked == "proverty":
+        page_info = {
+            'page_title': 'Latest Poverty   news - LA NACION',
+            'sub_link': 'Poverty  ',
+            'main_title': 'Poverty  ',
+            'view_more': 'SEE MORE Poverty   NOTES',
+        }
+    
+    elif clicked == "alcohol":
+        page_info = {
+            'page_title': 'Latest alcohol   news - LA NACION',
+            'sub_link': 'alcohol  ',
+            'main_title': 'alcohol  ',
+            'view_more': 'SEE MORE alcohol   NOTES',
+        }
+    
+    elif clicked == "teenagers":
+        page_info = {
+            'page_title': 'Latest news form Teenagers  - LA NACION',
+            'sub_link': 'Teenagers ',
+            'main_title': 'Teenagers ',
+            'view_more': 'SEE MORE NOTES from Teenagers ',
+        }
+    
+    elif clicked == "gender_identity":
+        page_info = {
+            'page_title': 'Latest news on DGender identity  - LA NACION',
+            'sub_link': 'Gender identity  ',
+            'main_title': 'Gender identity  ',
+            'view_more': 'SEE MORE NOTES on Gender identity  ',
+        }
+    elif clicked =="racism":
+        page_info = {
+            'page_title': 'Racism - LA NACION',
+            'sub_link': 'Racism',
+            'main_title': 'Racism',
+            'view_more': 'SEE MORE From Racism',
+        }
+        return render(request,'community_diversity.html',{'pg_info': page_info,'data': lsst, 'more': moore,})
+    
+    elif clicked =="hunger":
+        page_info = {
+            'page_title': 'Hunger for the future  - LA NACION',
+            'sub_link': 'Hunger for the future ',
+            'main_title': 'Hunger for the future ',
+            'view_more': 'SEE MORE From Hunger for the future ',
+        }
+        return render(request,'hunger.html',{'pg_info': page_info,'data': lsst, 'more': moore,'cards':top_cards})
+    elif clicked == "everything":
+        return render(request,'community_everything.html')
+    return render(request, 'community_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
 
 
 def opinion_editorial_view(request):
@@ -869,4 +967,4 @@ def awesome_sub_menus_view(request, parameter):
             'view_more': 'SEE MORE NOTES FROM OH DEAR! Fest ',
         }
     
-    return render(request, 'awesome_sub_menu.html', {'pg_info': page_info, 'data': lst, 'more': more})
+    return render(request, 'community_common.html', {'pg_info': page_info, 'data': lst, 'more': more})

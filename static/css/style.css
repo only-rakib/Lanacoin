@@ -267,7 +267,16 @@ ul, ol {
 	text-align: center;
 	box-shadow: 1px 1px 0 #999;
 }
-
+.img-top-card.steps{
+	padding-left:0px;
+}
+.img-top-card.steps li::before {
+	
+	top: 0;
+	z-index: 1;
+	margin-left: 2.6rem;
+	
+}
 .img_hover-e img {
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
@@ -729,4 +738,10 @@ a:hover.img_hover-e img {
 	display: inline list-item;
 	margin-right: 1rem;
 	font-size: 18px;
+}
+.everything ul li
+{
+	display: inline list-item;
+	font-size: 16px;
+	margin-right: 1rem;
 }

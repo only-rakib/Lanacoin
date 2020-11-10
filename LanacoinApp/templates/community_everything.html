@@ -1,0 +1,141 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Let's talk about everything - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 py-3" style="background-color: #D7D6CF;">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                    <a style="color: #000;" href="{% url 'home' %}"> LA NACION </a>|
+                    <a style="color: #000;" href="{% url 'society_common' society='community' %}"> Community </a>|
+                    <span style="color: #000;">Let's talk about everything </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="{% static 'images/2BHEOVW2ONGT7MC7U4VX4A2FTM.png' %}" alt="icon" class="">
+                </div>
+                <div class="col-12 col-md-8 everything" style="overflow-x: scroll;">
+                    <ul class="d-flex pt-5 font-weight-bold">
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='healthy_kitchen'%}">Gender
+                                violence </a>
+                        </li>
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='travels'%}">Abuse </a>
+                        </li>
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='makers'%}">Bullying</a>
+                        </li>
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='factory'%}">Addictions</a>
+                        </li>
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='fest'%}">Eating disorders</a>
+                        </li>
+                        <li>
+                            <a class="black" href="{% url 'awsome_sub_menu' parameter='fest'%}">Inclusive education </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="container-fluid px-lg-5 px-md-3 my-3">
+    <div class="row">
+        <div class="col-12 col-md-9 border">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-abuso.jpg' %}" alt="Card image cap">
+                            <div style="background: #4F2D42;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about abuse </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-violencia-genero.jpg' %}" alt="Card image cap">
+                            <div style="background: #621527;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about gender violence </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-educacion-inclusiva-ok.jpg' %}" alt="Card image cap">
+                            <div style="background: #506B66;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about inclusive education </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-bullying.jpg' %}" alt="Card image cap">
+                            <div style="background: #FB433C;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about bullying </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-trastornos-alimentacion.jpg' %}" alt="Card image cap">
+                            <div style="background: #5C7CB8;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about eating disorders </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-12 p-2">
+                    <a href="#" style="background: #006998;"
+                        title="The vaccination plan that the Government plans at the end of the year">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height: 100%;"
+                                src="{% static 'images/hablemos-de-adicciones.jpg' %}" alt="Card image cap">
+                            <div style="background: #7D6775;" class="py-2 px-3">
+                                <h1 class="title" style="color: #fff;height: 120px;">
+                                    <i>Let's talk about addictions </i>
+                                </h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock container%}

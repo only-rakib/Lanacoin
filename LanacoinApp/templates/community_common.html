@@ -1,7 +1,7 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-<title>Latest news on Security  - LA NACION </title>
+<title>{{pg_info.page_title}}</title>
 {% endblock title %}
 {% block container %}
 <section class="container-fluid px-lg-5 px-md-3 margin_t">
@@ -9,10 +9,10 @@
 		<div class="col">
 			<div class="row">
 				<div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-					<a href="#"> THE NATION | </a><span style="color: gray;"> Security  </span>
+					<a href="#"> THE NATION | </a><span style="color: gray;">{{pg_info.sub_link}}</span>
 				</div>
 				<div class="col-12 heading__main-politics">
-					<h1> Security  </h1>
+					<h1>{{pg_info.main_title}}</h1>
 				</div>
 			</div>
 			<div class="row margin_t">
@@ -108,15 +108,15 @@
 													</div>
 
 												</div>
-                                            </div>
-                                            {%endif%}
+											</div>
+											{%endif%}
 										</div>
 									</div>
 									{% endif %}
 									{% endfor %}
 									<div class="row">
 										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
-											<a class="btn btn__politics" href="#">SEE MORE NOTES FROM  Security  </a>
+											<a class="btn btn__politics" href="#">{{pg_info.view_more}}</a>
 										</div>
 									</div>
 								</div>
@@ -172,4 +172,5 @@
 		</div>
 	</div>
 </section>
+
 {%endblock container%}

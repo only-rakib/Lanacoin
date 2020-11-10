@@ -17,7 +17,9 @@ urlpatterns = [
     
     path('society/<society>/',views.society_views,name="society_common"),
     
-    path('community/',views.society_community_view,name="community"),
+    #path('community/',views.society_community_view,name="community"),
+    path('community/<clicked>',views.society_community_sub_menu_common_view,name="community_common_menu"),
+
     path('editorial/',views.opinion_editorial_view,name="editorial"),
     path('columnists/',views.opinion_columnists_view,name="columnists"),
     path('football/',views.sports_football_view,name="football"),
