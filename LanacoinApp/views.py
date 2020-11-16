@@ -62,8 +62,8 @@ lsst = [
         'title': ''' The minimum wage will increase by 28%, far from the expectations of the unions ''',
         'topic': 'present',
         'cover_pic': 'images/3275561h134.jpg',
-        'reporter':'By María Ayuso ',
-        'date':'October 31, 2020 '
+        'reporter': 'By María Ayuso ',
+        'date': 'October 31, 2020 '
     },
     {
 
@@ -114,15 +114,15 @@ top_cards = [
         'title': '''Coronavirus Cases on the rise or fall? The situation by party and commune throughout the country''',
         'topic': 'present',
         'cover_pic': 'images/H6PXHJEHNZCWPN7TQ2E4VMKWOE.jpg',
-        'reporter':'By María Ayuso ',
-        'date':'October 31, 2020 '
+        'reporter': 'By María Ayuso ',
+        'date': 'October 31, 2020 '
     },
     {
         'title': '''Mobility monitor: this is the movement of citizens since the beginning of the quarantine''',
         'topic': 'present',
         'cover_pic': 'images/ZQCDK4B7WBCGDL56BTR4ZVDP5Q.jpg',
-        'reporter':'By María Ayuso ',
-        'date':'October 31, 2020 '
+        'reporter': 'By María Ayuso ',
+        'date': 'October 31, 2020 '
     },
 ]
 
@@ -363,14 +363,13 @@ def society_views(request, society):
             'main_title': 'Science',
             'view_more': 'SEE MORE science NOTES',
         }
-    elif society =="community":
+    elif society == "community":
         return render(request, 'community.html', {'data': lsst, 'more': moore, 'cards': top_cards})
-    
+
     return render(request, 'society_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
 
 
-
-def society_community_sub_menu_common_view(request,clicked):
+def society_community_sub_menu_common_view(request, clicked):
     page_info = {}
     if clicked == "discrimination":
         page_info = {
@@ -386,7 +385,7 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'Diversity',
             'view_more': 'SEE MORE From Diversity',
         }
-        return render(request,'community_diversity.html',{'pg_info': page_info,'data': lsst, 'more': moore,})
+        return render(request, 'community_diversity.html', {'pg_info': page_info, 'data': lsst, 'more': moore, })
     elif clicked == "addictions":
         page_info = {
             'page_title': 'Latest Addictions  news - LA NACION',
@@ -415,7 +414,7 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'Sexual abuse  ',
             'view_more': 'SEE MORE NOTES on Sexual abuse  ',
         }
-    
+
     elif clicked == "proverty":
         page_info = {
             'page_title': 'Latest Poverty   news - LA NACION',
@@ -423,7 +422,7 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'Poverty  ',
             'view_more': 'SEE MORE Poverty   NOTES',
         }
-    
+
     elif clicked == "alcohol":
         page_info = {
             'page_title': 'Latest alcohol   news - LA NACION',
@@ -431,7 +430,7 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'alcohol  ',
             'view_more': 'SEE MORE alcohol   NOTES',
         }
-    
+
     elif clicked == "teenagers":
         page_info = {
             'page_title': 'Latest news form Teenagers  - LA NACION',
@@ -439,7 +438,7 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'Teenagers ',
             'view_more': 'SEE MORE NOTES from Teenagers ',
         }
-    
+
     elif clicked == "gender_identity":
         page_info = {
             'page_title': 'Latest news on DGender identity  - LA NACION',
@@ -447,26 +446,79 @@ def society_community_sub_menu_common_view(request,clicked):
             'main_title': 'Gender identity  ',
             'view_more': 'SEE MORE NOTES on Gender identity  ',
         }
-    elif clicked =="racism":
+    elif clicked == "racism":
         page_info = {
             'page_title': 'Racism - LA NACION',
             'sub_link': 'Racism',
             'main_title': 'Racism',
             'view_more': 'SEE MORE From Racism',
         }
-        return render(request,'community_diversity.html',{'pg_info': page_info,'data': lsst, 'more': moore,})
-    
-    elif clicked =="hunger":
+        return render(request, 'community_diversity.html', {'pg_info': page_info, 'data': lsst, 'more': moore, })
+
+    elif clicked == "hunger":
         page_info = {
             'page_title': 'Hunger for the future  - LA NACION',
             'sub_link': 'Hunger for the future ',
             'main_title': 'Hunger for the future ',
             'view_more': 'SEE MORE From Hunger for the future ',
         }
-        return render(request,'hunger.html',{'pg_info': page_info,'data': lsst, 'more': moore,'cards':top_cards})
+        return render(request, 'hunger.html', {'pg_info': page_info, 'data': lsst, 'more': moore, 'cards': top_cards})
     elif clicked == "everything":
-        return render(request,'community_everything.html')
+        return render(request, 'community_everything.html')
     return render(request, 'community_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
+
+
+def soicity_community_everything_view(request, clicked):
+    page_info = {}
+    if clicked == "abuse":
+        page_info = {
+            'page_title': 'Abuse - LA NACION',
+            'sub_link': 'Abuse ',
+            'view_more': '',
+            'bg_color': '#68495B',
+            'img':'images/APIPVKRKCVAEFPB4T7KGHF3WHA.png',
+        }
+    elif clicked == "gender":
+        page_info = {
+            'page_title': 'Gender violence  - LA NACION',
+            'sub_link': 'Gender violence ',
+            'view_more': '',
+            'bg_color': '#7A303D',
+            'img':'images/OJOZPIPTIZGZ5C7POZOUX3P3MA.png',
+        }
+    elif clicked == "education":
+        page_info = {
+            'page_title': 'Inclusive education - LA NACION',
+            'sub_link': 'Inclusive education',
+            'view_more': '',
+            'bg_color': '#5F837F',
+            'img':'images/LTWPACQGNRHZ5PHHY4Q2FIAXGE.png',
+        }
+    elif clicked == "bullying":
+        page_info = {
+            'page_title': 'Bullying - LA NACION',
+            'sub_link': 'Bullying ',
+            'view_more': '',
+            'bg_color': '#EE6052',
+            'img':'images/IDNN52OVMVDCJEELASPPZ7PHYA.png',
+        }
+    elif clicked == "eating":
+        page_info = {
+            'page_title': 'Eating disorders - LA NACION',
+            'sub_link': 'Eating disorders ',
+            'view_more': '',
+            'bg_color': '#6092CD',
+            'img':'images/T33ULSBBWRA6DHW6IIIZKKZVUY.png',
+        }
+    elif clicked == "addictions":
+        page_info = {
+            'page_title': 'Addictions   - LA NACION',
+            'sub_link': 'Addictions  ',
+            'view_more': '',
+            'bg_color': '#8F828B',
+            'img':'images/CFF6RLAZ7FBRBPLN3U5P4QT3YA.png',
+        }
+    return render(request, 'common_lets_talk.html', {'pg_info': page_info, 'data': lsst, 'more': moore, 'cards': top_cards})
 
 
 def opinion_editorial_view(request):
@@ -808,6 +860,43 @@ def lifestyle_technology_view(request):
     return render(request, 'technology.html', {'data': lsst, 'more': moore})
 
 
+def shows_view(request):
+    movies=[
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },{
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        }
+    ]
+    next_movies=[
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },
+        {
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        },{
+            'cover_pic':'images/imagen-placeholder-cine.png',
+            'title':'An abominable friend ',
+        }
+    ]
+    return render(request,'shows.html',{'data':movies,'next':next_movies})
+
 def print_edition_magazine_view(request):
     return render(request, 'magazine.html', {'data': lst, 'more': more})
 
@@ -966,5 +1055,5 @@ def awesome_sub_menus_view(request, parameter):
             'main_title': 'OH DEAR! Fest ',
             'view_more': 'SEE MORE NOTES FROM OH DEAR! Fest ',
         }
-    
+
     return render(request, 'community_common.html', {'pg_info': page_info, 'data': lst, 'more': more})

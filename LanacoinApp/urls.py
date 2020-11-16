@@ -19,6 +19,7 @@ urlpatterns = [
     
     #path('community/',views.society_community_view,name="community"),
     path('community/<clicked>',views.society_community_sub_menu_common_view,name="community_common_menu"),
+    path('community/everything/<clicked>',views.soicity_community_everything_view,name="community_common_menu_everything"),
 
     path('editorial/',views.opinion_editorial_view,name="editorial"),
     path('columnists/',views.opinion_columnists_view,name="columnists"),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('fashion/',views.lifestyle_fashion_view,name="fashion"),
     path('tourism/',views.lifestyle_tourism_view,name="tourism"),
     path('technology/',views.lifestyle_technology_view,name="technology"),
+    path('shows/',views.shows_view,name="shows"),
     path('magazine/',views.print_edition_magazine_view,name="magazine"),
     path('saturday/',views.print_edition_saturday_view,name="saturday"),
     path('ideas/',views.print_edition_ideas_view,name="ideas"),

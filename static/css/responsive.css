@@ -31,6 +31,10 @@
     {
         display: block;
     }
+    .select-bg
+    {
+        max-width: 140px !important;
+    }
 }
 @media(min-width:768px)
 {

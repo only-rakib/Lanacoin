@@ -395,7 +395,7 @@ a:hover.img_hover-e img {
 	color: #006998;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.statistics .nav-tabs .nav-item.show .nav-link,.statistics .nav-tabs .nav-link.active {
 	color: #549f42;
 	border-bottom: 2px solid #549f42 !important;
 	font-weight: 700!important;
@@ -744,4 +744,111 @@ a:hover.img_hover-e img {
 	display: inline list-item;
 	font-size: 16px;
 	margin-right: 1rem;
+}
+
+/*****************Shows***********************/
+.custom_nav-link-t{
+	padding: .5rem 5rem;
+	background: rgba(0, 117, 196, 0.08);
+}
+.custom_nav-link-t.active{
+	border-top: 3px solid black !important;
+}
+.custom_nav-link-t:hover{
+	border-top: 3px solid black !important;
+}
+.custom_nav-link-t:focus{
+	border-top: 3px solid black !important;
+}
+.custom_nav-link-t:visited{
+	border-top: 3px solid black !important;
+}
+
+.custom_nav-ic{
+	padding: 0 .6rem;
+	
+}
+.custom_tap-content{
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+	padding: 20px 20px 0;
+	margin-bottom: 60px;
+	margin-left: 1rem;
+	width: 100%;
+	margin-right: 1rem;
+}
+.select-bg {
+	padding: 8px 30px 8px 10px;
+	border: 1px solid #c5c5c5;
+	border-radius: 1px;
+	-webkit-appearance: none;
+	color: #666;
+	background-image: url(../images/icon-arrow2.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: transparent;
+	font-family: Arial;
+	font-size: 14px;
+	max-width: 270px;
+}
+.filtros .select-bg {
+	padding: 8px 30px 8px 10px;
+	border: 1px solid #c5c5c5;
+	border-radius: 1px;
+	-webkit-appearance: none;
+	color: #666;
+	background-image: url(../images/icon-arrow2.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: transparent;
+	font-family: Arial;
+	font-size: 14px;
+	max-width: 100%;
+}
+.filtros {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 20px;
+}
+.filtros > select:not(:last-child) {
+	margin-right: 15px;
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575.98px) {
+
+	.custom_nav-link-t{
+		padding: .5rem 3rem;
+	}
+	.custom_tap-content{
+		padding: 15px 15px 0;
+	}
+	.select-bg {
+		padding: 8px 20px 8px 10px;
+		max-width: 140px;
+	}
+	
+	.filtros > select:not(:last-child) {
+		margin-right: 5px;
+	}
+	
+}
+
+.custom_pc{
+	padding: 0 .45rem;
+}
+.btn-s{
+	font-size: 17px;
+	border-radius: 50%;
+	text-transform: none;
+	padding: .23rem .45rem;
+	color:#e61f63;
+	border-color: transparent;
+}
+.nav-body li a{
+	color: #fff;
+}
+
+.nav-body li a:hover{
+	color: #E288A6;
+	transition: .2s ease;
 }

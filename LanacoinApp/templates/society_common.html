@@ -114,11 +114,15 @@
 									</div>
 									{% endif %}
 									{% endfor %}
+									
+									{% if pg_info.view_more and pg_info.view_more.strip %}
+										
 									<div class="row">
 										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
 											<a class="btn btn__politics" href="#">{{pg_info.view_more}}</a>
 										</div>
 									</div>
+									{% endif %}
 								</div>
 
 							</div>

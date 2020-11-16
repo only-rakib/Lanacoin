@@ -1,0 +1,199 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Latest news from Saturday - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+    <div class="row">
+
+        <div class="col-12 col-md-10">
+            <div class="row hide767">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 top__tex-px">
+                            <p>THE NATION | Cinema listings </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pl-lg-2">
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-12  shows">
+                            <!-- Tab part start -->
+                            <ul class="nav nav-tabs justify-content-center d-flex flex-nowrap" id="myTab"
+                                role="tablist">
+                                <li class="nav-item custom_nav-ic" role="presentation">
+                                    <a class="nav-link custom_nav-link-t active" id="cine-tab" data-toggle="tab"
+                                        href="#cine" role="tab" aria-controls="cine" aria-selected="true">CINE</a>
+                                </li>
+                                <li class="nav-item custom_nav-ic" role="presentation">
+                                    <a class="nav-link custom_nav-link-t" id="theater-tab" data-toggle="tab"
+                                        href="#theater" role="tab" aria-controls="theater"
+                                        aria-selected="false">THEATER</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="cine" role="tabpanel"
+                                    aria-labelledby="cine-tab">
+                                    <div class="row pb-5 pt-4">
+                                        <div class="col-12">
+                                            <h4>Billboard <span style="background-color: #ffff25;">Cinema </span>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="custom_tap-content">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-3 ">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p>
+                                                                    <span style="background-color: #ffff25;">CINEMA
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <p><a href="#">Cinemark </a> </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-9 text-right">
+                                                        <select class="select-bg " id="ddlCines" name="ddlCines">
+                                                            <option value="" selected>All rooms </option>
+                                                            <optgroup label="Cinemark">
+                                                                <option value="1204"
+                                                                    data-url="/cartelera-de-cine/sala/autocine-cinemark-terrazas-de-mayo-sa1204">
+                                                                    Drive-in Cinemark Terrazas de Mayo </option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4><strong>MOVIES ON POSTER</strong> IN ARGENTINA</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-4">
+                                        <div class="col-12 col-md-3 filtros">
+
+                                            <select class="select-bg" id="filtro-region-pelicula">
+                                                <option value="" selected>Choose region </option>
+                                                <optgroup label="Buenos Aires">
+                                                    <option value="3">GBA - West Zone </option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-3 filtros">
+                                            <select class="select-bg" id="filtro-zona-pelicula" disabled="">
+                                                <option value="" selected disabled>I chose city </option>
+                                                <option value="18" data-region="3">Malvinas Argentinas </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-3 filtros">
+                                            <select class="select-bg" id="filtro-sala-pelicula">
+                                                <option disabled selected value="">I chose room </option>
+                                                <option value="1204" data-zona="18">Drive-in Cinemark Terrazas
+                                                    de
+                                                    Mayo </option>
+                                                <option data-all="true">(All rooms) </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-md-3 filtros">
+                                            <select class="select-bg" id="filtro-genero-pelicula" disabled="">
+                                                <option disabled selected value="">Choose gender </option>
+                                                <option value="13" data-salas="1204">Animation </option>
+                                                <option value="8" data-salas="1204">Terror </option>
+                                                <option data-all="true">(All genres) </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            
+                                            <div class="row">
+                                                {% for x in data %}
+
+                                                <div class="col-4">
+
+                                                    <div class="card-body py-md-3 px-sm-0 px-0">
+                                                        <a href="#" class="bluehover img_hover-e" title="{{x.title}}">
+                                                            {% with x.cover_pic as img %}
+                                                            <img class="card-img-bottom mt-4" src="{% static img %}"
+                                                                alt="recent">
+                                                            {% endwith %}
+                                                            <h5 class="card-title px-2 px-md-0"
+                                                                style="font-family: suecaslabmedium,Georgia;font-size: 14px;">
+                                                                <strong>{{x.title}}</strong>
+                                                            </h5>
+                                                        </a>
+
+                                                    </div>
+
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4><strong>NEXT RELEASES </strong></h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            
+                                            <div class="row">
+                                                {% for x in next %}
+
+                                                <div class="col-4">
+
+                                                    <div class="card-body py-md-3 px-sm-0 px-0">
+                                                        <a href="#" class="bluehover img_hover-e" title="{{x.title}}">
+                                                            {% with x.cover_pic as img %}
+                                                            <img class="card-img-bottom mt-4" src="{% static img %}"
+                                                                alt="recent">
+                                                            {% endwith %}
+                                                            <h5 class="card-title px-2 px-md-0"
+                                                                style="font-family: suecaslabmedium,Georgia;font-size: 14px;">
+                                                                <strong>{{x.title}}</strong>
+                                                            </h5>
+                                                        </a>
+
+                                                    </div>
+
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="theater" role="tabpanel" aria-labelledby="theater-tab">
+                                    <div class="row pt-4">
+                                        <div class="col-12">
+                                            <h4>Billboard Theater </h4>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3">
+                                        <div class="col-12">
+                                            <p>LATEST RELEASES THEATER </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab part end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock container %}
