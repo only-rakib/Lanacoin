@@ -1,0 +1,108 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>{{movie.title}}, {{movie.address}} -LA NACOIN</title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+
+
+
+    <div class="row">
+        <div class="col-10">
+            <div class="row pb-3 hide767">
+                <div class="col-12 ">
+                    <a class="text__top-calender1" href="{% url 'home' %}">THE NATION</a> | <a
+                        class="text__top-calender1" href="{% url 'shows' %}">{{movie.billboard}} billboard
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h1 style="font-family: SuecaSlab; font-weight: 400;">{{movie.title}}</h1>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-12 share_cal">
+                            <ul>
+                                <li><a href="#"><span class="icon_cal"><i
+                                                class="far fa-comment icon__calender"></i></span>Comment</a>
+                                </li>
+                                <li><a href="#"><span class="icon_cal"><i
+                                                class="fab fa-facebook-square icon__calender"></i></span>Facebook</a>
+                                </li>
+                                <li><a href="#"><span class="icon_cal"><i
+                                                class="fab fa-twitter icon__calender"></i></span>twitter</a>
+                                </li>
+                                <li><a href="#"><span class="icon_cal"><i
+                                                class="fab fa-google-plus-g icon__calender"></i></span>Google</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 pb-4">
+                <div class="col-12">
+
+                    {% if movie.in_out_comming == 'in' %}
+                    <div class="label --yellow"><span style="color:#000">IN POSTER </span></div>
+                    {% elif movie.in_out_comming == 'out' %}
+                    <div class="label --yellow"><span>OUT OF POSTER </span></div>
+                    {% else %}
+                    <div class="label --yellow"><span style="color:#000">COMING SOON IN POSTER</span>
+                    </div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+            <div class="row pb-4">
+                <div class="col-12">
+                    <h6><strong>{{movie.genere}} </strong>in {{movie.Address}}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="img-square-wrapper">
+
+                                {% with movie.poster as img %}
+                                <img src="{% static img %}" alt="poster">
+                                {% endwith %}
+
+
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">Premiere:{{movie.Premiere}} </p>
+                                <p class="card-text">Actor:{{movie.Actor}}
+                                </p>
+                                <p class="card-text">Address: {{movie.Address}} </p>
+                                <p class="card-text">Music:{{movie.Music}} </p>
+                                <p class="card-text">Choreography:{{movie.Choreography}} </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-12">
+                    <p>
+                        {{movie.detail}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+{% endblock container %}

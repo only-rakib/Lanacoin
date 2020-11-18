@@ -476,7 +476,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Abuse ',
             'view_more': '',
             'bg_color': '#68495B',
-            'img':'images/APIPVKRKCVAEFPB4T7KGHF3WHA.png',
+            'img': 'images/APIPVKRKCVAEFPB4T7KGHF3WHA.png',
         }
     elif clicked == "gender":
         page_info = {
@@ -484,7 +484,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Gender violence ',
             'view_more': '',
             'bg_color': '#7A303D',
-            'img':'images/OJOZPIPTIZGZ5C7POZOUX3P3MA.png',
+            'img': 'images/OJOZPIPTIZGZ5C7POZOUX3P3MA.png',
         }
     elif clicked == "education":
         page_info = {
@@ -492,7 +492,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Inclusive education',
             'view_more': '',
             'bg_color': '#5F837F',
-            'img':'images/LTWPACQGNRHZ5PHHY4Q2FIAXGE.png',
+            'img': 'images/LTWPACQGNRHZ5PHHY4Q2FIAXGE.png',
         }
     elif clicked == "bullying":
         page_info = {
@@ -500,7 +500,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Bullying ',
             'view_more': '',
             'bg_color': '#EE6052',
-            'img':'images/IDNN52OVMVDCJEELASPPZ7PHYA.png',
+            'img': 'images/IDNN52OVMVDCJEELASPPZ7PHYA.png',
         }
     elif clicked == "eating":
         page_info = {
@@ -508,7 +508,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Eating disorders ',
             'view_more': '',
             'bg_color': '#6092CD',
-            'img':'images/T33ULSBBWRA6DHW6IIIZKKZVUY.png',
+            'img': 'images/T33ULSBBWRA6DHW6IIIZKKZVUY.png',
         }
     elif clicked == "addictions":
         page_info = {
@@ -516,7 +516,7 @@ def soicity_community_everything_view(request, clicked):
             'sub_link': 'Addictions  ',
             'view_more': '',
             'bg_color': '#8F828B',
-            'img':'images/CFF6RLAZ7FBRBPLN3U5P4QT3YA.png',
+            'img': 'images/CFF6RLAZ7FBRBPLN3U5P4QT3YA.png',
         }
     return render(request, 'common_lets_talk.html', {'pg_info': page_info, 'data': lsst, 'more': moore, 'cards': top_cards})
 
@@ -859,43 +859,122 @@ def lifestyle_tourism_view(request):
 def lifestyle_technology_view(request):
     return render(request, 'technology.html', {'data': lsst, 'more': moore})
 
+def lifestyle_holidays_view(request):
+    return render(request,'holidays.html')
+
+def lifestyle_podcasts_view(request):
+    return render(request,'podcast.html')
 
 def shows_view(request):
-    movies=[
+    movies = [
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
         },
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
         },
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
-        },{
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }, {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
         }
     ]
-    next_movies=[
+    next_movies = [
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+            'release': '20.10.2020'
         },
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
         },
         {
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
-        },{
-            'cover_pic':'images/imagen-placeholder-cine.png',
-            'title':'An abominable friend ',
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }, {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
         }
     ]
-    return render(request,'shows.html',{'data':movies,'next':next_movies})
+    return render(request, 'shows.html', {'data': movies, 'next': next_movies})
+
+
+def inside_shows_view(request, shows_id):
+    next_movies = [
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+            'release': '20.10.2020'
+        },
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        },
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }, {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }
+    ]
+    movies_details ={
+        'id': "1",
+        'poster': "images/imagen-placeholder-cine.png",
+        'title': 'Childish',
+        'in_out_comming':'in',
+        'Premiere': '24.10.2020',
+        'Actor': 'Flopy Tesouro, Cristina Maresca, Rodrigo Noya',
+        'Address': 'Diego Rinaldi',
+        'Music': 'Mauro Garcia Barbe',
+        'Choreography': 'Ignacio Saraceni',
+        'detail': '''Synopsis of The Compass of Dreams: Carolo misses the talks with her grandfather, Lucia dreams of being a singer but her shyness prevents her from doing so. Together they set out on the road to the Haunted House where a curious character will help them discover surprising things, love for grown-ups and trust in dreams. ''',
+        'genere':'Comedy',
+        'Address':'San Nicolás - Autonomous City of Buenos Aires ',
+        'billboard':'Theater',
+    }
+    next_movies = [
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+            'release': '20.10.2020'
+        },
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        },
+        {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }, {
+            'cover_pic': 'images/imagen-placeholder-cine.png',
+            'title': 'An abominable friend ',
+            'theater': 'Comafi Multitheater',
+        }
+    ]
+
+    return render(request, 'inside_shows.html', {'movie': movies_details, 'this_theater': next_movies})
+
 
 def print_edition_magazine_view(request):
     return render(request, 'magazine.html', {'data': lst, 'more': more})
