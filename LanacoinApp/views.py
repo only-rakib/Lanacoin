@@ -865,6 +865,12 @@ def lifestyle_holidays_view(request):
 def lifestyle_podcasts_view(request):
     return render(request,'podcast.html')
 
+def lifestyle_horoscope_view(request):
+    return render(request,'horoscope_zodiac.html')
+
+def lifestyle_horoscope_chineese_view(request):
+    return render(request,'horoscope_chinese.html')
+
 def shows_view(request):
     movies = [
         {

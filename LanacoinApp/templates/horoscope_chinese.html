@@ -1,0 +1,163 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Chinese horoscope 2020 - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t chineese">
+    <div class="row">
+
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="row hide767">
+                <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                    <a href="{% url 'home' %}"> THE NATION | </a>
+                    <a href="{% url 'chineese_horoscope' %}">Chinese horoscope</a>
+                </div>
+                <div class="col-12 heading__main-politics">
+                    <h1>Chinese horoscope <span style="background-color: #ffff25;">2020</span> </h1>
+                    <p>By Susy Forte </p>
+                </div>
+            </div>
+
+            <div class="row pl-lg-2">
+                <div class="col-12">
+                    <div class="row ">
+                        <div class="custom_tap-content horoscope">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-sm-3 col-12 ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="horoscope_img Rat">
+                                                    <div class="zoomCrazy">
+
+                                                    </div>
+
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-9 col-12">
+                                        <h2>THE YEAR OF  <span style="background-color: yellow;">RAT</span></h2>
+                                        <div class="description">
+                                            <p>
+                                                On January 25, 2020, with the new moon of Aquarius, a new year begins in the Chinese lunar calendar. The Year of the Metal Rat. In the Chinese Horoscope the Rat is the first sign and marks the beginning of a new 12-year energy cycle. A new Chinese wheel begins, that is, the year of the rat marks the beginning of a new cycle that brings the possibility of leaving behind all the negatives of the past and activating new energies. All signs will be influenced by the powerful energy of this little animal that drives action and new beginnings. Stimulates intelligence, cunning, charm and charisma. The Metal element marks a year of optimism, a search for harmony, consolidation and radical changes. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="custom_tap-content newslatter">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 ">
+                                        <div style="display: inline block;">
+                                            <h3>
+                                                <span class="mail_icon"></span>
+                                                <strong style="position: absolute;top: 6px;"> Daily
+                                                    horoscope</strong>
+
+
+                                            </h3>
+                                            <span class="ml-0 ml-md-5" style="font-size: 14px;">
+                                                I received your horoscope every day in your e-mail
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row mb-5">
+
+
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <input type="email" name="" id="email" placeholder="Enter your mail"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <a class="btn btn-primary" href="#" role="button">RECEIVE THE NEWSLETTER
+                                        </a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <section id="horoscop-card">
+                        <div class="row">
+                            <div class="col-8 col-sm-4 col-8 col-sm-4 offset-2 offset-sm-0">
+                                <div class="card mt-3">
+
+                                    <div class="card-body border px-0 py-0">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-uppercase" style="line-height: 10px;font-size: 12px;">
+                                                Chinese horoscope </h6>
+                                            <h5 style="line-height: 10px"><strong class="text-uppercase">Rat </strong>
+                                            </h5>
+                                            
+                                            <a href="#">
+                                                <div class="horoscope_img Pig mt-3">
+                                                    <div class="zoomCrazy">
+
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <p class="card-text">Years: 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020. </p>
+                                            <a href="#" class="blue">Full Aries horoscope </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <a href="{% url 'horoscope' %}"> <strong>ZODIAC HOROSCOPE. See all signs ></strong>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-lg-3 hide767">
+            <div class="row">
+                <div class="col">
+                    <a href="{% url 'horoscope' %}" class="black">
+                        <div class="card mt-3 horoscope-side-bg">
+
+                            <div class="card-body">
+                                <h4>
+                                    horoscope
+                                    <strong>ZODIAC</strong>
+                                </h4>
+
+                                <p style="background-color: yellow;width: 10rem;">See all animals ></p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock container %}

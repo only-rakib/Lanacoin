@@ -1146,7 +1146,7 @@ a:hover.img_hover-e img {
 }
 
 .calendario__mes__eventos {
-	padding:3px 0px 0px 0px
+	padding: 3px 0px 0px 0px
 }
 
 .calendario__mes__eventos>h3 {
@@ -1177,12 +1177,14 @@ a:hover.img_hover-e img {
 	white-space: nowrap;
 	font-size: 13px;
 }
+
 .badge__bridge {
 	background-color: transparent !important;
 	border: 2px solid #FFB2B1;
 	color: #000;
 	line-height: 21px;
 }
+
 .badge__portable {
 	background-color: #CDE5CF !important;
 	color: #000;
@@ -1201,6 +1203,7 @@ a:hover.img_hover-e img {
 	width: 30px;
 	text-align: center;
 }
+
 .calendario__mes .portable.round {
 	background-color: #CDE5CF;
 	color: #000;
@@ -1302,4 +1305,182 @@ a:hover.img_hover-e img {
 
 .lista-feriados__item>li:nth-child(3) {
 	width: 48%;
+}
+
+/**********************Horoscope**************************/
+
+.horoscope_img {
+	background-size: 130px;
+	margin: 0 auto 10px;
+	height: 109px;
+	width: 120px;
+	background-image: url('/static/images/Sprite-Horoscopo.png');
+	background-position-x: center;
+}
+.chineese .horoscope_img {
+	background-image: url('/static/images/sprite-horoscopo-chino.png');
+	background-position-x: center;
+}
+
+#horoscop-card .horoscope_img {
+	background-size: 100px;
+	height: 85px;
+	width: 102px;
+}
+
+.horoscope_img.Scorpio {
+	background-position-y: -881px;
+}
+
+.horoscope_img.Aries {
+	background-position-y: -13px;
+}
+
+.horoscope_img.Taurus {
+	background-position-y: -109px;
+}
+
+.horoscope_img.Gemini {
+	background-position-y: -206px;
+}
+
+.horoscope_img.Cancer {
+	background-position-y: -301px;
+}
+
+.horoscope_img.Leo {
+	background-position-y: -390px;
+}
+
+.horoscope_img.Virgo {
+	background-position-y: -486px;
+}
+
+.horoscope_img.Libra {
+	background-position-y: -581px;
+}
+
+.horoscope_img.Sagittarius {
+	background-position-y: -773px;
+}
+
+.horoscope_img.Capricorn {
+	background-position-y: -870px;
+}
+
+.horoscope_img.Aquarius {
+	background-position-y: -966px;
+}
+
+.horoscope_img.Pisces {
+	background-position-y: -966px;
+}
+.horoscope_img.Rat {
+	background-position-y: -18px;
+}
+.horoscope_img.Buffalo{
+	background-position-y: -109px;
+}
+.horoscope_img.Tigre{
+	background-position-y: -206px;
+}
+.horoscope_img.Hare,.horoscope_img.Rabbit,.horoscope_img.Cat {
+	background-position-y: -301px;
+}
+.horoscope_img.Dragón {
+	background-position-y: -390px;
+}
+.horoscope_img.Snake {
+	background-position-y: -486px;
+}
+.horoscope_img.Horse {
+	background-position-y: -581px;
+}
+.horoscope_img.Goat {
+	background-position-y: -677px;
+}
+.horoscope_img.Monkey {
+	background-position-y: -773px;
+}
+.horoscope_img.Gallo {
+	background-position-y: -870px;
+}
+.horoscope_img.Dog {
+	background-position-y: -966px;
+}
+.horoscope_img.Boar,.horoscope_img.Pig  {
+	background-position-y: -1063px;
+}
+
+
+.zoomCrazy {
+	-webkit-animation-name: zoomCrazy;
+	animation-name: zoomCrazy;
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.custom_tap-content.horoscope p {
+	/*color: #666;*/
+	font-size: 13px;
+	
+}
+
+.custom_tap-content.horoscope h2 {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 5px 0;
+	text-transform: uppercase;
+	font-weight: 600;
+	
+}
+
+.custom_tap-content.horoscope .description {
+	font-size: 14px;
+	line-height: 20px;
+	color: #000;
+}
+
+.custom_tap-content.newslatter {
+	background-color: #F1F1F1;
+}
+
+.custom_tap-content.newslatter .mail_icon:before {
+	content: '\f0e0';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+	font-size: 54px;
+	padding-right: 10px;
+}
+
+.horoscope-side-bg {
+	background-image: url("/static/images/horoscopo-chino-aside.png");
+	height: 250px;
+	background-position: top left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+	background-position-x: center;
+}
+.chineese .horoscope-side-bg {
+	background-image: url("/static/images/horoscopo-zodiacal-aside.png");
+	height: 250px;
+	background-position: top left;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+	background-position-x: center;
+}
+
+.horoscope-side-bg .card-body {
+	padding: 10px 20px;
+	border-left: 9px solid #000;
+	background-color: rgba(255, 255, 255, 0.81);
+	color: #000;
+	text-transform: uppercase;
+	margin-top: 146px;
 }

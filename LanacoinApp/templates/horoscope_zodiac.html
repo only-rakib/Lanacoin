@@ -1,0 +1,168 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Today's horoscope - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
+    <div class="row">
+
+        <div class="col-12 col-md-8 col-lg-9">
+            <div class="row hide767">
+                <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                    <a href="{% url 'home' %}"> THE NATION </a>|
+                    <a href="{% url 'horoscope' %}">Horoscope today </a>
+                </div>
+                <div class="col-12 heading__main-politics">
+                    <h1> horoscope <span style="background-color: #ffff25;">Today's</span> </h1>
+                    <p>By Renata Dossi </p>
+                </div>
+            </div>
+
+            <div class="row pl-lg-2">
+                <div class="col-12">
+                    <div class="row ">
+                        <div class="custom_tap-content horoscope">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-sm-3 col-12 ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="horoscope_img Scorpio">
+                                                    <div class="zoomCrazy">
+
+                                                    </div>
+
+                                                </div>
+                                                <p class="text-center">24/10 al 22/11 </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-9 col-12">
+                                        <h2>HOROSCOPE Scorpio <span style="background-color: yellow;">TODAY </span></h2>
+                                        <div class="description">
+                                            <p>
+                                                It would be good if you do not stubborn and listen to your
+                                                surroundings. In this way, you will learn from others and can
+                                                positively change your point of view.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="custom_tap-content newslatter">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 ">
+                                        <div style="display: inline block;">
+                                            <h3>
+                                                <span class="mail_icon"></span>
+                                                <strong style="position: absolute;top: 6px;"> Daily
+                                                    horoscope</strong>
+
+
+                                            </h3>
+                                            <span class="ml-0 ml-md-5" style="font-size: 14px;">
+                                                I received your horoscope every day in your e-mail
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row mb-5">
+
+
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <input type="email" name="" id="email" placeholder="Enter your mail"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-12 col-md-6 mt-3">
+                                        <a class="btn btn-primary" href="#" role="button">RECEIVE THE NEWSLETTER
+                                        </a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <section id="horoscop-card">
+                        <div class="row">
+                            <div class="col-8 col-sm-4 col-8 col-sm-4 offset-2 offset-sm-0">
+                                <div class="card mt-3">
+
+                                    <div class="card-body border px-0 py-0">
+                                        <div class="card-body ">
+                                            <h6 class="text-uppercase" style="line-height: 10px;font-size: 12px;">
+                                                horoscope</h6>
+                                            <h5 style="line-height: 10px"><strong class="text-uppercase">Aries</strong>
+                                            </h5>
+                                            <h5 style="line-height: 10px" class="text-uppercase">Today</h5>
+                                            <a href="#">
+                                                <div class="horoscope_img Taurus">
+                                                    <div class="zoomCrazy">
+
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card-body">
+
+                                            <p class="card-text">Understand that freedom is often not always
+                                                dangerous in life.
+                                                Sometimes it helps to show the
+                                                best that one has inside and does not show it.</p>
+                                            <a href="#" class="blue">Full Aries horoscope </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <a href="{% url 'chineese_horoscope' %}"> <strong>CHINESE HOROSCOPE. See all animals ></strong>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-lg-3 hide767">
+            <div class="row">
+                <div class="col">
+                    <a href="{% url 'chineese_horoscope' %}" class="black">
+                        <div class="card mt-3 horoscope-side-bg">
+
+                            <div class="card-body">
+                                <h4>
+                                    horoscope
+                                    <strong>Chinese </strong>
+                                </h4>
+
+                                <p style="background-color: yellow;width: 10rem;">See all animals ></p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock container %}
