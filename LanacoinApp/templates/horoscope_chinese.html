@@ -93,6 +93,11 @@
                     </div>
                     <section id="horoscop-card">
                         <div class="row">
+                            
+                            {% for x in data %}
+                                
+                            
+                                
                             <div class="col-8 col-sm-4 col-8 col-sm-4 offset-2 offset-sm-0">
                                 <div class="card mt-3">
 
@@ -100,11 +105,11 @@
                                         <div class="card-body text-center">
                                             <h6 class="text-uppercase" style="line-height: 10px;font-size: 12px;">
                                                 Chinese horoscope </h6>
-                                            <h5 style="line-height: 10px"><strong class="text-uppercase">Rat </strong>
+                                            <h5 style="line-height: 10px"><strong class="text-uppercase">{{x.animal}}</strong>
                                             </h5>
                                             
-                                            <a href="#">
-                                                <div class="horoscope_img Pig mt-3">
+                                            <a href="{% url 'chineese_horoscope_inside' value=x.animal %}">
+                                                <div class="horoscope_img {{x.animal}} mt-3">
                                                     <div class="zoomCrazy">
 
                                                     </div>
@@ -115,14 +120,14 @@
 
                                         <div class="card-body">
                                             
-                                            <p class="card-text">Years: 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020. </p>
-                                            <a href="#" class="blue">Full Aries horoscope </a>
+                                            <p class="card-text">Years: {{x.years}} </p>
+                                            <a href="{% url 'chineese_horoscope_inside' value=x.animal %}" class="blue">Full {{x.animal}} horoscope </a>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-
+                            {% endfor %}
 
                         </div>
                         <div class="row">
@@ -150,7 +155,7 @@
                                     <strong>ZODIAC</strong>
                                 </h4>
 
-                                <p style="background-color: yellow;width: 10rem;">See all animals ></p>
+                                <p><span style="background-color: yellow;"> See all the signs ></span></p>
 
                             </div>
                         </div>

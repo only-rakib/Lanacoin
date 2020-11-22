@@ -1,7 +1,7 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-<title>Today's horoscope - LA NACION </title>
+<title>{{x.title}}</title>
 {% endblock title %}
 {% block container %}
 <section class="container-fluid px-lg-5 px-md-3 margin_t">
@@ -10,55 +10,97 @@
         <div class="col-12 col-md-8 col-lg-9">
             <div class="row hide767">
                 <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-                    <a href="{% url 'home' %}"> THE NATION | </a>
-                    <a href="{% url 'horoscope' %}">Horoscope today</a>
-                    
+                    <a href="{% url 'home' %}"> THE NATION </a>|
+                    <a href="{% url 'horoscope' %}">Horoscope | </a>
+                    <a href="{% url 'horoscope_inside' value=x.sign %}">{{x.sign}}</a>
                 </div>
-                <div class="col-12 heading__main-politics">
-                    <h1> horoscope <span style="background-color: #ffff25;">Today's</span> </h1>
-                    <p>By Renata Dossi </p>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12 heading__main-politics">
+                    <h1> horoscope <span style="background-color: #ffff25;">{{x.sign}}</span> </h1>
+
+
+                </div>
+                <div class="col-md-6 col-12 share_cal text-left text-md-right">
+
+                    <ul>
+                        <li><a href="#"><span class="icon_cal"><i
+                                        class="far fa-comment icon__calender"></i></span>Comment</a>
+                        </li>
+                        <li><a href="#"><span class="icon_cal"><i
+                                        class="fab fa-facebook-square icon__calender"></i></span>Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon_cal">
+                                    <i class="fab fa-twitter icon__calender"></i>
+                                </span>twitter
+                            </a>
+                        </li>
+
+
+                    </ul>
+
                 </div>
             </div>
 
-            <div class="row pl-lg-2">
+            <div class="row pl-lg-2 mt-3">
                 <div class="col-12">
                     <div class="row ">
                         <div class="custom_tap-content horoscope">
                             <div class="col-12">
-                                    
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>HOROSCOPE {{x.sign}} <span style="background-color: yellow;">TODAY </span>
+                                        </h2>
+                                        <p>{{x.name}}</p>
+                                    </div>
+
+                                </div>
                                 <div class="row">
                                     <div class="col-sm-3 col-12 ">
+
                                         <div class="row">
                                             <div class="col-12">
-                                                <div class="horoscope_img Scorpio">
+
+                                                <div class="horoscope_img {{x.sign}}">
                                                     <div class="zoomCrazy">
 
                                                     </div>
 
                                                 </div>
-                                                <p class="text-center">24/10 al 22/11 </p>
+                                                <p class="text-center">{{x.bd}}</p>
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="col-sm-9 col-12">
-                                        <h2>HOROSCOPE Scorpio <span style="background-color: yellow;">TODAY </span></h2>
+
                                         <div class="description">
                                             <p>
-                                                It would be good if you do not stubborn and listen to your
-                                                surroundings. In this way, you will learn from others and can
-                                                positively change your point of view.
+                                                {{x.des}}
                                             </p>
-                                            
+                                            <p><strong>Love: </strong>{{x.love}}</p>
+                                            <p><strong>Wealth: </strong>{{x.wealth}}</p>
+                                            <p><strong>Wellness: </strong>{{x.wellness}}</p>
                                         </div>
-                                        <a href="{% url 'horoscope_inside' value='Scorpio' %}">Full Scorpio horoscope</a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <div class="row ">
+                    <div class="row horoscope_week">
+                        <div class="col">
+                            <h2>Horoscope <span style="background-color: yellow;">Weekly</span> of {{x.sign}} </h2>
+                            <p>For {{x.for}} </p>
+                            <p><strong>Love: </strong>{{x.week_love}}</p>
+                            <p><strong>Money: </strong>{{x.money}}</p>
+                            <p><strong>Key of the week: </strong>{{x.key}}</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
                         <div class="custom_tap-content newslatter">
                             <div class="col-12">
                                 <div class="row">
@@ -97,50 +139,6 @@
                             </div>
                         </div>
                     </div>
-                    <section id="horoscop-card">
-                        <div class="row">
-                            
-                            {% for x in data %}    
-                            <div class="col-8 col-sm-4 col-8 col-sm-4 offset-2 offset-sm-0">
-                                <div class="card mt-3" style="height: 100%;">
-
-                                    <div class="card-body border px-0 py-0">
-                                        <div class="card-body" title="x.sign">
-                                            <h6 class="text-uppercase" style="line-height: 10px;font-size: 12px;">
-                                                horoscope</h6>
-                                            <h5 style="line-height: 10px"><strong class="text-uppercase">{{x.sign}}</strong>
-                                            </h5>
-                                            <h5 style="line-height: 10px" class="text-uppercase">Today</h5>
-                                            <a href="{% url 'horoscope_inside' value=x.sign %}">
-                                                <div class="horoscope_img {{x.sign}}">
-                                                    <div class="zoomCrazy">
-
-                                                    </div>
-
-                                                </div>
-                                            </a>
-                                            <p class="text-center" style="color: #666;font-size: 12px;">24/10 al 22/11 </p>
-                                        </div>
-
-                                        <div class="card-body" title="{{x.des}}">
-
-                                            <p class="card-text">{{x.des}}</p>
-                                            <a href="{% url 'horoscope_inside' value=x.sign %}" class="blue">Full {{x.sign}} horoscope </a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col text-right">
-                                <a href="{% url 'chineese_horoscope' %}"> <strong>CHINESE HOROSCOPE. See all animals ></strong>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
 
 
                 </div>

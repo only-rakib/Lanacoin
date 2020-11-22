@@ -859,17 +859,87 @@ def lifestyle_tourism_view(request):
 def lifestyle_technology_view(request):
     return render(request, 'technology.html', {'data': lsst, 'more': moore})
 
+
 def lifestyle_holidays_view(request):
-    return render(request,'holidays.html')
+    return render(request, 'holidays.html')
+
 
 def lifestyle_podcasts_view(request):
-    return render(request,'podcast.html')
+    return render(request, 'podcast.html')
+
 
 def lifestyle_horoscope_view(request):
-    return render(request,'horoscope_zodiac.html')
+    signs = [
+        {
+            # the first letter must be capital and others small in sign key
+            'sign': 'Aries',
+            'bd': '21/3 al 20/4',
+            'des': '''After so long, you can develop your creative vision as long as what you want is strong enough. Don't limit yourself. ''',
+            
+        },
+        {
+            'sign': 'Taurus',
+            'bd': '21/4 al 21/5 ',
+            'des': '''If you feel internally dissatisfied, know that you should focus on planning a new life project that makes you feel even more gratified. '''
+        }
+    ]
+    return render(request, 'horoscope_zodiac.html', {'data': signs})
+
+
+def lifestyle_horoscope_inside_view(request, value):
+    details= {}
+
+    if value == "Aries":
+        details= {
+            'title': '♈ ARIES horoscope today - LA NACION ',
+            'sign': 'Aries',
+            'name': 'Renata Dossi',
+            'bd': '21/3 al 20/4',
+            'des': '''Know that if you adopt a more tolerant attitude towards your family, you can better guide your life. Listen to the complaints and spend more time with them. ''',
+            'love': '''
+    If you feel that your soul mate is not giving you what you want or need, find a new way to love. Tell him about the fears and emotions you are experiencing.''',
+            'wealth': '''
+    These days, you will have a strong power of persuasion in front of your co-workers. Do not hesitate and use it as soon as possible in your work environment. ''',
+            'wellness': '''Try to take your time if you find yourself nervous or overwhelmed by the situations you are experiencing. Oxygenate your lungs and relax.''',
+            'for': 'Kiron ',
+            'week_love': '''
+    If you feel that your soul mate is not giving you what you want or need, find a new way to love. Tell him about the fears and emotions you are experiencing.''',
+            'money': '''
+    These days, you will have a strong power of persuasion in front of your co-workers. Do not hesitate and use it as soon as possible in your work environment. ''',
+            'key': '''Try to take your time if you find yourself nervous or overwhelmed by the situations you are experiencing. Oxygenate your lungs and relax.''',
+
+        }
+    return render(request, 'horoscope_zodiac_inside.html',{'x':details})
+
 
 def lifestyle_horoscope_chineese_view(request):
-    return render(request,'horoscope_chinese.html')
+    animal = [
+        {
+            # the first letter must be capital and others small in sign key
+            'animal': 'Rat',
+            'years': '1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009. ',
+            
+            
+        },
+        {
+            'animal': 'Buffalo',
+            'years': '1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009. ',
+            
+        }
+    ]
+    return render(request, 'horoscope_chinese.html',{'data':animal})
+
+def lifestyle_horoscope_chineese_inside_view(request,value):
+    details={}
+    if value=='Rat':
+        details={
+            'animal':'Rat',
+            'years':'1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020. ',
+            'this_year':'''In the year of your sign, you will know how to enhance all your talents to obtain what you want most. With a more practical and determined attitude, you will feel that nothing is out of your reach. You will know how to manage your hyperactivity with intelligence and you will have the possibility of meeting influential people who will benefit you in your profession and in the businesses you do. It is a time of concretions, a very productive year where you will notice that luck is on your side. Thanks to your creativity and professionalism, the most complicated things will be easy to do. The challenge will be knowing how to accept the good advice of more experienced people and learn to delegate when situations overwhelm you. In love, do not be afraid to make decisions, trust your experience and follow what your heart dictates. ''',
+            'character':'''Admired and honored for its sagacity and skill, in the East the Rat is a symbol of luck and prosperity. Charming creature capable of captivating anyone, she is aware of this quality and likes to flaunt her style. Curious, she is always on the hunt for new information, has a great sense of humor and lives in constant movement. Despite being very sociable, you need to spend time alone, to think, meditate, and get inspired. Very focused on herself, it is difficult for her to see beyond, however, she is usually very protective and generous with those who are faithful to her. Intelligent, restless and impatient, she always achieves her goals, knows how to find the fastest way and nothing stops her. Like the Sagittarius woman, the Rat adores her family, is passionate and difficult to tame, she does not like being wanted to handle or betrayed. You need a lot of affection to value yourself, because you have a tendency to underestimate yourself. This sign is analogous, that is, with similar characteristics, to the Sagittarius sign. ''',
+        }
+
+    return render(request,'horoscope_chinese_inside.html',{'x':details})
 
 def shows_view(request):
     movies = [
@@ -941,20 +1011,20 @@ def inside_shows_view(request, shows_id):
             'theater': 'Comafi Multitheater',
         }
     ]
-    movies_details ={
+    movies_details = {
         'id': "1",
         'poster': "images/imagen-placeholder-cine.png",
         'title': 'Childish',
-        'in_out_comming':'in',
+        'in_out_comming': 'in',
         'Premiere': '24.10.2020',
         'Actor': 'Flopy Tesouro, Cristina Maresca, Rodrigo Noya',
         'Address': 'Diego Rinaldi',
         'Music': 'Mauro Garcia Barbe',
         'Choreography': 'Ignacio Saraceni',
         'detail': '''Synopsis of The Compass of Dreams: Carolo misses the talks with her grandfather, Lucia dreams of being a singer but her shyness prevents her from doing so. Together they set out on the road to the Haunted House where a curious character will help them discover surprising things, love for grown-ups and trust in dreams. ''',
-        'genere':'Comedy',
-        'Address':'San Nicolás - Autonomous City of Buenos Aires ',
-        'billboard':'Theater',
+        'genere': 'Comedy',
+        'Address': 'San Nicolás - Autonomous City of Buenos Aires ',
+        'billboard': 'Theater',
     }
     next_movies = [
         {

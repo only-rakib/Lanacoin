@@ -1422,13 +1422,13 @@ a:hover.img_hover-e img {
 	animation-fill-mode: both;
 }
 
-.custom_tap-content.horoscope p {
+.custom_tap-content.horoscope p,.horoscope_week p {
 	/*color: #666;*/
 	font-size: 13px;
 	
 }
 
-.custom_tap-content.horoscope h2 {
+.custom_tap-content.horoscope h2,.horoscope_week h2 {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 5px 0;
