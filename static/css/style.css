@@ -1691,11 +1691,9 @@ a:hover.img_hover-e img {
 	text-transform: none;
 	margin-bottom: 0px;
 	position: relative;
-
 }
 
-.image_over
-{
+.image_over {
 	background-color: #fff;
 	position: absolute;
 	bottom: 0px;
@@ -1703,8 +1701,317 @@ a:hover.img_hover-e img {
 	right: 0;
 	padding-left: 15px;
 	margin-right: 15px;
-	
 }
-.custom_card_margin_top{
+
+.custom_card_margin_top {
 	margin-top: 250px;
 }
+
+/*spotrs start here*/
+
+.top_linkh {
+	color: #0d880c;
+	font-size: 11px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.top_linkh:hover {
+	color: #0d880c;
+}
+
+.author_head a {
+	border-bottom: 2px solid #549f42;
+	padding-bottom: 2px;
+	color: #0d880c;
+}
+
+.custom__sports {
+	color: #0d880c;
+	border-bottom: 2px solid #0d880c;
+}
+
+.custom__sports h1 {
+	color: #0d880c!important;
+	line-height: 34px;
+}
+
+.custom__navbars {
+	border-bottom: 1px solid #ccc;
+}
+
+.custom__navs {
+	margin-top: 1.2rem;
+}
+
+.custom__navbar-nav a {
+	color: #0d880c!important;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: 700;
+}
+
+.custom_head-texts a {
+	color: #000;
+	line-height: 42px !important;
+	font-weight: 600;
+}
+
+.contenidos {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	background: #ffff25;
+	padding: 6px 10px 5px 66px;
+}
+
+.tercera {
+	display: table-cell;
+	width: 290px;
+	height: auto;
+	background: repeating-linear-gradient(-45deg, #fafafa, #fafafa 5px, #fff, #fff 7px) !important;
+	border-left: 40px solid #fff;
+	vertical-align: top;
+}
+
+.floatFix::after, ul::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.contenedor {
+	border: 1px solid #ccc;
+	border-right: none;
+	border-left: none;
+	padding: 5px 0 15px;
+}
+
+/*sports icon*/
+
+.custom__icons {
+	background-image: url(/static/images/sprite-escudos-3.png);
+	width: 58px;
+	height: 237px;
+	display: inline-block;
+	margin: 1px 8px 5px 3px;
+	background-size: 1050px;
+	color: #000;
+}
+
+.sports a {
+	color: #000;
+}
+
+.sports a:hover {
+	color: #7DB570;
+}
+
+/*******************/
+
+.sports .contenedor {
+	border: 1px solid #ccc;
+	border-right: none;
+	border-left: none;
+	padding: 5px 0 15px;
+	margin-left: 5rem;
+}
+/*
+.sports .contenedor div {
+	width: 7.2%;
+	float: left;
+	text-align: center;
+	padding: 15px 0;
+	position: relative;
+	margin-right: 4px;
+}
+*/
+.sports .contenedor div a {
+	background: url("/static/images/sprite-escudos-3.png") no-repeat;
+	width: 58px;
+	height: 60px;
+	display: inline-block;
+	margin: 1px 8px 5px 3px;
+	background-size: 1050px;
+	color: #000;
+}
+
+.sports .contenedor div a:hover span {
+	display: block
+}
+
+.sports .contenedor div a span {
+	font-size: 10px;
+	font-family: Arial;
+	text-transform: uppercase;
+	line-height: 12px;
+	text-align: center;
+	position: absolute;
+	width: 98%;
+	top: 75px;
+	left: 0;
+	margin: auto;
+	display: none
+}
+
+.sports .contenedor div a span:before {
+	content: " ";
+	border-top: 2px solid #549f42;
+	display: block;
+	margin-bottom: 7px
+}
+
+.sports .contenedor div a.aldosivi {
+	background-position: -10px -17px
+}
+
+.sports .contenedor div a.argentinos-jrs {
+	background-position: -86px -16px
+}
+
+.sports .contenedor div a.arsenal {
+	background-position: -159px -17px
+}
+
+.sports .contenedor div a.atl-rafaela {
+	background-position: -430px -16px
+}
+
+.sports .contenedor div a.atl-tucuman {
+	background-position: -297px -16px
+}
+
+.sports .contenedor div a.banfield {
+	background-position: -362px -16px
+}
+
+.sports .contenedor div a.boca {
+	background-position: -501px -17px
+}
+
+.sports .contenedor div a.central-cordoba {
+	background-position: -232px -160px
+}
+
+.sports .contenedor div a.colon {
+	background-position: -574px -15px
+}
+
+.sports .contenedor div a.chacarita {
+	background-position: -86px -158px
+}
+
+.sports .contenedor div a.estudiantes-lp {
+	background-position: -716px -15px
+}
+
+.sports .contenedor div a.belgrano {
+	background-position: -430px -16px
+}
+
+.sports .contenedor div a.defensa-y-justicia {
+	background-position: -644px -16px
+}
+
+.sports .contenedor div a.gimnasia-lp {
+	background-position: -775px -16px
+}
+
+.sports .contenedor div a.godoy-cruz {
+	background-position: -840px -14px
+}
+
+.sports .contenedor div a.independiente {
+	background-position: -975px -16px
+}
+
+.sports .contenedor div a.huracan {
+	background-position: -909px -16px
+}
+
+.sports .contenedor div a.lanus {
+	background-position: -9px -89px
+}
+
+.sports .contenedor div a.newells {
+	background-position: -85px -89px
+}
+
+.sports .contenedor div a.olimpo {
+	background-position: -156px -89px
+}
+
+.sports .contenedor div a.quilmes {
+	background-position: -208px -58px
+}
+
+.sports .contenedor div a.patronato {
+	background-position: -229px -89px
+}
+
+.sports .contenedor div a.river {
+	background-position: -430px -89px
+}
+
+.sports .contenedor div a.rosario-central {
+	background-position: -495px -89px
+}
+
+.sports .contenedor div a.racing {
+	background-position: -363px -87px
+}
+
+.sports .contenedor div a.san-lorenzo {
+	background-position: -569px -90px
+}
+
+.sports .contenedor div a.sanmartin-sj {
+	background-position: -641px -89px
+}
+
+.sports .contenedor div a.sanmartin-tc {
+	background-position: -157px -158px
+}
+
+.sports .contenedor div a.sarmiento {
+	background-position: -505px -58px
+}
+
+.sports .contenedor div a.talleres-cordoba {
+	background-position: -11px -161px
+}
+
+.sports .contenedor div a.temperley {
+	background-position: -777px -90px
+}
+
+.sports .contenedor div a.tigre {
+	background-position: -841px -89px
+}
+
+.sports .contenedor div a.union {
+	background-position: -908px -91px
+}
+
+.sports .contenedor div a.velez {
+	background-position: -974px -89px
+}
+/*
+@media screen and (max-width:520px) {
+	.sports.contenedor div {
+		width: 58px
+	}
+}
+
+@media screen and (max-width:800px) {
+	.contenidos.deportes .escudos .contenedor div a {
+		background-size: 750px;
+		width: 42px;
+		height: 44px;
+	}
+	.sports .contenedor div a.argentinos-jrs {
+		background-position: -62px -10px;
+	}
+}*/

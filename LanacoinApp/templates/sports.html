@@ -1,0 +1,467 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+<title>Latest Sports news - LA NACION </title>
+{% endblock title %}
+{% block container %}
+<section class="container-fluid sports">
+    <div class="row">
+        <div class="col-xl-11 col-sm-12">
+            <!-- head nav section start here -->
+            <div class="row pb-4">
+                <div class="col-md-11 col-sm-12 col-12 offset-md-1 pl-sm-0">
+                    <div class="row">
+                        <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                            <a href="{% url 'home' %}"> THE NATION |</a>
+                            <span style="color: gray;"> Sports</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="navbar navbar-expand-lg pl-0 pb-0 custom__navbars">
+                                <a class="navbar-brand custom__sports" href="#">
+                                    <h1>Sports</h1>
+                                </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse  custom__navs" id="navbarNavAltMarkup">
+                                    <div class="navbar-nav custom__navbar-nav col-sm-12">
+                                        <a class="nav-item nav-link" href="#">POSITIONS </a>
+                                        <a class="nav-item nav-link" href="#">FIXTURE</a>
+                                        <a class="nav-item nav-link" href="#">BOCA</a>
+                                        <a class="nav-item nav-link" href="#">RIVER</a>
+                                        <a class="nav-item nav-link" href="#">FOOTBALL</a>
+                                        <a class="nav-item nav-link" href="#">RUGBY</a>
+                                        <a class="nav-item nav-link" href="#">TENNIS</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- head nav senction end here -->
+            <!-- first body section part-1 start here -->
+            <div class="row pt-md-4">
+                <div class="col-12">
+                    <div class="row p-0">
+                        <div class="col-md-10 col-sm-12 col-12 p-0">
+                            <div class="row">
+                                {% for top_news in top_news %}
+                                {% if forloop.first %}
+                                <div class="col-md-8 col-sm-12" title="{{top_news.sub_title}}">
+                                    <div class="row">
+                                        <div class="col-sm-2 col-12 pr-0 d-sm-none d-md-block"
+                                            style="background: linear-gradient(90deg,transparent,rgba(0,0,0,.05));">
+                                        </div>
+                                        <div class="col-sm-10 col-12">
+                                            <div class="row">
+                                                <div class="col-12 pl-3 pb-3 pt-5 pr-md-3 pr-sm-0">
+                                                    <h2 class="pl-md-1 pr-xl-5 pr-lg-3 custom_head-texts"><a href="#">
+                                                            {{top_news.details}}
+                                                        </a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-3 pb-3">
+                                        <div class="col-12">
+                                            <div class="row pl-md-4">
+                                                <div class="col-md-11 col-sm-12 col-12 offset-md-1">
+                                                    <h4 class="contenidos">Tri-Nations</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row pl-md-4">
+                                                <div class="col-md-11 col-sm-12 offset-md-1 ">
+                                                    <a href="#" class="img_hover-e">
+                                                        {% with top_news.cover_photo as img %}
+                                                        <img src="{% static img %} " class=" img-fluid w-100">
+                                                        {%endwith%}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- side bar for card  start-->
+                                <div class="col-md-4 col-sm-12 pt-2">
+                                    {% else %}
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="img_hover-e" title="{{top_news.sub_title}}">
+                                                <div class="card" style="border-color: transparent;">
+                                                    {% with top_news.cover_photo as img %}
+                                                    <img class="card-img-top" src="{% static img %}"
+                                                        alt="Card image cap">
+                                                    {% endwith %}
+                                                    <div class="card-body pl-0 pr-0">
+
+                                                        <p class="card-text">{{top_news.sub_title}}</p>
+                                                        <strong class="author px-2 px-md-0 text-uppercase"
+                                                            style="color: #66bf50;">
+                                                            present
+                                                        </strong>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+
+
+                                <!-- side bar for card end  -->
+                            </div>
+                            <!-- Body card part-2 start here -->
+                            <div class="row pt-3">
+                                <div class="col-md-11 col-sm-12 offset-md-1">
+                                    <div class="row">
+                                        {% for top_news_lower in top_news_lower %}
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <a href="#" class="img_hover-e"
+                                                        title="{{top_news_lower.sub_title}}">
+                                                        <div class="card" style="border-color: transparent;">
+                                                            {% with top_news_lower.cover_photo as img %}
+                                                            <img class="card-img-top" src="{% static img %}"
+                                                                alt="Card image cap">
+                                                            {% endwith %}
+                                                            <div class="card-body pl-0 pr-0">
+
+                                                                <p class="card-text">{{top_news_lower.sub_title}}</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Body card part-2 end here -->
+                            <!-- Body card part-2 start here -->
+                            <!--
+                            <div class="row mt-5">
+                                <div class="col-md-11 col-sm-12 offset-md-1">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3>SUPERLEAGUE: ALL CLUBS </h3>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 custom__icons">
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            
+                            <section class="contenedor floatFix pr-0 pr-md-5 pl-2 pl-md-0" >
+                                
+                                 
+                                <div class="row">
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/argentinos-juniors" class="argentinos-jrs"> <span>Argentinos Juniors </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/arsenal" class="arsenal"> <span> Arsenal </span></a>
+                                </div>
+                                
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/aldosivi" class="aldosivi"> <span>Aldosivi </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/atletico-tucuman" class="atl-tucuman"> <span>Athletic Tucuman </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/banfield" class="banfield"> <span>Banfield </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/boca-juniors" class="boca"> <span>Boca Juniors </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/central-cordoba" class="central-cordoba"> <span>Central Cordoba </span></a>
+                                </div>
+                                
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/colon" class="colon"> <span>Columbus of Santa Fe </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/defensa-y-justicia" class="defensa-y-justicia"> <span>Defense and Justice </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/estudiantes-la-plata" class="estudiantes-lp"> <span>Silver students </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/gimnasia-y-esgrima" class="gimnasia-lp"> <span>Gymnastics of the Silver </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/godoy-cruz" class="godoy-cruz"> <span>Godoy Cruz </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/huracan" class="huracan"> <span>Hurricane </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/independiente" class="independiente"> <span>Independent </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/lanus" class="lanus"> <span>Lanús </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/newells" class="newells"> <span> Newell's </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/patronato" class="patronato"> <span>Patronage </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/racing" class="racing"> <span> Racing </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/river-plate" class="river"> <span> River Plate </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/rosario-central" class="rosario-central"> <span>Rosario Central </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/san-lorenzo" class="san-lorenzo"> <span>San Lorenzo </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/talleres-cordoba" class="talleres-cordoba"> <span>Cordoba workshops </span></a>
+                                </div>
+                        
+                                <!-- <div>
+                                    <a href="/deportes/futbol/tigre" class="tigre"> <span> Tigre</span></a>
+                                </div> -->
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/union" class="union"> <span>Union of Santa Fé </span></a>
+                                </div>
+                        
+                                <div class="col-3 col-md-1 mb-5 mb-md-0">
+                                    <a href="/deportes/futbol/velez" class="velez"> <span>Velez Sarfsield </span></a>
+                                </div>
+                            </div>
+                            </section>
+                            <!-- Body card part-2 end here -->
+                            <!-- Body card part-2 start here -->
+                            <div class="row">
+                                <div class="col-md-11 col-sm-12 offset-md-1">
+                                    <hr>
+                                    <div class="row">
+                                        {% for top_news_lower in top_news_lower %}
+                                        <div class="col-md-4 col-sm-12">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <a href="#" class="img_hover-e"
+                                                        title="{{top_news_lower.sub_title}}">
+                                                        <div class="card" style="border-color: transparent;">
+                                                            {% with top_news_lower.cover_photo as img %}
+                                                            <img class="card-img-top"
+                                                                src="{% static 'images/3498780w1033.png' %}"
+                                                                alt="Card image cap">
+                                                            {% endwith %}
+                                                            <div class="card-body pl-0 pr-0">
+
+                                                                <p class="card-text">{{top_news_lower.sub_title}}</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Body card part-2 end here -->
+                            <!-- Body card part-2 start here -->
+                            <div class="row pb-4 pt-3">
+                                <div class="col-md-11 col-sm-12 offset-md-1">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h3 class="author_head"><a href="#">Author</a> </h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pt-2">
+                                            <div class="card border">
+                                                <div class="card-body text-center pt-0">
+                                                    <h3 class="line_top"><a class="top_linkh" href="#"
+                                                            style="color: #66bf50;">International
+                                                            Boxing</a></h3>
+                                                    
+                                                    <a href="#">
+                                                        <h2 class="card-text" style="line-height: 1.2rem!important;"><a
+                                                                href="#" style="font-size: 16px; ">Tyson vs
+                                                                Jones a time bomb on countdown </a></h2>
+                                                    </a>
+                                                    <div class="pt-1"></div>
+                                                    <a class="card__image" href="#">
+                                                        <div class="m-auto">
+
+                                                            <img class="rounded-circle custom_hover-img custom_hover"
+                                                                src="{% static 'images/3207350w90.webp' %}"
+                                                                alt="Bologna">
+                                                        </div>
+                                                        
+                                                    </a>
+                                                    <a href="#">
+                                                        <p style="color: #66bf50;">Osvaldo Príncipi</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Body card part-2 end here -->
+
+                        </div>
+                        <div class="col-md-2 col-sm-12 d-sm-none d-md-block tercera">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--body section part-2 start here -->
+            <div class="row pt-4 pb-4">
+                <div class="col-md-11 col-sm-12 col-12 offset-md-1 pl-sm-0">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="{% static 'images/3498782h440.png' %}" class="img-fluid w-100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 pt-10">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498780w1033.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498780w1033.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498780w1033.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- body senction part-2 end here -->
+            <!-- last body section start here -->
+            <div class="row pt-4 pb-4">
+                <div class="col-md-11 col-sm-12 col-12 offset-md-1 pl-sm-0">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="{% static 'images/3498782h440.png' %}" class="img-fluid w-100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 pt-10">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498782h440.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498780w1033.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card" style="border-color: transparent;">
+                                        <img class="card-img-top" src="{% static 'images/3498780w1033.png' %}"
+                                            alt="Card image cap">
+                                        <div class="card-body pl-0 pr-0">
+                                            <p class="card-text">Mouth. The surprising recovery of Salvio and the team
+                                                that would play in Brazil </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- last body section End here -->
+        </div>
+    </div>
+    {%endblock container%}
