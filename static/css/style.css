@@ -1801,15 +1801,15 @@ a:hover.img_hover-e img {
 	color: #000;
 }
 
-.sports a {
+.sports a,.sports a .title {
 	color: #000;
 }
 
-.sports a:hover {
-	color: #7DB570;
+.sports a:hover,.sports a .title:hover {
+	color: #549f42;
 }
 
-/*******************/
+
 
 .sports .contenedor {
 	border: 1px solid #ccc;
@@ -1818,16 +1818,7 @@ a:hover.img_hover-e img {
 	padding: 5px 0 15px;
 	margin-left: 5rem;
 }
-/*
-.sports .contenedor div {
-	width: 7.2%;
-	float: left;
-	text-align: center;
-	padding: 15px 0;
-	position: relative;
-	margin-right: 4px;
-}
-*/
+
 .sports .contenedor div a {
 	background: url("/static/images/sprite-escudos-3.png") no-repeat;
 	width: 58px;
@@ -1851,7 +1842,7 @@ a:hover.img_hover-e img {
 	position: absolute;
 	width: 98%;
 	top: 75px;
-	left: 0;
+	left: 10px;
 	margin: auto;
 	display: none
 }
@@ -1998,20 +1989,7 @@ a:hover.img_hover-e img {
 .sports .contenedor div a.velez {
 	background-position: -974px -89px
 }
-/*
-@media screen and (max-width:520px) {
-	.sports.contenedor div {
-		width: 58px
-	}
+.sports h3.title{
+	border-bottom: none;
+	text-transform: none;
 }
-
-@media screen and (max-width:800px) {
-	.contenidos.deportes .escudos .contenedor div a {
-		background-size: 750px;
-		width: 42px;
-		height: 44px;
-	}
-	.sports .contenedor div a.argentinos-jrs {
-		background-position: -62px -10px;
-	}
-}*/

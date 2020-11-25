@@ -65,8 +65,12 @@
     .custom_card_margin_top {
         margin-top: 15px !important;
     }
-    .sports .contenedor
+    .sports .contenedor div a span
     {
-        margin-left: 0rem !important;
+        
+        left: -10px;
+    }
+    .sports .contenedor{
+        margin-left: 0px !important;
     }
 }
