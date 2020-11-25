@@ -217,6 +217,74 @@ def last_news_data_view(request):
     return render(request, 'data.html', {'data': lsst, 'more': moore, 'cards': top_cards})
 
 
+def economics_view(request):
+    top_news = [
+        {
+            'title': 'Land grab.',
+            'sub_title': "Strong march in Entre Ríos after Etchevehere's complaint",
+            'details': '''Producers from the province are mobilized in Santa Elena, in front of the former official's field; they went there to reject the usurpation''',
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/recent-1.webp'
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+
+    ]
+    top_news_lower = [
+        {
+            'title': 'Land grab.',
+            'sub_title': "Strong march in Entre Ríos after Etchevehere's complaint",
+            'details': '''Producers from the province are mobilized in Santa Elena, in front of the former official's field; they went there to reject the usurpation''',
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/recent-1.webp'
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+        {
+            'title': 'Land grab.',
+            'sub_title': "Strong march in Entre Ríos after Etchevehere's complaint",
+            'details': '''Producers from the province are mobilized in Santa Elena, in front of the former official's field; they went there to reject the usurpation''',
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/recent-1.webp'
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+        {
+            'title': 'Massive and mandatory. ',
+            'sub_title': "The vaccination plan that the Government plans at the end of the year",
+            'reporter': 'By Jaime Rosemberg',
+            'cover_photo': 'images/3449885h186.webp',
+        },
+
+    ]
+
+    return render(request, 'economics.html', {'top_news': top_news, 'top_news_lower': top_news_lower, 'more_news': top_news_lower, 'other_theme': top_news_lower, 'interest': top_news_lower, 'most_read': top_news_lower})
+
+
 def economy_dollar_today_view(request):
     today = date.today()
     d2 = today.strftime("%B %d")
@@ -875,7 +943,7 @@ def lifestyle_horoscope_view(request):
             'sign': 'Aries',
             'bd': '21/3 al 20/4',
             'des': '''After so long, you can develop your creative vision as long as what you want is strong enough. Don't limit yourself. ''',
-            
+
         },
         {
             'sign': 'Taurus',
@@ -887,10 +955,10 @@ def lifestyle_horoscope_view(request):
 
 
 def lifestyle_horoscope_inside_view(request, value):
-    details= {}
+    details = {}
 
     if value == "Aries":
-        details= {
+        details = {
             'title': '♈ ARIES horoscope today - LA NACION ',
             'sign': 'Aries',
             'name': 'Renata Dossi',
@@ -909,7 +977,7 @@ def lifestyle_horoscope_inside_view(request, value):
             'key': '''Try to take your time if you find yourself nervous or overwhelmed by the situations you are experiencing. Oxygenate your lungs and relax.''',
 
         }
-    return render(request, 'horoscope_zodiac_inside.html',{'x':details})
+    return render(request, 'horoscope_zodiac_inside.html', {'x': details})
 
 
 def lifestyle_horoscope_chineese_view(request):
@@ -918,28 +986,30 @@ def lifestyle_horoscope_chineese_view(request):
             # the first letter must be capital and others small in sign key
             'animal': 'Rat',
             'years': '1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009. ',
-            
-            
+
+
         },
         {
             'animal': 'Buffalo',
             'years': '1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009. ',
-            
+
         }
     ]
-    return render(request, 'horoscope_chinese.html',{'data':animal})
+    return render(request, 'horoscope_chinese.html', {'data': animal})
 
-def lifestyle_horoscope_chineese_inside_view(request,value):
-    details={}
-    if value=='Rat':
-        details={
-            'animal':'Rat',
-            'years':'1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020. ',
-            'this_year':'''In the year of your sign, you will know how to enhance all your talents to obtain what you want most. With a more practical and determined attitude, you will feel that nothing is out of your reach. You will know how to manage your hyperactivity with intelligence and you will have the possibility of meeting influential people who will benefit you in your profession and in the businesses you do. It is a time of concretions, a very productive year where you will notice that luck is on your side. Thanks to your creativity and professionalism, the most complicated things will be easy to do. The challenge will be knowing how to accept the good advice of more experienced people and learn to delegate when situations overwhelm you. In love, do not be afraid to make decisions, trust your experience and follow what your heart dictates. ''',
-            'character':'''Admired and honored for its sagacity and skill, in the East the Rat is a symbol of luck and prosperity. Charming creature capable of captivating anyone, she is aware of this quality and likes to flaunt her style. Curious, she is always on the hunt for new information, has a great sense of humor and lives in constant movement. Despite being very sociable, you need to spend time alone, to think, meditate, and get inspired. Very focused on herself, it is difficult for her to see beyond, however, she is usually very protective and generous with those who are faithful to her. Intelligent, restless and impatient, she always achieves her goals, knows how to find the fastest way and nothing stops her. Like the Sagittarius woman, the Rat adores her family, is passionate and difficult to tame, she does not like being wanted to handle or betrayed. You need a lot of affection to value yourself, because you have a tendency to underestimate yourself. This sign is analogous, that is, with similar characteristics, to the Sagittarius sign. ''',
+
+def lifestyle_horoscope_chineese_inside_view(request, value):
+    details = {}
+    if value == 'Rat':
+        details = {
+            'animal': 'Rat',
+            'years': '1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020. ',
+            'this_year': '''In the year of your sign, you will know how to enhance all your talents to obtain what you want most. With a more practical and determined attitude, you will feel that nothing is out of your reach. You will know how to manage your hyperactivity with intelligence and you will have the possibility of meeting influential people who will benefit you in your profession and in the businesses you do. It is a time of concretions, a very productive year where you will notice that luck is on your side. Thanks to your creativity and professionalism, the most complicated things will be easy to do. The challenge will be knowing how to accept the good advice of more experienced people and learn to delegate when situations overwhelm you. In love, do not be afraid to make decisions, trust your experience and follow what your heart dictates. ''',
+            'character': '''Admired and honored for its sagacity and skill, in the East the Rat is a symbol of luck and prosperity. Charming creature capable of captivating anyone, she is aware of this quality and likes to flaunt her style. Curious, she is always on the hunt for new information, has a great sense of humor and lives in constant movement. Despite being very sociable, you need to spend time alone, to think, meditate, and get inspired. Very focused on herself, it is difficult for her to see beyond, however, she is usually very protective and generous with those who are faithful to her. Intelligent, restless and impatient, she always achieves her goals, knows how to find the fastest way and nothing stops her. Like the Sagittarius woman, the Rat adores her family, is passionate and difficult to tame, she does not like being wanted to handle or betrayed. You need a lot of affection to value yourself, because you have a tendency to underestimate yourself. This sign is analogous, that is, with similar characteristics, to the Sagittarius sign. ''',
         }
 
-    return render(request,'horoscope_chinese_inside.html',{'x':details})
+    return render(request, 'horoscope_chinese_inside.html', {'x': details})
+
 
 def shows_view(request):
     movies = [
@@ -1212,3 +1282,38 @@ def awesome_sub_menus_view(request, parameter):
         }
 
     return render(request, 'community_common.html', {'pg_info': page_info, 'data': lst, 'more': more})
+
+
+def all_common_side_view(request, parameter):
+    page_info = {}
+    if parameter == 'lifestyle':
+        page_info = {
+            'page_title': 'Latest News from Lifestyle- LA NACION',
+            'sub_link': 'Lifestyle',
+            'view_more': 'See more Lifestyle notes',
+            'main_title': 'Lifestyle',
+        }
+    elif parameter == 'society':
+        page_info = {
+            'page_title': 'Latest News from Society- LA NACION',
+            'sub_link': 'Society',
+            'view_more': 'See more Society notes',
+            'main_title': 'Society',
+        }
+    elif parameter == 'opinion':
+        page_info = {
+            'page_title': 'Latest Opinion News- LA NACION',
+            'sub_link': 'Opinion',
+            'view_more': 'See more Opinion notes',
+            'main_title': 'Opinion',
+        }
+    elif parameter == 'shows_main':
+        page_info = {
+            'page_title': 'Latest News From Shows - LA NACION',
+            'sub_link': 'Shows ',
+            'view_more': 'See more notes from Shows ',
+            'main_title': 'Shows ',
+        }
+        return render(request, 'common_side_two.html', {'data': lst, 'more': moore, 'cards': top_cards, 'pg_info': page_info})
+
+    return render(request, 'common_side_nav.html', {'data': lst, 'more': more, 'pg_info': page_info})

@@ -1317,6 +1317,7 @@ a:hover.img_hover-e img {
 	background-image: url('/static/images/Sprite-Horoscopo.png');
 	background-position-x: center;
 }
+
 .chineese .horoscope_img {
 	background-image: url('/static/images/sprite-horoscopo-chino.png');
 	background-position-x: center;
@@ -1375,43 +1376,54 @@ a:hover.img_hover-e img {
 .horoscope_img.Pisces {
 	background-position-y: -966px;
 }
+
 .horoscope_img.Rat {
 	background-position-y: -18px;
 }
-.horoscope_img.Buffalo{
+
+.horoscope_img.Buffalo {
 	background-position-y: -109px;
 }
-.horoscope_img.Tigre{
+
+.horoscope_img.Tigre {
 	background-position-y: -206px;
 }
-.horoscope_img.Hare,.horoscope_img.Rabbit,.horoscope_img.Cat {
+
+.horoscope_img.Hare, .horoscope_img.Rabbit, .horoscope_img.Cat {
 	background-position-y: -301px;
 }
+
 .horoscope_img.Dragón {
 	background-position-y: -390px;
 }
+
 .horoscope_img.Snake {
 	background-position-y: -486px;
 }
+
 .horoscope_img.Horse {
 	background-position-y: -581px;
 }
+
 .horoscope_img.Goat {
 	background-position-y: -677px;
 }
+
 .horoscope_img.Monkey {
 	background-position-y: -773px;
 }
+
 .horoscope_img.Gallo {
 	background-position-y: -870px;
 }
+
 .horoscope_img.Dog {
 	background-position-y: -966px;
 }
-.horoscope_img.Boar,.horoscope_img.Pig  {
+
+.horoscope_img.Boar, .horoscope_img.Pig {
 	background-position-y: -1063px;
 }
-
 
 .zoomCrazy {
 	-webkit-animation-name: zoomCrazy;
@@ -1422,19 +1434,17 @@ a:hover.img_hover-e img {
 	animation-fill-mode: both;
 }
 
-.custom_tap-content.horoscope p,.horoscope_week p {
+.custom_tap-content.horoscope p, .horoscope_week p {
 	/*color: #666;*/
 	font-size: 13px;
-	
 }
 
-.custom_tap-content.horoscope h2,.horoscope_week h2 {
+.custom_tap-content.horoscope h2, .horoscope_week h2 {
 	font-size: 18px;
 	line-height: 24px;
 	padding: 5px 0;
 	text-transform: uppercase;
 	font-weight: 600;
-	
 }
 
 .custom_tap-content.horoscope .description {
@@ -1465,6 +1475,7 @@ a:hover.img_hover-e img {
 	margin-bottom: 30px;
 	background-position-x: center;
 }
+
 .chineese .horoscope-side-bg {
 	background-image: url("/static/images/horoscopo-zodiacal-aside.png");
 	height: 250px;
@@ -1483,4 +1494,217 @@ a:hover.img_hover-e img {
 	color: #000;
 	text-transform: uppercase;
 	margin-top: 146px;
+}
+
+/*****************Dollar rate*********************/
+
+.com-anexo_dolar {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	font-size: 12px;
+	background: #5f5f5f;
+	border-radius: 3px;
+	border: solid 1px #dedede;
+}
+
+.com-anexo_dolar div {
+	margin: 16px 0;
+	color: #fff;
+	padding-left: 8px;
+}
+
+.com-anexo_dolar div:first-child {
+	grid-area: 1 / 1 / span 2 / span 3;
+	margin-bottom: 0;
+}
+
+.com-anexo_dolar div:last-child {
+	grid-area: 4 / 1 / span 2 / span 3;
+}
+
+.com-anexo_dolar div:nth-child(2), .com-anexo_dolar div:nth-child(3) {
+	border-right: solid 1px #999;
+}
+
+.com-anexo_dolar div:last-child {
+	background: #fff;
+	border: solid 1px #dedede;
+	padding: 0;
+	margin: 0;
+}
+
+.com-anexo_dolar div h2 {
+	display: none;
+}
+
+.com-anexo_dolar div h3 {
+	margin: 0 0 8px 0;
+	display: block;
+	font-size: 12px;
+}
+
+.com-anexo_dolar div:first-child h3 {
+	margin: 0;
+}
+
+.com-anexo_dolar div p {
+	margin: 0;
+	display: inline-block;
+}
+
+.com-anexo_dolar div p span {
+	display: none;
+	color: #ccc;
+}
+
+.com-anexo_dolar div p strong {
+	margin-right: 8px;
+}
+
+.com-anexo_dolar div p strong:last-child {
+	margin: 0;
+}
+
+.com-anexo_dolar div img {
+	height: 33px;
+	display: block;
+	margin: 4px auto;
+}
+
+@media screen and (min-width:370px) {
+	.com-anexo_dolar div {
+		padding-left: 12px;
+	}
+}
+
+@media screen and (min-width:600px) {
+	.com-anexo_dolar {
+		grid-template-columns: 180px 1fr 1fr 1fr 160px;
+	}
+	.com-anexo_dolar div:first-child, .com-anexo_dolar div:last-child {
+		grid-area: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
+}
+
+@media screen and (min-width:850px) {
+	.com-anexo_dolar {
+		grid-template-columns: 180px 230px 1fr 1fr 160px;
+	}
+	.com-anexo_dolar div {
+		margin: 16px 0;
+	}
+	.com-anexo_dolar div h3 {
+		display: inline-block;
+		margin: 0 8px 0 0;
+	}
+}
+
+@media screen and (min-width:1110px) {
+	.com-anexo_dolar {
+		background: none;
+		border-radius: none;
+		border: none;
+		grid-template-columns: 1fr 1fr 1fr 185px;
+		grid-column-gap: 3px;
+		font-size: 16px;
+	}
+	.com-anexo_dolar div {
+		background: #5f5f5f;
+		margin: 0;
+		padding: 18px;
+		border-radius: 3px;
+		border: none;
+	}
+	.com-anexo_dolar div:first-child {
+		display: none;
+	}
+	.com-anexo_dolar div h2 {
+		display: block;
+		font: normal normal 17px/20px 'suecaslabbold', sans-serif;
+		margin: 0 0 10px 0;
+	}
+	.com-anexo_dolar div h3 {
+		display: none;
+	}
+	.com-anexo_dolar div p span {
+		display: inline;
+	}
+	.com-anexo_dolar div img {
+		height: 38px;
+		margin: 0 auto;
+	}
+}
+
+/********************Economics*********************/
+
+.negocios h1 a, .negocios h3 a {
+	font-size: 0;
+	width: 204px;
+	height: 66px;
+	background-image: url(/static/images/comunidad.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	/*top: 16px;*/
+	display: inline-block;
+}
+
+.negocios .links a {
+	display: inline;
+	font-size: 12px;
+	color: #d83e2c !important;
+	line-height: 64px;
+	font-weight: 600;
+}
+
+.indices-home {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, .6);
+}
+
+.indices-home.labels {
+	border-bottom: none;
+}
+
+.indices-home a {
+	color: #d83e2c;
+	margin-right: 15px;
+}
+
+.recent-news.economics.recent-news .col-tablet:after {
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	right: .875rem;
+	top: 0;
+	border-right: none;
+}
+
+.recent-news.economics h3.title {
+	border-bottom: none;
+	text-transform: none;
+	margin-bottom: 0px;
+	position: relative;
+
+}
+
+.image_over
+{
+	background-color: #fff;
+	position: absolute;
+	bottom: 0px;
+	width: 80%;
+	right: 0;
+	padding-left: 15px;
+	margin-right: 15px;
+	
+}
+.custom_card_margin_top{
+	margin-top: 250px;
 }

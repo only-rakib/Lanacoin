@@ -1,0 +1,247 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block title %}
+
+<title>Latest news from Argentina and the world - LA NACION</title>
+{% endblock title %}
+{% block container %}
+<section class="contenidos negocios cargando">
+    <section class="container-fluid px-lg-5 px-md-2 px-2">
+        <div class="row mt-4">
+            <div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
+                <a href="#"> THE NATION | </a><span style="color: gray;"> Business </span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <h1><a href="#">Business community </a></h1>
+            </div>
+            <div class="col-12 col-lg-8 d-flex align-items-end">
+                <div class="links ml-lg-auto">
+                    <a class="mr-2" href="http://remates.lanacion.com.ar" target="_blank">WINNING AUCTIONS </a>
+                    <a class="mr-2" href="{% url 'dollar_today' %}">DOLLAR TODAY </a>
+                    <a class="mr-2" href="{% url 'indices' %}">INDICES </a>
+                    <a class="mr-2" href="{% url 'field' %}">FIELD </a>
+                    <a class="mr-2" href="{% url  %}">BUSINESSES </a>
+                    <a class="mr-2" href="{% url  %}">ENTREPRENEURS </a>
+                    <a class="mr-2" href="{% url  %}">PROPERTIES </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin Techo Deportes -->
+    </section>
+
+
+</section>
+<section class="recent-news economics">
+    <div class="container-fluid px-lg-5 px-md-2 px-sm-0 px-0 margin_t">
+        <div class="row">
+            <div class="col-lg-9">
+                <section class="com-anexo_dolar">
+                    <div>
+                        <h3>DOLLAR QUOTE TODAY <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8"
+                                viewBox="0 0 6 8">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M-3-2H9v12H-3z"></path>
+                                    <path fill="#F2F2F2"
+                                        d="M5.227 4.396l-3.62 3.44a.612.612 0 0 1-.834 0 .54.54 0 0 1 0-.792L3.976 4 .773.956a.54.54 0 0 1 0-.792.612.612 0 0 1 .834 0l3.62 3.44a.544.544 0 0 1 0 .792z">
+                                    </path>
+                                </g>
+                            </svg></h3>
+                    </div>
+                    <div>
+                        <h2>NATION BANK DOLLAR </h2>
+                        <h3>NATIONAL BANK: </h3>
+                        <p><span>Buy: </span> <strong id="spanCompra">$79,50</strong> <span>Sell: </span> <strong
+                                id="spanVenta">$85,50</strong></p>
+                    </div>
+                    <div>
+                        <h2>DOLLAR BLUE </h2>
+                        <h3>BLUE: </h3>
+                        <p><span>Buy: </span> <strong id="spanCompraBlue">$155,00</strong> <span>Sell: </span> <strong
+                                id="spanVentaBlue">$161,00</strong></p>
+                    </div>
+                    <div>
+                        <h2>DOLLAR CASH WITH LIQUI </h2>
+                        <h3>CCL: </h3>
+                        <!--<p><span>Compra:</span> <strong id="spanCompraDccl">-</strong> <span>Venta:</span> <strong id="spanVentaDccl">-</strong></p>-->
+                        <p><span>Reference: </span> <strong id="spanCompraDccl">$118,18</strong></p>
+                    </div>
+                    <div class="logo">
+                        <a class=""
+                            href="https://www.invertironline.com/external/productos?utm_source=lanacion&amp;utm_medium=referral&amp;utm_campaign=cobranding&amp;utm_term=dolar-hoy&amp;utm_content=logo&amp;id_origen=107"
+                            target="_blank" rel="nofollow">
+                            <img src="{% static 'images/logo-invertir.png' %}" alt="invertirOnline.com ">
+                        </a>
+                    </div>
+                </section>
+                <!-----Top New Section----->
+
+                <section id="section-top-news" class="mt-5">
+                    <div class="row">
+                        {% for top_news in top_news %}
+
+                        {% if forloop.first %}
+                        <div class="col-md-8 col-sm-12 col-tablet">
+                            <a class="p-0" href="#" title="{{top_news.sub_title}}">
+                                <div class="card big-image">
+                                    <div class="card-body py-md-0 pr-md-4 pr-sm-0 pl-sm-0 px-0">
+                                        <h1 class="title px-2 px-md-0">
+
+                                            {{top_news.sub_title}}
+                                        </h1>
+
+                                        {% with top_news.cover_photo as img %}
+                                        <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                        {% endwith %}
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12">
+                            {% else %}
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#" title="{{top_news.sub_title}}">
+                                        <div class="card small-image">
+                                            <div class="card-body py-md-0 px-sm-0 px-0">
+                                                {% with top_news.cover_photo as img %}
+                                                <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                                {% endwith %}
+                                                <h2 class="title px-2 px-md-0">
+
+                                                    {{top_news.sub_title}}
+                                                </h2>
+
+
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <section class="option-menu">
+                        <div class="indices-home row border p-4 mt-5 ml-2 ml-md-0 mr-2 mr-md-0 mb-2 mb-md-0">
+                            <div class="col-12 col-md-3 labels"> INDICATORS <b>ECONOMIC : </b></div>
+
+                            <div class="col-12 col-md-9">
+                                <a href="{% url 'dollar_today' %}">DOLLAR TODAY </a>
+                                <a href="{% url 'indices' %}">BONDS </a>
+                                <a href="{% url 'indices' %}">INDICES </a>
+                                <a href="{% url 'indices' %}">MERVAL MERVAL </a>
+                                <a href="{% url 'indices' %}">OPTIONS </a>
+                                <a href="{% url 'indices' %}">25 </a>
+                                <a href="{% url 'indices' %}">BURCAP </a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="row">
+                        {% for top_news_lower in top_news_lower %}
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#" title="{{top_news_lower.sub_title}}">
+                                <div class="card-body py-md-3 px-sm-0 px-0">
+                                    {% with top_news_lower.cover_photo as img %}
+                                    <img class="card-img-bottom mt-4" src="{% static img %}" alt="recent">
+                                    {% endwith %}
+                                    <h2 class="title px-2 px-md-0">
+
+                                        {{top_news_lower.sub_title}}
+                                    </h2>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://www.lanacion.com.ar/economia/datos-economia-argentina-segui-monitor-la-nacion-nid2284152#/">
+                                <img src="{% static 'images/16663.webp' %}" style="width: 100%;height: 100%;" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-5 recent-news economics container-fluid px-lg-5 px-md-2 px-2">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="{% static 'images/3499665h322.webp' %}" style="width: 100%;height: 100%;" class="img-fluid"
+                alt="">
+            <div class="image_over">
+                <a href="#">
+                    <h3 class="title">The young man who became a millionaire and decided to keep it a
+                        secret</h3>
+                </a>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="row no-gutters d-md-flex align-items-end mx-3 mx-md-0 " >
+
+                <div class="col-4 col-md-12 order-1 order-md-0 custom_card_margin_top ">
+                    <img src="{% static 'images/3499665h322.webp' %}" style="width: 100%; min-height: 100px;min-width: 100px;"
+                        class="img-fluid" alt="">
+                </div>
+                <div class="col-8 col-md-12 order-0 order-md-1 ">
+                    <a href="#">
+                        <h3 class="title" style="font-size: 14px;">The young man who became a
+                            millionaire and decided to keep it a secret</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="row no-gutters d-md-flex align-items-end mx-3 mx-md-0 " >
+
+                <div class="col-4 col-md-12 order-1 order-md-0 custom_card_margin_top">
+                    <img src="{% static 'images/3499665h322.webp' %}" style="width: 100%; min-height: 100px;min-width: 100px;"
+                        class="img-fluid" alt="">
+                </div>
+                <div class="col-8 col-md-12 order-0 order-md-1 ">
+                    <a href="#">
+                        <h3 class="title" style="font-size: 14px;">The young man who became a
+                            millionaire and decided to keep it a secret</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="row no-gutters d-md-flex align-items-end mx-3 mx-md-0 " >
+
+                <div class="col-4 col-md-12 order-1 order-md-0 custom_card_margin_top" >
+                    <img src="{% static 'images/3499665h322.webp' %}" style="width: 100%; min-height: 100px;min-width: 100px;"
+                        class="img-fluid" alt="">
+                </div>
+                <div class="col-8 col-md-12 order-0 order-md-1 ">
+                    <a href="#">
+                        <h3 class="title" style="font-size: 14px;">The young man who became a
+                            millionaire and decided to keep it a secret</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+{% endblock container %}

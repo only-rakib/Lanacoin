@@ -1,46 +1,18 @@
 {% extends 'head_foot.html' %}
 {% load static %}
 {% block title %}
-
-<title>Latest News of the Dollar Quote Today, Price of the Dollar on {{date}} - LA NACION</title>
+<title>{{pg_info.page_title}}</title>
 {% endblock title %}
 {% block container %}
-
-<section class="container-fluid px-lg-5 px-md-3">
-    <section class="com-anexo_dolar">
-        <div>
-            <h3>DOLLAR QUOTE TODAY <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8"><g fill="none" fill-rule="evenodd"><path d="M-3-2H9v12H-3z"></path><path fill="#F2F2F2" d="M5.227 4.396l-3.62 3.44a.612.612 0 0 1-.834 0 .54.54 0 0 1 0-.792L3.976 4 .773.956a.54.54 0 0 1 0-.792.612.612 0 0 1 .834 0l3.62 3.44a.544.544 0 0 1 0 .792z"></path></g></svg></h3>
-        </div>
-        <div>
-            <h2>NATION BANK DOLLAR </h2>
-            <h3>NATIONAL BANK: </h3>
-            <p><span>Buy: Sell </span> <strong id="spanCompra">$ 77.50 </strong> <span>: </span> <strong id="spanVenta">$ 83.50 </strong></p>
-        </div>
-        <div>
-            <h2>DOLLAR BLUE </h2>
-            <h3>BLUE: </h3>
-            <p><span>Buy: </span> <strong id="spanCompraBlue">$ 177.00 </strong> <span>Sale: </span> <strong id="spanVentaBlue">$ 183.00 </strong></p>
-        </div>
-        <div>
-            <h2>DOLLAR CASH WITH LIQUI </h2>
-            <h3>CCL: </h3>
-            <!--<p><span>Compra:</span> <strong id="spanCompraDccl">-</strong> <span>Venta:</span> <strong id="spanVentaDccl">-</strong></p>-->
-            <p><span>Reference: </span> <strong id="spanCompraDccl">$ 118.18 </strong></p>
-        </div>
-        <div class="logo">
-            <a class="" href="https://www.invertironline.com/external/productos?utm_source=lanacion&amp;utm_medium=referral&amp;utm_campaign=cobranding&amp;utm_term=dolar-hoy&amp;utm_content=logo&amp;id_origen=107" target="_blank" rel="nofollow">
-                <img src="{% static 'images/logo-invertir.png' %}" alt="invertirOnline.com ">
-            </a>
-        </div>
-    </section>
+<section class="container-fluid px-lg-5 px-md-3 margin_t">
 	<div class="row">
 		<div class="col">
-			<div class="row mt-4">
+			<div class="row">
 				<div class="col-12 mt-3 mb-3 sub__heading-politics hide767">
-					<a href="#"> THE NATION | </a><span style="color: gray;"> Dollar today </span>
+					<a href="#"> THE NATION | </a><span style="color: gray;">{{pg_info.sub_link}}</span>
 				</div>
 				<div class="col-12 heading__main-politics">
-					<h1>Dollar price today </h1>
+					<h1>{{pg_info.main_title}}</h1>
 				</div>
 			</div>
 			<div class="row margin_t">
@@ -61,7 +33,7 @@
 											title="{{x.title}}">
 											<div class="row no-gutters">
 												<div class="col-md-4 pt-2">
-													<a href="#" class="img_hover-e">
+													<a href="{% url 'article' %}" class="img_hover-e">
 														{% with x.cover_pic as img %}
 														<img src="{% static img %}" class="card-img w-100" alt="...">
 														{% endwith %}
@@ -70,7 +42,7 @@
 												<div class="col-md-8">
 													<div class="card-body">
 														<h5 class="card-title article__heading-politics">
-															<a href="#">
+															<a href="{% url 'article' %}">
 																{{x.title}}
 															</a>
 														</h5>
@@ -136,17 +108,21 @@
 													</div>
 
 												</div>
-                                            </div>
-                                            {%endif%}
+											</div>
+											{%endif%}
 										</div>
 									</div>
 									{% endif %}
 									{% endfor %}
+									
+									{% if pg_info.view_more and pg_info.view_more.strip %}
+										
 									<div class="row">
 										<div class="col-sm-12 text-center text-uppercase pt-2 pb-2 mt-3">
-											<a class="btn btn__politics" href="#">SEE MORE NOTES OF Dollar Quote Today, Dollar Price on {{date}} </a>
+											<a class="btn btn__politics" href="#">{{pg_info.view_more}}</a>
 										</div>
 									</div>
+									{% endif %}
 								</div>
 
 							</div>
@@ -154,8 +130,8 @@
 						<div class="col-lg-5 col-md-12 hide1023">
 							<div class="row pt-3 pb-3">
 								<div class="col-12">
-									<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">MOST
-										<strong>READ NOW</strong></h5>
+									<h5 class="text-uppercase" style="font-family: suecaslabmedium,Georgia">More
+										<strong>{{pg_info.sub_link}}</strong></h5>
 								</div>
 							</div>
 							<ol class="steps">
@@ -200,4 +176,5 @@
 		</div>
 	</div>
 </section>
+
 {%endblock container%}

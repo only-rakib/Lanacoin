@@ -1,80 +1,68 @@
-@media(max-width:1023px)
-{
-    .hide1023
-    {
+@media(max-width:1023px) {
+    .hide1023 {
         display: none;
     }
-    .show1023
-    {
+    .show1023 {
         display: block;
     }
 }
-@media(min-width:1024px)
-{
-    .hide1023
-    {
+
+@media(min-width:1024px) {
+    .hide1023 {
         display: block;
     }
-    .show1023
-    {
+    .show1023 {
         display: none;
     }
 }
-@media(max-width:991px)
-{
-    .hide991
-    {
+
+@media(max-width:991px) {
+    .hide991 {
         display: none;
-        
     }
-    .show991
-    {
+    .show991 {
         display: block;
     }
-    .select-bg
-    {
+    .select-bg {
         max-width: 140px !important;
     }
 }
-@media(min-width:768px)
-{
-    #section-editorials .border-edit
-    {
-        border:none;
+
+@media(min-width:768px) {
+    #section-editorials .border-edit {
+        border: none;
     }
-    .table-statics table
-    {
+    .table-statics table {
         width: 300px!important;
     }
 }
-@media(max-width:767px)
-{
-    #section-editorials .border-edit
-    {
-        border:1px solid #ccc;
+
+@media(max-width:767px) {
+    #section-editorials .border-edit {
+        border: 1px solid #ccc;
     }
-    .recent-news .col-tablet:after{
+    .recent-news .col-tablet:after {
         display: none;
     }
-    .show767
-    {
+    .show767 {
         display: block !important;
     }
-    .hide767
-    {
+    .hide767 {
         display: none !important;
     }
-    .lanacoin_logo_header
-    {
+    .lanacoin_logo_header {
         font-size: 1.5rem;
     }
-    a.figure
-    {
-        height:auto !important;
+    a.figure {
+        height: auto !important;
     }
-    .margin_t
-    {
+    .margin_t {
         margin-top: .5rem;
     }
-    
+    .indices-home .labels {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+    .custom_card_margin_top {
+        margin-top: 15px !important;
+    }
 }

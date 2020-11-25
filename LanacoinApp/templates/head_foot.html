@@ -96,7 +96,7 @@
           <a tabindex="-1" href="{% url 'politics' %}" class="items">Politics</a>
         </li>
         <li class="dropright" title="Economy">
-          <a tabindex="-1" href="#" class="items">Economy</a>
+          <a tabindex="-1" href="{% url 'economics' %}" class="items">Economy</a>
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu">
             <ul>
@@ -129,7 +129,7 @@
           <a tabindex="-1" href="{% url 'world' %}" class="items" title="The world">The world</a>
         </li>
         <li class="dropright" title="Society">
-          <a tabindex="-1" href="#" class="items">Society</a>
+          <a tabindex="-1" href="{% url 'common_side' parameter='society' %}" class="items">Society</a>
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul>
@@ -144,7 +144,7 @@
           </div>
         </li>
         <li class="dropright" title="Opinion">
-          <a tabindex="-1" href="#" class="items">Opinion</a>
+          <a tabindex="-1" href="{% url 'common_side' parameter='opinion' %}" class="items">Opinion</a>
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu">
             <ul>
@@ -184,7 +184,7 @@
           </div>
         </li>
         <li class="dropright">
-          <a tabindex="-1" href="#" class="items">Lifestyle</a>
+          <a tabindex="-1" href="{% url 'common_side' parameter='lifestyle' %}" class="items">Lifestyle</a>
           <i class="fas fa-chevron-right"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">
             <ul>
@@ -205,7 +205,7 @@
           </div>
         </li>
         <li class="dropright">
-          <a tabindex="-1" href="#" class="items">Shows</a>
+          <a tabindex="-1" href="{% url 'common_side' parameter='shows_main' %}" class="items">Shows</a>
           <i class="fas fa-chevron-right"></i>
           <div class="dropdown-menu">
             <ul>
@@ -222,7 +222,7 @@
         </li>
         <hr class="my-0">
         <li class="dropright" title="Print edition">
-          <a tabindex="-1" href="#" class="items text-black-50">Print edition</a>
+          <a tabindex="-1" href="http://edicionimpresa.lanacion.com.ar/la-nacion" class="items text-black-50">Print edition</a>
           <i class="fas fa-chevron-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             data-offset="boundary"></i>
           <div class="dropdown-menu" style="  transform: translateY(-50%);">

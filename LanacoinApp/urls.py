@@ -7,6 +7,7 @@ urlpatterns = [
     path('transit/',views.last_news_transit_view,name="transit"),
     path('data/',views.last_news_data_view,name="data"),
     path('dollar-today/',views.economy_dollar_today_view,name="dollar_today"),
+    path('economics/',views.economics_view,name="economics"),
     path('field/',views.economy_field_view,name="field"),
     path('properties/',views.economy_properties_view,name="properties"),
     path('foregin-trade/',views.economy_foregin_trade_view,name="foregin_trade"),
@@ -54,4 +55,5 @@ urlpatterns = [
     
     path('article/',views.article_view,name="article"),
     path('author/',views.author_view,name="author"),
+    path('<parameter>/',views.all_common_side_view,name="common_side"),
 ]
