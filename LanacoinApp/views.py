@@ -195,7 +195,9 @@ def home_view(request):
     ]
     return render(request, 'home_page.html', {'top_news': top_news, 'top_news_lower': top_news_lower, 'more_news': top_news_lower, 'other_theme': top_news_lower, 'interest': top_news_lower, 'most_read': top_news_lower})
 
-
+def latest_news_view(request):
+    return render(request,'latest_news.html')
+    
 def article_view(request):
     today = date.today()
     d2 = today.strftime("%B %d")

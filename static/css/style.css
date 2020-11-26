@@ -1661,6 +1661,7 @@ a:hover.img_hover-e img {
 	font-weight: 600;
 }
 
+
 .indices-home {
 	font-size: 12px;
 	font-weight: 400;
@@ -1676,7 +1677,7 @@ a:hover.img_hover-e img {
 	margin-right: 15px;
 }
 
-.recent-news.economics.recent-news .col-tablet:after {
+.recent-news.economics .col-tablet:after {
 	content: "";
 	display: block;
 	height: 100%;
@@ -1692,7 +1693,14 @@ a:hover.img_hover-e img {
 	margin-bottom: 0px;
 	position: relative;
 }
-
+.recent-news.economics img:hover
+{
+	filter: brightness(1.1);
+}
+.recent-news.economics a:hover h2.title,.recent-news.economics a:hover h3.title
+{
+	color: #d83e2c;
+}
 .image_over {
 	background-color: #fff;
 	position: absolute;
@@ -1757,7 +1765,7 @@ a:hover.img_hover-e img {
 	font-weight: 600;
 }
 
-.contenidos {
+.sports.contenidos {
 	display: inline-block;
 	font-size: 12px;
 	font-weight: 700;
@@ -1992,4 +2000,50 @@ a:hover.img_hover-e img {
 .sports h3.title{
 	border-bottom: none;
 	text-transform: none;
+}
+
+/***************Latest News**************************/
+.cuerpo {
+	padding-left: 100px;
+	border-left: 1px solid #000;
+}
+.cuerpo .hora::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 10px;
+	border: 1px solid #000;
+	background: #fff;
+	left: -33px;
+	top: 0;
+	z-index: 2;
+	position: absolute;
+}
+.cuerpo .hora::after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 5px;
+	background: #000;
+	top: 4px;
+	left: -29px;
+	z-index: 2;
+	position: absolute;
+}
+.cuerpo:first-child .hora {
+	background-color: #ffff25;
+}
+.cuerpo .hora {
+	float: left !important;
+	clear: left;
+	margin-left: 0 !important;
+	position: absolute;
+	font-family: suecaslabbold,Georgia,"serif";
+	font-size: 20px;
+	margin-bottom: 7px;
+	width: auto;
+	left: 25px;
+}
+.cuerpo:hover .hora::after {
+	background: #999;
 }

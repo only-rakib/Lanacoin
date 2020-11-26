@@ -73,4 +73,7 @@
     .sports .contenedor{
         margin-left: 0px !important;
     }
+    .page__divider-ver {
+        border-right: none !important;
+    }
 }
